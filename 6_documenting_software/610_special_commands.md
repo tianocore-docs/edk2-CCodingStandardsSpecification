@@ -155,7 +155,7 @@ style comments:
 
 ###### Table 12 HTML Commands
 
-| `Command`        | `Description`                                               |
+| Command          | Description                                                 |
 | ---------------- | ----------------------------------------------------------- |
 | `<A HREF="...">` | Starts an HTML hyper-link.                                  |
 | `<A NAME="...">` | Starts a named anchor.                                      |
