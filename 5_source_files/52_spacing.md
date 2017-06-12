@@ -130,23 +130,39 @@ if (MyVar != 0) {
 If ((--MyInteger) > 0) {
 ```
 
-#### 5.2.2.4 Subsequent lines of multi-line function calls should line up one or two tabstops from the beginning of the function name
+#### 5.2.2.4 Subsequent lines of multi-line function calls should line up two spaces from the beginning of the function name
 
-Use either one or two tab stops to ensure that each parameter is indented at
-least two spaces after the function name. Either of the below examples is
-acceptable:
+If a function call or function like macro invocation is broken up into multiple
+lines, then:
+
+* One argument per line, including the first argument on its own line.
+* Indent each argument 2 spaces from the start of the function name. If a
+  function is called through a structure or union member, of type
+  pointer-to-function, then indent each argument 2 spaces from the start of the
+  member name.
+* Align the close parenthesis with the start of the last argument
 
 ```c
+CopyMem (
+  Destination,
+  Source,
+  SIZE_4KB
+  );
+
 Status = gBS->AllocatePool (
                 EfiBootServicesData,
                 sizeof (DRIVER_NAME_INSTANCE),
                 &PrivateData
                 );
-Status = gBS->AllocatePool (
-                EfiBootServicesData,
-                sizeof (DRIVER_NAME_INSTANCE),
-                &PrivateData
-                );
+
+DEBUG ((
+  DEBUG_INFO,
+  "The addresses of the 4 buffers are %p, %p, %p, and %p\n",
+  Buffer1,
+  Buffer2,
+  Buffer3,
+  Buffer4
+  ));
 ```
 
 #### 5.2.2.5 Always put space after commas or semicolons that separate items
