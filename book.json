@@ -1,8 +1,7 @@
 {
   "variables" : {
-    "draft"   : "yes",
     "title"   : "EDK II C Coding Standards Specification",
-    "version" : "Revision 2.2"
+    "version" : "Revision 2.20"
   },
 
   "plugins": ["puml"],
