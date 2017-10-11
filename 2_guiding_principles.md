@@ -47,7 +47,7 @@ The following is an alphabetical list of software design principles:
 **Accessibility**
 
 This entails designing objects and environments to be usable, with no
-modification, by the greatest number of people as possible, including people
+modification, by the greatest number of people possible, including people
 with varying educational and social backgrounds, as well as those with motor or
 sensory challenges.
 
@@ -68,7 +68,7 @@ shortterm memory, as well as to accommodate its limits.
 This is a technique used for critical actions, inputs, or commands.
 Confirmations are primarily used to prevent unintended actions. Minimize errors
 in critical or irreversible operations with confirmations. If you overuse
-confirmations, expect that they will be ignored Avoid overusing confirmations
+confirmations, expect that they will be ignored. Avoid overusing confirmations
 to ensure that they remain unexpected and uncommon; otherwise, they may be
 ignored. Use a two-step operation for hardware confirmations and dialogs for
 software confirmations.
@@ -97,7 +97,7 @@ about the assumptions you make.
 **Forgiveness**
 
 Design to help users avoid errors and reduce the negative consequences of
-errors any errors made. Recommended methods for achieving design forgiveness
+any errors made. Recommended methods for achieving design forgiveness
 include affordances, reversibility of actions, and safety nets. Effectively
 designing for forgiveness results in a design needing minimal confirmations,
 warnings, and help.
@@ -171,7 +171,7 @@ classes of platforms from embedded systems to massively parallel computers.
 
 Greater reliance on unique or exotic pieces makes a system harder to
 understand, and more intimidating for someone trying to understand it the first
-time. Using standardized, common approaches should be to give the whole system
+time. Using standardized, common approaches should give the whole system
 a familiar feeling. This standardization is one of the primary goals of this
 document.
 
