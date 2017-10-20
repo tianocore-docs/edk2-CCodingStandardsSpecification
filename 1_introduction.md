@@ -62,7 +62,7 @@ This specification addresses the chronic problem of providing accurate
 documentation of the code base by embedding the documentation within the code.
 While this does not guarantee that the documentation will be kept up to date,
 it significantly increases the chances. A document generation system, Doxygen,
-then produce formatted documentation by extracting information from specially
+can produce formatted documentation by extracting information from specially
 formatted comment blocks and the syntactic elements of the code.
 
 This specification presents protocol standards that will ensure that the
@@ -97,10 +97,10 @@ wide support. On the downside in that each developer's C code could
 lack of uniformity makes understanding and maintaining the code very difficult.
 
 Uniformity is the key theme of these rules. You may disagree with some of our
-decisions. Nevertheless, we ask that you commit to conforming to standards of
-this specification. Also, there are pitfalls inherent in the C language that
-this style guide may help you to avoid. The goal of this document is making
-you, and those who follow you, more productive.
+decisions. Nevertheless, we ask that you commit to conforming with the
+standards of this specification. Also, there are pitfalls inherent in the C
+language that this style guide may help you to avoid. The goal of this document
+is making you, and those who follow you, more productive.
 
 Some of the strict rules for protocol and driver construction may seem overly
 onerous. Don't panic - there is a method to our madness - we intend to
@@ -161,7 +161,7 @@ Topics covered in this coding standard include:
 * Commenting rules
 * Doxygen
 
-These guidelines represent an attempt make you aware of your actions, because
+These guidelines represent an attempt to make you aware of your actions, because
 those actions affect the future readers and maintainers of the code you produce.
 
 Pre-existing code ported to the EDK II environment does not have to conform to
