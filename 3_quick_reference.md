@@ -55,7 +55,7 @@
   any file using the abbreviation or acronym. See "Abbreviation Usage" and
   "Glossary".
 
-* There is no limit to name lengths. A length of 10 to 30 characters is ",
+* There is no limit to name lengths. A length of 10 to 30 characters is
   recommended. See "File Names" & "Identifiers that are always reserved".
 
 * File names must not start with numbers. See "File Names".
