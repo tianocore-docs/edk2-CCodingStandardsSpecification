@@ -43,9 +43,9 @@ or from common EFI data types.
 The corresponding EFI types must be used instead.
 
 "EFI Data Types" below contains the common data types that are referenced in
-the interface definitions defined by this specification. Per the _UEFI
-Specification_, version 2.3.1:
+the interface definitions defined by the UEFI specification.
 
+Per the _UEFI Specification_, version 2.3.1:
 "Unless otherwise specified, all data types are naturally aligned. Structures
 are aligned on boundaries equal to the largest internal datum of the structure,
 and internal data is implicitly padded to achieve natural alignment."
