@@ -92,7 +92,7 @@ reader of the code, not the writer.
 
 Any abbreviation used, which is not documented in this specification, or in the
 _UEFI Specification_ shall be placed into a Glossary section of the File header
-as specified in See "File Heading".
+as specified in "File Heading".
 
 Do not define a new abbreviation to replace an abbreviation that is already
 defined in this document. For example, do not define No to mean Number, because
