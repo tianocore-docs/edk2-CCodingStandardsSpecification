@@ -60,8 +60,8 @@ these are C files with an extension of "`.c`".
 
 /* Function Definitions */
 
-/* If this is a protocol definition, the
-protocol structure is defined and initialized here.
+/* If this is a protocol definition, the protocol structure is defined and
+  initialized here.
 */
 ```
 

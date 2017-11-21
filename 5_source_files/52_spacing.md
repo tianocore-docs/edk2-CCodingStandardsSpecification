@@ -278,7 +278,7 @@ the preferred indentation, but two tabs (four spaces) is also acceptable.
   Detailed description of the file’s contents and other useful
   information for a person viewing the file for the first time.
 
-  Copyright (C) --20XX, Acme Corporation. All rights reserved.<BR>
+  Copyright (C) 20XX, Acme Corporation. All rights reserved.<BR>
   SPDX-License-Identifier: BSD-2-Clause-Patent
 
   @par Revision Reference:
