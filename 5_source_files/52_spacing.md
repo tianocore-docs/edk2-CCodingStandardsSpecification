@@ -279,15 +279,7 @@ the preferred indentation, but two tabs (four spaces) is also acceptable.
   information for a person viewing the file for the first time.
 
   Copyright (C) --20XX, Acme Corporation. All rights reserved.<BR>
-  This program and the accompanying materials
-  are licensed and made available under the terms and conditions of
-  the BSD License which accompanies this distribution. The full
-  text of the license may be found at
-  http://opensource.org/licenses/bsd-license.
-
-  THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS"
-  BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER
-  EXPRESS OR IMPLIED.
+  SPDX-License-Identifier: BSD-2-Clause-Patent
 
   @par Revision Reference:
     - PI Version 1.0
@@ -364,22 +356,16 @@ the location and content of the file. The correct license will be determined by
 the project leader at the time the file is created. In most cases, the license
 will be the same as for other files in the module or package.
 
-The majority of the files in EDK II contain the following "BSD" license.
+The preferred license for EDK II is the "BSD+Patent" license.  The license for
+a file is provided in the file header using an SPDX identifier.  The following
+shows the SPDX identifier for the "BSD+Patent" license.
 
 ```
-This program and the accompanying materials are licensed and made
-available under the terms and conditions of the BSD License that
-accompanies this distribution. The full text of the license may be
-found at http://opensource.org/licenses/bsd-license.
-
-THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS" BASIS,
-WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR
-IMPLIED.
+SPDX-License-Identifier: BSD-2-Clause-Patent
 ```
 
-The license will follow the copyright notice without an intervening blank line.
-It will be separated from the Specification Reference, if present, by a single
-blank line.
+The license follows the copyright notice.  The license is separated from the
+Specification Reference, if present, by a single blank line.
 
 #### 5.2.3.5 Specification Reference
 
