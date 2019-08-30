@@ -66,23 +66,7 @@ not behave the same.
 Banners can be useful to highlight logical divisions within a file; such as
 before vital sections. This type of usage should be minimized.
 
-### 6.2.3 Avoid comments where the opening comment characters are alone on a line.
-
-```
-/*
- * VIOLATION: Horror Vacui
-*/
-```
-
-or
-
-```c
-//
-// VIOLATION: Horror Vacui
-//
-```
-
-### 6.2.4 Do not include jokes or obtuse references in comments.
+### 6.2.3 Do not include jokes or obtuse references in comments.
 
 ```
 "Out of cheese error! Redo from start."
