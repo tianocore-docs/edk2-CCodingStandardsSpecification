@@ -54,7 +54,7 @@ minimal familiarity with the code. Clarity is important, but one should also
 strive for terse and concise comments. One should be able to see both the
 comment, and the code being commented on, on the same screen.
 
-### 6.2.1 Only use C style, "/*", comments for multi-line comments and on the same line as pre-processor directives.
+### 6.2.1 Only use C style, "/*", comments on the same line as pre-processor directives, and in Doxygen-style file and function header comment blocks.
 
 Compile can vary in their support for use of `//` in preprocessor directives
 (e.g. `#define`). Note that the mixing of `/* ... */` and `//` is not handled
