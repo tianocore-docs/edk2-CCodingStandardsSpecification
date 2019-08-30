@@ -58,3 +58,42 @@ instance differs.
 
 When possible, you should also list the requirements that are satisfied by the
 code.
+
+### 6.4.6 Comment spurious variable assignments.
+
+A compiler or static code analyzer may warn that an object with automatic or
+allocated storage duration is read without having been initialized, while
+visual inspection reveals that this is impossible.
+
+In order to suppress such a warning (which is emitted due to invalid data flow
+analysis), developers explicitly assign the affected object the value to which
+the same object would be initialized automatically, had the object static
+storage duration, and no initializer. (The value assigned could be arbitrary;
+the above-mentioned value is chosen for stylistic reasons.) For example:
+
+```c
+UINTN LocalIntegerVariable;
+VOID  *LocalPointerVariable;
+
+LocalIntegerVariable = 0;
+LocalPointerVariable = NULL;
+```
+
+This kind of assignment is difficult to distinguish from assignments where the
+initial value of an object is meaningful, and is consumed by other code without
+an intervening assignment. Therefore, each such assignment must be documented,
+as follows:
+
+```c
+UINTN LocalIntegerVariable;
+VOID  *LocalPointerVariable;
+
+//
+// set LocalIntegerVariable to suppress incorrect compiler/analyzer warnings
+//
+LocalIntegerVariable = 0;
+//
+// set LocalPointerVariable to suppress incorrect compiler/analyzer warnings
+//
+LocalPointerVariable = NULL;
+```
