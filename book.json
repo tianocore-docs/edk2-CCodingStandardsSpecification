@@ -3,7 +3,6 @@
     "title"   : "EDK II C Coding Standards Specification",
     "version" : "Revision 2.20"
   },
-
-  "plugins": ["puml"],
+  "plugins": ["puml-aleung"],
   "pluginsConfig": {}
 }
