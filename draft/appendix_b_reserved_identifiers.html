@@ -1,0 +1,2185 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>APPENDIX B Reserved Identifiers · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="appendix_c_optimization_and_performance.html" />
+    
+    
+    <link rel="prev" href="appendix_a_common_examples.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./#edk-ii-c-coding-standards-specification">
+            
+                    
+                    EDK II C Coding Standards Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#11-abstract">
+            
+                    
+                    1.1 Abstract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#12-rationale">
+            
+                    
+                    1.2 Rationale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#13-scope">
+            
+                    
+                    1.3 Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#14-references">
+            
+                    
+                    1.4 References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#15-glossary">
+            
+                    
+                    1.5 Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2_guiding_principles.html">
+            
+                <a href="2_guiding_principles.html#2-guiding-principles">
+            
+                    
+                    2 Guiding Principles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2_guiding_principles.html">
+            
+                <a href="2_guiding_principles.html#21-software-design">
+            
+                    
+                    2.1 Software Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2_guiding_principles.html">
+            
+                <a href="2_guiding_principles.html#22-principles-for-software-maintenance">
+            
+                    
+                    2.2 Principles for Software Maintenance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="2_guiding_principles.html">
+            
+                <a href="2_guiding_principles.html#23-additional-recommendations">
+            
+                    
+                    2.3 Additional Recommendations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#3-quick-reference">
+            
+                    
+                    3 Quick Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#31-naming">
+            
+                    
+                    3.1 Naming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#32-formatting">
+            
+                    
+                    3.2 Formatting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#33-files-general-rules">
+            
+                    
+                    3.3 Files: General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#34-documentation">
+            
+                    
+                    3.4 Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#4-naming-conventions">
+            
+                    
+                    4 Naming Conventions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#41-general-naming-rules">
+            
+                    
+                    4.1 General Naming Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="4_naming_conventions/42_file_names.html">
+            
+                <a href="4_naming_conventions/42_file_names.html#42-file-names">
+            
+                    
+                    4.2 File Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="4_naming_conventions/43_identifiers.html">
+            
+                <a href="4_naming_conventions/43_identifiers.html#43-identifiers">
+            
+                    
+                    4.3 Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="4_naming_conventions/44_global_&_module_variables.html">
+            
+                <a href="4_naming_conventions/44_global_&_module_variables.html#44-global--module-variables">
+            
+                    
+                    4.4 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="4_naming_conventions/45_name_space_rules.html">
+            
+                <a href="4_naming_conventions/45_name_space_rules.html#45-name-space-rules">
+            
+                    
+                    4.5 Name Space Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5_source_files/">
+            
+                <a href="5_source_files/#5-source-files">
+            
+                    
+                    5 Source Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="5_source_files/">
+            
+                <a href="5_source_files/#51-general-rules">
+            
+                    
+                    5.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="5_source_files/52_spacing.html">
+            
+                <a href="5_source_files/52_spacing.html#52-spacing">
+            
+                    
+                    5.2 Spacing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="5_source_files/53_include_files.html">
+            
+                <a href="5_source_files/53_include_files.html#53-include-files">
+            
+                    
+                    5.3 Include Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="5_source_files/54_code_file_structure.html">
+            
+                <a href="5_source_files/54_code_file_structure.html#54-code-file-structure">
+            
+                    
+                    5.4 Code File Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="5_source_files/55_preprocessor_directives.html">
+            
+                <a href="5_source_files/55_preprocessor_directives.html#55-preprocessor-directives">
+            
+                    
+                    5.5 Preprocessor Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="5_source_files/56_declarations_and_types.html">
+            
+                <a href="5_source_files/56_declarations_and_types.html#56-declarations-and-types">
+            
+                    
+                    5.6 Declarations and Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="5_source_files/57_c_programming.html">
+            
+                <a href="5_source_files/57_c_programming.html#57-c-programming">
+            
+                    
+                    5.7 C Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="5_source_files/58_error_handling_and_assert.html">
+            
+                <a href="5_source_files/58_error_handling_and_assert.html#58-error-handling-and-assert">
+            
+                    
+                    5.8 Error Handling and ASSERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6_documenting_software/">
+            
+                <a href="6_documenting_software/#6-documenting-software">
+            
+                    
+                    6 Documenting Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="6_documenting_software/">
+            
+                <a href="6_documenting_software/#61-documentation-concepts">
+            
+                    
+                    6.1 Documentation Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="6_documenting_software/62_comments.html">
+            
+                <a href="6_documenting_software/62_comments.html#62-comments">
+            
+                    
+                    6.2 Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="6_documenting_software/63_what_not_to_comment.html">
+            
+                <a href="6_documenting_software/63_what_not_to_comment.html#63-what-not-to-comment">
+            
+                    
+                    6.3 What NOT to Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="6_documenting_software/64_what_you_must_comment.html">
+            
+                <a href="6_documenting_software/64_what_you_must_comment.html#64-what-you-must-comment">
+            
+                    
+                    6.4 What You Must Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="6_documenting_software/65_types_of_comments.html">
+            
+                <a href="6_documenting_software/65_types_of_comments.html#65-types-of-comments">
+            
+                    
+                    6.5 Types of Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="6_documenting_software/66_introducing_doxygen.html">
+            
+                <a href="6_documenting_software/66_introducing_doxygen.html#66-introducing-doxygen">
+            
+                    
+                    6.6 Introducing Doxygen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="6_documenting_software/67_how_doxygen_works.html">
+            
+                <a href="6_documenting_software/67_how_doxygen_works.html#67-how-doxygen-works">
+            
+                    
+                    6.7 How Doxygen Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="6_documenting_software/68_special_documentation_blocks.html">
+            
+                <a href="6_documenting_software/68_special_documentation_blocks.html#68-special-documentation-blocks">
+            
+                    
+                    6.8 Special Documentation Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="6_documenting_software/69_putting_documentation_after_members.html">
+            
+                <a href="6_documenting_software/69_putting_documentation_after_members.html#69-putting-documentation-after-members">
+            
+                    
+                    6.9 Putting Documentation after Members
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="6_documenting_software/610_special_commands.html">
+            
+                <a href="6_documenting_software/610_special_commands.html#610-special-commands">
+            
+                    
+                    6.10 Special Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="appendix_a_common_examples.html">
+            
+                <a href="appendix_a_common_examples.html#appendix-a-common-examples">
+            
+                    
+                    APPENDIX A Common Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="appendix_b_reserved_identifiers.html">
+            
+                <a href="appendix_b_reserved_identifiers.html#appendix-b-reserved-identifiers">
+            
+                    
+                    APPENDIX B Reserved Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="appendix_c_optimization_and_performance.html">
+            
+                <a href="appendix_c_optimization_and_performance.html#appendix-c-optimization-and-performance">
+            
+                    
+                    APPENDIX C Optimization and Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#table-1-common-opposites">
+            
+                    
+                    Table 1 Common Opposites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#table-2-efi-supported-abbreviations">
+            
+                    
+                    Table 2 EFI Supported Abbreviations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#table-3-efi-supported-acronyms">
+            
+                    
+                    Table 3 EFI Supported Acronyms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="4_naming_conventions/43_identifiers.html">
+            
+                <a href="4_naming_conventions/43_identifiers.html#table-4-reserved-keywords">
+            
+                    
+                    Table 4 Reserved Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="5_source_files/">
+            
+                <a href="5_source_files/#table-5-permissible-escape-sequences-isoiec-98991990-6134">
+            
+                    
+                    Table 5 Permissible Escape Sequences (ISO/IEC 9899:1990 6.1.3.4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="5_source_files/56_declarations_and_types.html">
+            
+                <a href="5_source_files/56_declarations_and_types.html#table-6-efi-data-types-slightly-modified-from-uefi-231">
+            
+                    
+                    Table 6 EFI Data Types (slightly modified from UEFI 2.3.1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="5_source_files/56_declarations_and_types.html">
+            
+                <a href="5_source_files/56_declarations_and_types.html#table-7-modifiers-for-common-efi-data-types-reference-the-uefi-specification-and-beyond-bios">
+            
+                    
+                    Table 7 Modifiers for Common EFI Data Types (reference the UEFI Specification and Beyond Bios)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="5_source_files/56_declarations_and_types.html">
+            
+                <a href="5_source_files/56_declarations_and_types.html#table-8-efi-constants">
+            
+                    
+                    Table 8 EFI Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="5_source_files/57_c_programming.html">
+            
+                <a href="5_source_files/57_c_programming.html#table-9-parameter-modifiers">
+            
+                    
+                    Table 9 Parameter Modifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="5_source_files/57_c_programming.html">
+            
+                <a href="5_source_files/57_c_programming.html#table-10-predicate-expression-examples">
+            
+                    
+                    Table 10 Predicate Expression Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="6_documenting_software/610_special_commands.html">
+            
+                <a href="6_documenting_software/610_special_commands.html#table-11-html-character-entities">
+            
+                    
+                    Table 11 HTML Character Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="6_documenting_software/610_special_commands.html">
+            
+                <a href="6_documenting_software/610_special_commands.html#table-12-html-commands">
+            
+                    
+                    Table 12 HTML Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >APPENDIX B Reserved Identifiers</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 04:23:43]</div>
+        <div style="text-align:right">Revision 2.2</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  APPENDIX B Reserved Identifiers
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="appendix-b-reserved-identifiers">APPENDIX B Reserved Identifiers</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__bool_true_false_are_defined</code></td>
+<td></td>
+<td><code>_Complex_I</code></td>
+<td><code>_Exit</code></td>
+</tr>
+<tr>
+<td><code>_IOFBF</code></td>
+<td><code>_IOLBF</code></td>
+<td><code>_IONBF</code></td>
+<td><code>abs</code></td>
+</tr>
+<tr>
+<td><code>abort</code></td>
+<td><code>acos</code></td>
+<td><code>acosf</code></td>
+<td><code>acosh</code></td>
+</tr>
+<tr>
+<td><code>acoshf</code></td>
+<td><code>acoshl</code></td>
+<td><code>acosl</code></td>
+<td><code>and</code></td>
+</tr>
+<tr>
+<td><code>and_eq</code></td>
+<td><code>asctime</code></td>
+<td><code>asin</code></td>
+<td><code>asinf</code></td>
+</tr>
+<tr>
+<td><code>asinh</code></td>
+<td><code>asinhf</code></td>
+<td><code>asinhl</code></td>
+<td><code>asinl</code></td>
+</tr>
+<tr>
+<td><code>assert</code></td>
+<td><code>atan</code></td>
+<td><code>atan2</code></td>
+<td><code>atan2f</code></td>
+</tr>
+<tr>
+<td><code>atan2l</code></td>
+<td><code>atanf</code></td>
+<td><code>atanh</code></td>
+<td><code>atanhf</code></td>
+</tr>
+<tr>
+<td><code>atanhl</code></td>
+<td><code>atanl</code></td>
+<td><code>atexit</code></td>
+<td><code>atof</code></td>
+</tr>
+<tr>
+<td><code>atoi</code></td>
+<td><code>atol</code></td>
+<td><code>atoll</code></td>
+<td><code>BUFSIZ</code></td>
+</tr>
+<tr>
+<td><code>bitand</code></td>
+<td><code>bitor</code></td>
+<td><code>bool</code></td>
+<td><code>bsearch</code></td>
+</tr>
+<tr>
+<td><code>btowc</code></td>
+<td><code>cabs</code></td>
+<td><code>cabsf</code></td>
+<td><code>cabsl</code></td>
+</tr>
+<tr>
+<td><code>cacos</code></td>
+<td><code>cacosf</code></td>
+<td><code>cacosh</code></td>
+<td><code>cacosl</code></td>
+</tr>
+<tr>
+<td><code>cacoshf</code></td>
+<td><code>cacoshl</code></td>
+<td><code>calloc</code></td>
+<td><code>carg</code></td>
+</tr>
+<tr>
+<td><code>cargf</code></td>
+<td><code>cargl</code></td>
+<td><code>casin</code></td>
+<td><code>casinf</code></td>
+</tr>
+<tr>
+<td><code>casinl</code></td>
+<td><code>casinh</code></td>
+<td><code>casinhf</code></td>
+<td><code>casinhl</code></td>
+</tr>
+<tr>
+<td><code>catan</code></td>
+<td><code>catanf</code></td>
+<td><code>catanl</code></td>
+<td><code>catanh</code></td>
+</tr>
+<tr>
+<td><code>catanhf</code></td>
+<td><code>catanhl</code></td>
+<td><code>cbrt</code></td>
+<td><code>cbrtf</code></td>
+</tr>
+<tr>
+<td><code>cbrtl</code></td>
+<td><code>ccos</code></td>
+<td><code>ccosf</code></td>
+<td><code>ccosh</code></td>
+</tr>
+<tr>
+<td><code>ccoshf</code></td>
+<td><code>ccoshl</code></td>
+<td><code>ccosl</code></td>
+<td><code>ceil</code></td>
+</tr>
+<tr>
+<td><code>ceilf</code></td>
+<td><code>ceill</code></td>
+<td><code>cexp</code></td>
+<td><code>cexpf</code></td>
+</tr>
+<tr>
+<td><code>cexpl</code></td>
+<td><code>CHAR_BIT</code></td>
+<td><code>CHAR_MIN</code></td>
+<td><code>CHAR_MAX</code></td>
+</tr>
+<tr>
+<td><code>cimag</code></td>
+<td><code>cimagf</code></td>
+<td><code>cimagl</code></td>
+<td><code>clearerr</code></td>
+</tr>
+<tr>
+<td><code>clock</code></td>
+<td><code>clock_t</code></td>
+<td><code>CLOCKS_PER_SEC</code></td>
+<td><code>clog</code></td>
+</tr>
+<tr>
+<td><code>clogf</code></td>
+<td><code>clogl</code></td>
+<td><code>compl</code></td>
+<td><code>complex</code></td>
+</tr>
+<tr>
+<td><code>conj</code></td>
+<td><code>conjf</code></td>
+<td><code>conjl</code></td>
+<td><code>copysign</code></td>
+</tr>
+<tr>
+<td><code>copysignf</code></td>
+<td><code>copysignl</code></td>
+<td><code>cos</code></td>
+<td><code>cosf</code></td>
+</tr>
+<tr>
+<td><code>cosl</code></td>
+<td><code>cosh</code></td>
+<td><code>coshf</code></td>
+<td><code>coshl</code></td>
+</tr>
+<tr>
+<td><code>cpow</code></td>
+<td><code>cpowf</code></td>
+<td><code>cpowl</code></td>
+<td><code>cproj</code></td>
+</tr>
+<tr>
+<td><code>cprojf</code></td>
+<td><code>cprojl</code></td>
+<td><code>creal</code></td>
+<td><code>crealf</code></td>
+</tr>
+<tr>
+<td><code>creall</code></td>
+<td><code>csin</code></td>
+<td><code>csinf</code></td>
+<td><code>csinh</code></td>
+</tr>
+<tr>
+<td><code>csinhf</code></td>
+<td><code>csinhl</code></td>
+<td><code>csinl</code></td>
+<td><code>csqrt</code></td>
+</tr>
+<tr>
+<td><code>csqrtf</code></td>
+<td><code>csqrtl</code></td>
+<td><code>ctan</code></td>
+<td><code>ctanf</code></td>
+</tr>
+<tr>
+<td><code>ctanl</code></td>
+<td><code>ctanh</code></td>
+<td><code>ctanhf</code></td>
+<td><code>ctanhl</code></td>
+</tr>
+<tr>
+<td><code>ctime</code></td>
+<td><code>CX_LIMITED_RANGE</code></td>
+<td><code>DBL_DIG</code></td>
+<td><code>DBL_EPSILON</code></td>
+</tr>
+<tr>
+<td><code>DBL_MAX</code></td>
+<td><code>DBL_MANT_DIG</code></td>
+<td><code>DBL_MAX_10_EXP</code></td>
+<td><code>DBL_MAX_EXP</code></td>
+</tr>
+<tr>
+<td><code>DBL_MIN</code></td>
+<td><code>DBL_MIN_10_EXP</code></td>
+<td><code>DBL_MIN_EXP</code></td>
+<td><code>DECIMAL_DIG</code></td>
+</tr>
+<tr>
+<td><code>difftime</code></td>
+<td><code>div</code></td>
+<td><code>div_t</code></td>
+<td><code>double_t</code></td>
+</tr>
+<tr>
+<td><code>EDOM</code></td>
+<td><code>EILSEQ</code></td>
+<td><code>EOF</code></td>
+<td><code>ERANGE</code></td>
+</tr>
+<tr>
+<td><code>erf</code></td>
+<td><code>erff</code></td>
+<td><code>erfl</code></td>
+<td><code>erfc</code></td>
+</tr>
+<tr>
+<td><code>erfcf</code></td>
+<td><code>erfcl</code></td>
+<td><code>errno</code></td>
+<td><code>exit</code></td>
+</tr>
+<tr>
+<td><code>EXIT_FAILURE</code></td>
+<td><code>EXIT_SUCCESS</code></td>
+<td><code>exp</code></td>
+<td><code>expf</code></td>
+</tr>
+<tr>
+<td><code>expl</code></td>
+<td><code>exp2</code></td>
+<td><code>exp2f</code></td>
+<td><code>exp2l</code></td>
+</tr>
+<tr>
+<td><code>expm1</code></td>
+<td><code>expm1f</code></td>
+<td><code>expm1l</code></td>
+<td><code>fabs</code></td>
+</tr>
+<tr>
+<td><code>fabsf</code></td>
+<td><code>fabsl</code></td>
+<td><code>false</code></td>
+<td><code>fclose</code></td>
+</tr>
+<tr>
+<td><code>fdim</code></td>
+<td><code>fdimf</code></td>
+<td><code>fdiml</code></td>
+<td><code>FE_ALL_EXCEPT</code></td>
+</tr>
+<tr>
+<td><code>FE_DFL_ENV</code></td>
+<td><code>FE_DIVBYZERO</code></td>
+<td><code>FE_DOWNWARD</code></td>
+<td><code>FE_INEXACT</code></td>
+</tr>
+<tr>
+<td><code>FE_INVALID</code></td>
+<td><code>FE_OVERFLOW</code></td>
+<td><code>FE_TONEAREST</code></td>
+<td><code>FE_TOWARDZERO</code></td>
+</tr>
+<tr>
+<td><code>FE_UNDERFLOW</code></td>
+<td><code>FE_UPWARD</code></td>
+<td><code>feclearexcept</code></td>
+<td><code>fegetenv</code></td>
+</tr>
+<tr>
+<td><code>fegetexceptflag</code></td>
+<td><code>feholdexcept</code></td>
+<td><code>fegetround</code></td>
+<td><code>feof</code></td>
+</tr>
+<tr>
+<td><code>FENV_ACCESS</code></td>
+<td><code>fenv_t</code></td>
+<td><code>feraiseexcept</code></td>
+<td><code>ferror</code></td>
+</tr>
+<tr>
+<td><code>fesetenv</code></td>
+<td><code>fesetexceptflag</code></td>
+<td><code>fesetround</code></td>
+<td><code>fetestexcept</code></td>
+</tr>
+<tr>
+<td><code>feupdateenv</code></td>
+<td><code>fexcept_t</code></td>
+<td><code>fflush</code></td>
+<td><code>fgetc</code></td>
+</tr>
+<tr>
+<td><code>fgetpos</code></td>
+<td><code>fgetwc</code></td>
+<td><code>fgetws</code></td>
+<td><code>fgets</code></td>
+</tr>
+<tr>
+<td><code>FILE</code></td>
+<td><code>FILENAME_MAX</code></td>
+<td><code>float_t</code></td>
+<td><code>floor</code></td>
+</tr>
+<tr>
+<td><code>floorf</code></td>
+<td><code>floorl</code></td>
+<td><code>FLT_DIG</code></td>
+<td><code>FLT_EPSILON</code></td>
+</tr>
+<tr>
+<td><code>FLT_EVAL_METHOD</code></td>
+<td><code>FLT_MANT_DIG</code></td>
+<td><code>FLT_MAX</code></td>
+<td><code>FLT_MAX_10_EXP</code></td>
+</tr>
+<tr>
+<td><code>FLT_MAX_EXP</code></td>
+<td><code>FLT_MIN</code></td>
+<td><code>FLT_MIN_10_EXP</code></td>
+<td><code>FLT_MIN_EXP</code></td>
+</tr>
+<tr>
+<td><code>FLT_RADIX</code></td>
+<td><code>FLT_ROUNDS</code></td>
+<td><code>fma</code></td>
+<td><code>fmaf</code></td>
+</tr>
+<tr>
+<td><code>fmax</code></td>
+<td><code>fmaxf</code></td>
+<td><code>fmaxl</code></td>
+<td><code>fmin</code></td>
+</tr>
+<tr>
+<td><code>fminf</code></td>
+<td><code>fminl</code></td>
+<td><code>fmod</code></td>
+<td><code>fmodf</code></td>
+</tr>
+<tr>
+<td><code>fmodl</code></td>
+<td><code>fopen</code></td>
+<td><code>FOPEN_MAX</code></td>
+<td><code>FP_CONTRACT</code></td>
+</tr>
+<tr>
+<td><code>FP_FAST_FMA</code></td>
+<td><code>FP_FAST_FMAF</code></td>
+<td><code>FP_FAST_FMAL</code></td>
+<td><code>FP_ILOGB0</code></td>
+</tr>
+<tr>
+<td><code>FP_ILOGBNAN</code></td>
+<td><code>FP_INFINITE</code></td>
+<td><code>FP_NAN</code></td>
+<td><code>FP_NORMAL</code></td>
+</tr>
+<tr>
+<td><code>FP_SUBNORMAL</code></td>
+<td><code>FP_ZERO</code></td>
+<td><code>fpclassify</code></td>
+<td><code>fputc</code></td>
+</tr>
+<tr>
+<td><code>fputs</code></td>
+<td><code>fpos_t</code></td>
+<td><code>fprintf</code></td>
+<td><code>fputwc</code></td>
+</tr>
+<tr>
+<td><code>fputws</code></td>
+<td><code>fread</code></td>
+<td><code>free</code></td>
+<td><code>freopen</code></td>
+</tr>
+<tr>
+<td><code>frexp</code></td>
+<td><code>frexpf</code></td>
+<td><code>frexpl</code></td>
+<td><code>fscanf</code></td>
+</tr>
+<tr>
+<td><code>fseek</code></td>
+<td><code>fsetpos</code></td>
+<td><code>ftell</code></td>
+<td><code>fwide</code></td>
+</tr>
+<tr>
+<td><code>fwprintf</code></td>
+<td><code>fwrite</code></td>
+<td><code>fwscanf</code></td>
+<td><code>getc</code></td>
+</tr>
+<tr>
+<td><code>getchar</code></td>
+<td><code>getenv</code></td>
+<td><code>gets</code></td>
+<td><code>getwc</code></td>
+</tr>
+<tr>
+<td><code>getwchar</code></td>
+<td><code>gmtime</code></td>
+<td><code>HUGE_VAL</code></td>
+<td><code>HUGE_VALF</code></td>
+</tr>
+<tr>
+<td><code>HUGE_VALL</code></td>
+<td><code>hypot</code></td>
+<td><code>hypotf</code></td>
+<td><code>hypotl</code></td>
+</tr>
+<tr>
+<td><code>I</code></td>
+<td><code>ilogb</code></td>
+<td><code>ilogbf</code></td>
+<td><code>ilogbl</code></td>
+</tr>
+<tr>
+<td><code>imaginary</code></td>
+<td><code>imaxdiv_t</code></td>
+<td><code>imaxabs</code></td>
+<td><code>imaxdiv</code></td>
+</tr>
+<tr>
+<td><code>INFINITY</code></td>
+<td><code>INT_FASTN_MIN</code></td>
+<td><code>INT_FASTN_MAX</code></td>
+<td><code>int_fastN_t</code></td>
+</tr>
+<tr>
+<td><code>INT_LEASTN_MIN</code></td>
+<td><code>INT_LEASTN_MAX</code></td>
+<td><code>int_leastN_t</code></td>
+<td><code>INT_MAX</code></td>
+</tr>
+<tr>
+<td><code>INT_MIN</code></td>
+<td><code>INTMAX_C</code></td>
+<td><code>INTMAX_MAX</code></td>
+<td><code>INTMAX_MIN</code></td>
+</tr>
+<tr>
+<td><code>intmax_t</code></td>
+<td><code>INTN_C</code></td>
+<td><code>INTN_MIN</code></td>
+<td><code>INTN_MAX</code></td>
+</tr>
+<tr>
+<td><code>intN_t</code></td>
+<td><code>intptr_t</code></td>
+<td><code>INTPTR_MIN</code></td>
+<td><code>INTPTR_MAX</code></td>
+</tr>
+<tr>
+<td><code>isalnum</code></td>
+<td><code>isalpha</code></td>
+<td><code>isblank</code></td>
+<td><code>iscntrl</code></td>
+</tr>
+<tr>
+<td><code>isdigit</code></td>
+<td><code>isfinite</code></td>
+<td><code>isgraph</code></td>
+<td><code>isgreater</code></td>
+</tr>
+<tr>
+<td><code>isgreaterequal</code></td>
+<td><code>isinf</code></td>
+<td><code>isless</code></td>
+<td><code>islessequal</code></td>
+</tr>
+<tr>
+<td><code>islessgreater</code></td>
+<td><code>islower</code></td>
+<td><code>isnan</code></td>
+<td><code>isnormal</code></td>
+</tr>
+<tr>
+<td><code>isprint</code></td>
+<td><code>ispunct</code></td>
+<td><code>isspace</code></td>
+<td><code>isunordered</code></td>
+</tr>
+<tr>
+<td><code>isupper</code></td>
+<td><code>iswalnum</code></td>
+<td><code>iswalpha</code></td>
+<td><code>iswblank</code></td>
+</tr>
+<tr>
+<td><code>iswcntrl</code></td>
+<td><code>iswctype</code></td>
+<td><code>iswdigit</code></td>
+<td><code>iswgraph</code></td>
+</tr>
+<tr>
+<td><code>iswlower</code></td>
+<td><code>iswprint</code></td>
+<td><code>iswpunct</code></td>
+<td><code>iswspace</code></td>
+</tr>
+<tr>
+<td><code>iswupper</code></td>
+<td><code>iswxdigit</code></td>
+<td><code>isxdigit</code></td>
+<td><code>jmp_buf</code></td>
+</tr>
+<tr>
+<td><code>L_tmpnam</code></td>
+<td><code>labs</code></td>
+<td><code>LC_ALL</code></td>
+<td><code>LC_COLLATE</code></td>
+</tr>
+<tr>
+<td><code>LC_CTYPE</code></td>
+<td><code>LC_MONETARY</code></td>
+<td><code>LC_NUMERIC</code></td>
+<td><code>LC_TIME</code></td>
+</tr>
+<tr>
+<td><code>LDBL_DIG</code></td>
+<td><code>LDBL_EPSILON</code></td>
+<td><code>LDBL_MANT_DIG</code></td>
+<td><code>LDBL_MAX</code></td>
+</tr>
+<tr>
+<td><code>LDBL_MAX_EXP</code></td>
+<td><code>LDBL_MAX_10_EXP</code></td>
+<td><code>LDBL_MIN</code></td>
+<td><code>LDBL_MIN_EXP</code></td>
+</tr>
+<tr>
+<td><code>LDBL_MIN_10_EXP</code></td>
+<td><code>ldexp</code></td>
+<td><code>ldexpf</code></td>
+<td><code>ldexpl</code></td>
+</tr>
+<tr>
+<td><code>ldiv</code></td>
+<td><code>ldiv_t</code></td>
+<td><code>lgamma</code></td>
+<td><code>lgammaf</code></td>
+</tr>
+<tr>
+<td><code>lgammal</code></td>
+<td><code>llabs</code></td>
+<td><code>lldiv</code></td>
+<td><code>lldiv_t</code></td>
+</tr>
+<tr>
+<td><code>LLONG_MAX</code></td>
+<td><code>LLONG_MIN</code></td>
+<td><code>llrint</code></td>
+<td><code>llrintf</code></td>
+</tr>
+<tr>
+<td><code>llrintl</code></td>
+<td><code>llround</code></td>
+<td><code>llroundf</code></td>
+<td><code>llroundl</code></td>
+</tr>
+<tr>
+<td><code>localeconv</code></td>
+<td><code>localtime</code></td>
+<td><code>log</code></td>
+<td><code>logf</code></td>
+</tr>
+<tr>
+<td><code>logl</code></td>
+<td><code>log10</code></td>
+<td><code>log10f</code></td>
+<td><code>log10l</code></td>
+</tr>
+<tr>
+<td><code>log1p</code></td>
+<td><code>log1pf</code></td>
+<td><code>log1pl</code></td>
+<td><code>log2</code></td>
+</tr>
+<tr>
+<td><code>log2f</code></td>
+<td><code>log2l</code></td>
+<td><code>logb</code></td>
+<td><code>logbf</code></td>
+</tr>
+<tr>
+<td><code>logbl</code></td>
+<td><code>LONG_MAX</code></td>
+<td><code>LONG_MIN</code></td>
+<td><code>longjmp</code></td>
+</tr>
+<tr>
+<td><code>lrint</code></td>
+<td><code>lrintf</code></td>
+<td><code>lrintl</code></td>
+<td><code>lround</code></td>
+</tr>
+<tr>
+<td><code>lroundf</code></td>
+<td><code>lroundl</code></td>
+<td><code>mal</code></td>
+<td><code>malloc</code></td>
+</tr>
+<tr>
+<td><code>MATH_ERREXCEPT</code></td>
+<td><code>math_errhandling</code></td>
+<td><code>MATH_ERRNO</code></td>
+<td><code>MB_CUR_MAX</code></td>
+</tr>
+<tr>
+<td><code>MB_LEN_MAX</code></td>
+<td><code>mblen</code></td>
+<td><code>mbrlen</code></td>
+<td><code>mbrtowc</code></td>
+</tr>
+<tr>
+<td><code>mbsinit</code></td>
+<td><code>mbstate_t</code></td>
+<td><code>mbstowcs</code></td>
+<td><code>mbsrtowcs</code></td>
+</tr>
+<tr>
+<td><code>mbtowc</code></td>
+<td><code>memchr</code></td>
+<td><code>memcmp</code></td>
+<td><code>memcpy</code></td>
+</tr>
+<tr>
+<td><code>memmove</code></td>
+<td><code>memset</code></td>
+<td><code>mktime</code></td>
+<td><code>modf</code></td>
+</tr>
+<tr>
+<td><code>modff</code></td>
+<td><code>modfl</code></td>
+<td><code>NAN</code></td>
+<td><code>nan</code></td>
+</tr>
+<tr>
+<td><code>nanf</code></td>
+<td><code>nanl</code></td>
+<td><code>NDEBUG</code></td>
+<td><code>nearbyint</code></td>
+</tr>
+<tr>
+<td><code>nearbyintf</code></td>
+<td><code>nearbyintl</code></td>
+<td><code>nextafter</code></td>
+<td><code>nextafterf</code></td>
+</tr>
+<tr>
+<td><code>nextafterl</code></td>
+<td><code>nexttoward</code></td>
+<td><code>nexttowardf</code></td>
+<td><code>nexttowardl</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td><code>not_eq</code></td>
+<td><code>NULL</code></td>
+<td><code>or</code></td>
+</tr>
+<tr>
+<td><code>or_eq</code></td>
+<td><code>offsetof</code></td>
+<td><code>perror</code></td>
+<td><code>pow</code></td>
+</tr>
+<tr>
+<td><code>powf</code></td>
+<td><code>powl</code></td>
+<td><code>PRIdN</code></td>
+<td><code>PRIiN</code></td>
+</tr>
+<tr>
+<td><code>PRIoN</code></td>
+<td><code>PRIuN</code></td>
+<td><code>PRIXN</code></td>
+<td><code>PRIxN</code></td>
+</tr>
+<tr>
+<td><code>PRIdLEASTN</code></td>
+<td><code>PRIdFASTN</code></td>
+<td><code>PRIdMAX</code></td>
+<td><code>PRIdPTR</code></td>
+</tr>
+<tr>
+<td><code>PRIiLEASTN</code></td>
+<td><code>PRIiFASTN</code></td>
+<td><code>PRIiMAX</code></td>
+<td><code>PRIiPTR</code></td>
+</tr>
+<tr>
+<td><code>printf</code></td>
+<td><code>PRIoLEASTN</code></td>
+<td><code>PRIoFASTN</code></td>
+<td><code>PRIoMAX</code></td>
+</tr>
+<tr>
+<td><code>PRIoPTR</code></td>
+<td><code>PRIuLEASTN</code></td>
+<td><code>PRIuFASTN</code></td>
+<td><code>PRIuMAX</code></td>
+</tr>
+<tr>
+<td><code>PRIuPTR</code></td>
+<td><code>PRIXLEASTN</code></td>
+<td><code>PRIxLEASTN</code></td>
+<td><code>PRIXFASTN</code></td>
+</tr>
+<tr>
+<td><code>PRIxFASTN</code></td>
+<td><code>PRIXMAX</code></td>
+<td><code>PRIxMAX</code></td>
+<td><code>PRIXPTR</code></td>
+</tr>
+<tr>
+<td><code>PRIxPTR</code></td>
+<td><code>PTRDIFF_MAX</code></td>
+<td><code>PTRDIFF_MIN</code></td>
+<td><code>ptrdiff_t</code></td>
+</tr>
+<tr>
+<td><code>putc</code></td>
+<td><code>putchar</code></td>
+<td><code>puts</code></td>
+<td><code>putwc</code></td>
+</tr>
+<tr>
+<td><code>putwchar</code></td>
+<td><code>qsort</code></td>
+<td><code>raise</code></td>
+<td><code>rand</code></td>
+</tr>
+<tr>
+<td><code>RAND_MAX</code></td>
+<td><code>realloc</code></td>
+<td><code>remainder</code></td>
+<td><code>remainderf</code></td>
+</tr>
+<tr>
+<td><code>remainderl</code></td>
+<td><code>remove</code></td>
+<td><code>remquo</code></td>
+<td><code>remquof</code></td>
+</tr>
+<tr>
+<td><code>remquol</code></td>
+<td><code>rename</code></td>
+<td><code>rewind</code></td>
+<td><code>rint</code></td>
+</tr>
+<tr>
+<td><code>rintf</code></td>
+<td><code>rintl</code></td>
+<td><code>round</code></td>
+<td><code>roundf</code></td>
+</tr>
+<tr>
+<td><code>roundl</code></td>
+<td><code>scalbn</code></td>
+<td><code>scalbnf</code></td>
+<td><code>scalbnl</code></td>
+</tr>
+<tr>
+<td><code>scalbln</code></td>
+<td><code>scalblnf</code></td>
+<td><code>scalblnl</code></td>
+<td><code>scanf</code></td>
+</tr>
+<tr>
+<td><code>SCHAR_MAX</code></td>
+<td><code>SCHAR_MIN</code></td>
+<td><code>SCNdN</code></td>
+<td><code>SCNdFASTN</code></td>
+</tr>
+<tr>
+<td><code>SCNdLEASTN</code></td>
+<td><code>SCNdMAX</code></td>
+<td><code>SCNdPTR</code></td>
+<td><code>SCNiN</code></td>
+</tr>
+<tr>
+<td><code>SCNiFASTN</code></td>
+<td><code>SCNiLEASTN</code></td>
+<td><code>SCNiMAX</code></td>
+<td><code>SCNiPTR</code></td>
+</tr>
+<tr>
+<td><code>SCNoN</code></td>
+<td><code>SCNoFASTN</code></td>
+<td><code>SCNoLEASTN</code></td>
+<td><code>SCNoMAX</code></td>
+</tr>
+<tr>
+<td><code>SCNoPTR</code></td>
+<td><code>SCNuN</code></td>
+<td><code>SCNuFASTN</code></td>
+<td><code>SCNuLEASTN</code></td>
+</tr>
+<tr>
+<td><code>SCNuMAX</code></td>
+<td><code>SCNuPTR</code></td>
+<td><code>SCNxN</code></td>
+<td><code>SCNxFASTN</code></td>
+</tr>
+<tr>
+<td><code>SCNxLEASTN</code></td>
+<td><code>SCNxMAX</code></td>
+<td><code>SCNxPTR</code></td>
+<td><code>SEEK_CUR</code></td>
+</tr>
+<tr>
+<td><code>SEEK_END</code></td>
+<td><code>SEEK_SET</code></td>
+<td><code>setbuf</code></td>
+<td><code>setjmp</code></td>
+</tr>
+<tr>
+<td><code>setlocale</code></td>
+<td><code>setvbuf</code></td>
+<td><code>SHRT_MAX</code></td>
+<td><code>SHRT_MIN</code></td>
+</tr>
+<tr>
+<td><code>SIG_ATOMIC_MAX</code></td>
+<td><code>SIG_ATOMIC_MIN</code></td>
+<td><code>sig_atomic_t</code></td>
+<td><code>SIG_DFL</code></td>
+</tr>
+<tr>
+<td><code>SIG_ERR</code></td>
+<td><code>SIG_IGN</code></td>
+<td><code>SIGABRT</code></td>
+<td><code>SIGFPE</code></td>
+</tr>
+<tr>
+<td><code>SIGILL</code></td>
+<td><code>SIGINT</code></td>
+<td><code>signal</code></td>
+<td><code>signbit</code></td>
+</tr>
+<tr>
+<td><code>SIGSEGV</code></td>
+<td><code>SIGTERM</code></td>
+<td><code>sin</code></td>
+<td><code>sinf</code></td>
+</tr>
+<tr>
+<td><code>sinl</code></td>
+<td><code>sinh</code></td>
+<td><code>sinhf</code></td>
+<td><code>sinhl</code></td>
+</tr>
+<tr>
+<td><code>SIZE_MAX</code></td>
+<td><code>size_t</code></td>
+<td><code>snprintf</code></td>
+<td><code>sprintf</code></td>
+</tr>
+<tr>
+<td><code>sqrt</code></td>
+<td><code>sqrtf</code></td>
+<td><code>sqrtl</code></td>
+<td><code>srand</code></td>
+</tr>
+<tr>
+<td><code>sscanf</code></td>
+<td><code>stderr</code></td>
+<td><code>stdin</code></td>
+<td><code>stdout</code></td>
+</tr>
+<tr>
+<td><code>strcat</code></td>
+<td><code>strchr</code></td>
+<td><code>strcmp</code></td>
+<td><code>strcoll</code></td>
+</tr>
+<tr>
+<td><code>strcpy</code></td>
+<td><code>strcspn</code></td>
+<td><code>strerror</code></td>
+<td><code>strftime</code></td>
+</tr>
+<tr>
+<td><code>strlen</code></td>
+<td><code>strncat</code></td>
+<td><code>strncmp</code></td>
+<td><code>strncpy</code></td>
+</tr>
+<tr>
+<td><code>strpbrk</code></td>
+<td><code>strrchr</code></td>
+<td><code>strspn</code></td>
+<td><code>strstr</code></td>
+</tr>
+<tr>
+<td><code>strtod</code></td>
+<td><code>strtof</code></td>
+<td><code>strtoimax</code></td>
+<td><code>strtok</code></td>
+</tr>
+<tr>
+<td><code>strtol</code></td>
+<td><code>strtold</code></td>
+<td><code>strtoll</code></td>
+<td><code>strtoul</code></td>
+</tr>
+<tr>
+<td><code>strtoull</code></td>
+<td><code>strtoumax</code></td>
+<td><code>strxfrm</code></td>
+<td><code>swprintf</code></td>
+</tr>
+<tr>
+<td><code>swscanf</code></td>
+<td><code>system</code></td>
+<td><code>tan</code></td>
+<td><code>tanf</code></td>
+</tr>
+<tr>
+<td><code>tanl</code></td>
+<td><code>tanh</code></td>
+<td><code>tanhf</code></td>
+<td><code>tanhl</code></td>
+</tr>
+<tr>
+<td><code>tgamma</code></td>
+<td><code>tgammaf</code></td>
+<td><code>tgammal</code></td>
+<td><code>time</code></td>
+</tr>
+<tr>
+<td><code>time_t</code></td>
+<td><code>TMP_MAX</code></td>
+<td><code>tmpfile</code></td>
+<td><code>tmpnam</code></td>
+</tr>
+<tr>
+<td><code>tolower</code></td>
+<td><code>toupper</code></td>
+<td><code>towlower</code></td>
+<td><code>towupper</code></td>
+</tr>
+<tr>
+<td><code>towctrans</code></td>
+<td><code>true</code></td>
+<td><code>trunc</code></td>
+<td><code>truncf</code></td>
+</tr>
+<tr>
+<td><code>truncl</code></td>
+<td><code>UCHAR_MAX</code></td>
+<td><code>UINT_FASTN_MAX</code></td>
+<td><code>uint_fastN_t</code></td>
+</tr>
+<tr>
+<td><code>UINT_LEASTN_MAX</code></td>
+<td><code>uint_leastN_t</code></td>
+<td><code>UINT_MAX</code></td>
+<td><code>UINTMAX_C</code></td>
+</tr>
+<tr>
+<td><code>UINTMAX_MAX</code></td>
+<td><code>uintmax_t</code></td>
+<td><code>UINTN_C</code></td>
+<td><code>UINTN_MAX</code></td>
+</tr>
+<tr>
+<td><code>uintN_t</code></td>
+<td><code>UINTPTR_MAX</code></td>
+<td><code>uintptr_t</code></td>
+<td><code>ULLONG_MAX</code></td>
+</tr>
+<tr>
+<td><code>ULONG_MAX</code></td>
+<td><code>ungetc</code></td>
+<td><code>ungetwc</code></td>
+<td><code>USHRT_MAX</code></td>
+</tr>
+<tr>
+<td><code>va_arg</code></td>
+<td><code>va_copy</code></td>
+<td><code>va_end</code></td>
+<td><code>va_list</code></td>
+</tr>
+<tr>
+<td><code>va_start</code></td>
+<td><code>vfprintf</code></td>
+<td><code>vfscanf</code></td>
+<td><code>vfwprintf</code></td>
+</tr>
+<tr>
+<td><code>vfwscanf</code></td>
+<td><code>vprintf</code></td>
+<td><code>vscanf</code></td>
+<td><code>vsnprintf</code></td>
+</tr>
+<tr>
+<td><code>vsprintf</code></td>
+<td><code>vsscanf</code></td>
+<td><code>vswprintf</code></td>
+<td><code>vswscanf</code></td>
+</tr>
+<tr>
+<td><code>vwprintf</code></td>
+<td><code>vwscanf</code></td>
+<td><code>WCHAR_MAX</code></td>
+<td><code>WCHAR_MIN</code></td>
+</tr>
+<tr>
+<td><code>wchar_t</code></td>
+<td><code>wcscat</code></td>
+<td><code>wcschr</code></td>
+<td><code>wcscmp</code></td>
+</tr>
+<tr>
+<td><code>wcscoll</code></td>
+<td><code>wcscpy</code></td>
+<td><code>wcscspn</code></td>
+<td><code>wcsftime</code></td>
+</tr>
+<tr>
+<td><code>wcslen</code></td>
+<td><code>wcsncat</code></td>
+<td><code>wcsncmp</code></td>
+<td><code>wcsncpy</code></td>
+</tr>
+<tr>
+<td><code>wcspbrk</code></td>
+<td><code>wcsrchr</code></td>
+<td><code>wcsrtombs</code></td>
+<td><code>wcsspn</code></td>
+</tr>
+<tr>
+<td><code>wcsstr</code></td>
+<td><code>wcstod</code></td>
+<td><code>wcstof</code></td>
+<td><code>wcstoimax</code></td>
+</tr>
+<tr>
+<td><code>wcstok</code></td>
+<td><code>wcstol</code></td>
+<td><code>wcstold</code></td>
+<td><code>wcstoll</code></td>
+</tr>
+<tr>
+<td><code>wcrtomb</code></td>
+<td><code>wcstombs</code></td>
+<td><code>wcstoul</code></td>
+<td><code>wcstoull</code></td>
+</tr>
+<tr>
+<td><code>wcstoumax</code></td>
+<td><code>wcsxfrm</code></td>
+<td><code>wctob</code></td>
+<td><code>wctomb</code></td>
+</tr>
+<tr>
+<td><code>wctrans</code></td>
+<td><code>wctrans_t</code></td>
+<td><code>wctype</code></td>
+<td><code>wctype_t</code></td>
+</tr>
+<tr>
+<td><code>WEOF</code></td>
+<td><code>WINT_MAX</code></td>
+<td><code>WINT_MIN</code></td>
+<td><code>wint_t</code></td>
+</tr>
+<tr>
+<td><code>wmemchr</code></td>
+<td><code>wmemcmp</code></td>
+<td><code>wmemcpy</code></td>
+<td><code>wmemmove</code></td>
+</tr>
+<tr>
+<td><code>wmemset</code></td>
+<td><code>wprintf</code></td>
+<td><code>wscanf</code></td>
+<td><code>xor</code></td>
+</tr>
+<tr>
+<td><code>xor_eq</code></td>
+<td><code>_Imaginary_I</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 04:23:43]</div>
+        <div style="text-align:right">Revision 2.2</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="appendix_a_common_examples.html#appendix-a-common-examples" class="navigation navigation-prev " aria-label="Previous page: APPENDIX A Common Examples">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="appendix_c_optimization_and_performance.html#appendix-c-optimization-and-performance" class="navigation navigation-next " aria-label="Next page: APPENDIX C Optimization and Performance">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"APPENDIX B Reserved Identifiers","level":"1.9","depth":1,"next":{"title":"APPENDIX C Optimization and Performance","level":"1.10","depth":1,"anchor":"#appendix-c-optimization-and-performance","path":"appendix_c_optimization_and_performance.md","ref":"appendix_c_optimization_and_performance.md#appendix-c-optimization-and-performance","articles":[]},"previous":{"title":"APPENDIX A Common Examples","level":"1.8","depth":1,"anchor":"#appendix-a-common-examples","path":"appendix_a_common_examples.md","ref":"appendix_a_common_examples.md#appendix-a-common-examples","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"appendix_b_reserved_identifiers.md","mtime":"2020-12-01T04:23:06.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T04:23:43.240Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

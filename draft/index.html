@@ -1,0 +1,1267 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>EDK II C Coding Standards Specification · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1_introduction.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./#edk-ii-c-coding-standards-specification">
+            
+                    
+                    EDK II C Coding Standards Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#11-abstract">
+            
+                    
+                    1.1 Abstract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#12-rationale">
+            
+                    
+                    1.2 Rationale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#13-scope">
+            
+                    
+                    1.3 Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#14-references">
+            
+                    
+                    1.4 References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1_introduction.html">
+            
+                <a href="1_introduction.html#15-glossary">
+            
+                    
+                    1.5 Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2_guiding_principles.html">
+            
+                <a href="2_guiding_principles.html#2-guiding-principles">
+            
+                    
+                    2 Guiding Principles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2_guiding_principles.html">
+            
+                <a href="2_guiding_principles.html#21-software-design">
+            
+                    
+                    2.1 Software Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2_guiding_principles.html">
+            
+                <a href="2_guiding_principles.html#22-principles-for-software-maintenance">
+            
+                    
+                    2.2 Principles for Software Maintenance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="2_guiding_principles.html">
+            
+                <a href="2_guiding_principles.html#23-additional-recommendations">
+            
+                    
+                    2.3 Additional Recommendations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#3-quick-reference">
+            
+                    
+                    3 Quick Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#31-naming">
+            
+                    
+                    3.1 Naming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#32-formatting">
+            
+                    
+                    3.2 Formatting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#33-files-general-rules">
+            
+                    
+                    3.3 Files: General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3_quick_reference.html">
+            
+                <a href="3_quick_reference.html#34-documentation">
+            
+                    
+                    3.4 Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#4-naming-conventions">
+            
+                    
+                    4 Naming Conventions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#41-general-naming-rules">
+            
+                    
+                    4.1 General Naming Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="4_naming_conventions/42_file_names.html">
+            
+                <a href="4_naming_conventions/42_file_names.html#42-file-names">
+            
+                    
+                    4.2 File Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="4_naming_conventions/43_identifiers.html">
+            
+                <a href="4_naming_conventions/43_identifiers.html#43-identifiers">
+            
+                    
+                    4.3 Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="4_naming_conventions/44_global_&_module_variables.html">
+            
+                <a href="4_naming_conventions/44_global_&_module_variables.html#44-global--module-variables">
+            
+                    
+                    4.4 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="4_naming_conventions/45_name_space_rules.html">
+            
+                <a href="4_naming_conventions/45_name_space_rules.html#45-name-space-rules">
+            
+                    
+                    4.5 Name Space Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5_source_files/">
+            
+                <a href="5_source_files/#5-source-files">
+            
+                    
+                    5 Source Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="5_source_files/">
+            
+                <a href="5_source_files/#51-general-rules">
+            
+                    
+                    5.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="5_source_files/52_spacing.html">
+            
+                <a href="5_source_files/52_spacing.html#52-spacing">
+            
+                    
+                    5.2 Spacing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="5_source_files/53_include_files.html">
+            
+                <a href="5_source_files/53_include_files.html#53-include-files">
+            
+                    
+                    5.3 Include Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="5_source_files/54_code_file_structure.html">
+            
+                <a href="5_source_files/54_code_file_structure.html#54-code-file-structure">
+            
+                    
+                    5.4 Code File Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="5_source_files/55_preprocessor_directives.html">
+            
+                <a href="5_source_files/55_preprocessor_directives.html#55-preprocessor-directives">
+            
+                    
+                    5.5 Preprocessor Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="5_source_files/56_declarations_and_types.html">
+            
+                <a href="5_source_files/56_declarations_and_types.html#56-declarations-and-types">
+            
+                    
+                    5.6 Declarations and Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="5_source_files/57_c_programming.html">
+            
+                <a href="5_source_files/57_c_programming.html#57-c-programming">
+            
+                    
+                    5.7 C Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="5_source_files/58_error_handling_and_assert.html">
+            
+                <a href="5_source_files/58_error_handling_and_assert.html#58-error-handling-and-assert">
+            
+                    
+                    5.8 Error Handling and ASSERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6_documenting_software/">
+            
+                <a href="6_documenting_software/#6-documenting-software">
+            
+                    
+                    6 Documenting Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="6_documenting_software/">
+            
+                <a href="6_documenting_software/#61-documentation-concepts">
+            
+                    
+                    6.1 Documentation Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="6_documenting_software/62_comments.html">
+            
+                <a href="6_documenting_software/62_comments.html#62-comments">
+            
+                    
+                    6.2 Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="6_documenting_software/63_what_not_to_comment.html">
+            
+                <a href="6_documenting_software/63_what_not_to_comment.html#63-what-not-to-comment">
+            
+                    
+                    6.3 What NOT to Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="6_documenting_software/64_what_you_must_comment.html">
+            
+                <a href="6_documenting_software/64_what_you_must_comment.html#64-what-you-must-comment">
+            
+                    
+                    6.4 What You Must Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="6_documenting_software/65_types_of_comments.html">
+            
+                <a href="6_documenting_software/65_types_of_comments.html#65-types-of-comments">
+            
+                    
+                    6.5 Types of Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="6_documenting_software/66_introducing_doxygen.html">
+            
+                <a href="6_documenting_software/66_introducing_doxygen.html#66-introducing-doxygen">
+            
+                    
+                    6.6 Introducing Doxygen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="6_documenting_software/67_how_doxygen_works.html">
+            
+                <a href="6_documenting_software/67_how_doxygen_works.html#67-how-doxygen-works">
+            
+                    
+                    6.7 How Doxygen Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="6_documenting_software/68_special_documentation_blocks.html">
+            
+                <a href="6_documenting_software/68_special_documentation_blocks.html#68-special-documentation-blocks">
+            
+                    
+                    6.8 Special Documentation Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="6_documenting_software/69_putting_documentation_after_members.html">
+            
+                <a href="6_documenting_software/69_putting_documentation_after_members.html#69-putting-documentation-after-members">
+            
+                    
+                    6.9 Putting Documentation after Members
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="6_documenting_software/610_special_commands.html">
+            
+                <a href="6_documenting_software/610_special_commands.html#610-special-commands">
+            
+                    
+                    6.10 Special Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="appendix_a_common_examples.html">
+            
+                <a href="appendix_a_common_examples.html#appendix-a-common-examples">
+            
+                    
+                    APPENDIX A Common Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="appendix_b_reserved_identifiers.html">
+            
+                <a href="appendix_b_reserved_identifiers.html#appendix-b-reserved-identifiers">
+            
+                    
+                    APPENDIX B Reserved Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="appendix_c_optimization_and_performance.html">
+            
+                <a href="appendix_c_optimization_and_performance.html#appendix-c-optimization-and-performance">
+            
+                    
+                    APPENDIX C Optimization and Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#table-1-common-opposites">
+            
+                    
+                    Table 1 Common Opposites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#table-2-efi-supported-abbreviations">
+            
+                    
+                    Table 2 EFI Supported Abbreviations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="4_naming_conventions/">
+            
+                <a href="4_naming_conventions/#table-3-efi-supported-acronyms">
+            
+                    
+                    Table 3 EFI Supported Acronyms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="4_naming_conventions/43_identifiers.html">
+            
+                <a href="4_naming_conventions/43_identifiers.html#table-4-reserved-keywords">
+            
+                    
+                    Table 4 Reserved Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="5_source_files/">
+            
+                <a href="5_source_files/#table-5-permissible-escape-sequences-isoiec-98991990-6134">
+            
+                    
+                    Table 5 Permissible Escape Sequences (ISO/IEC 9899:1990 6.1.3.4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="5_source_files/56_declarations_and_types.html">
+            
+                <a href="5_source_files/56_declarations_and_types.html#table-6-efi-data-types-slightly-modified-from-uefi-231">
+            
+                    
+                    Table 6 EFI Data Types (slightly modified from UEFI 2.3.1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="5_source_files/56_declarations_and_types.html">
+            
+                <a href="5_source_files/56_declarations_and_types.html#table-7-modifiers-for-common-efi-data-types-reference-the-uefi-specification-and-beyond-bios">
+            
+                    
+                    Table 7 Modifiers for Common EFI Data Types (reference the UEFI Specification and Beyond Bios)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="5_source_files/56_declarations_and_types.html">
+            
+                <a href="5_source_files/56_declarations_and_types.html#table-8-efi-constants">
+            
+                    
+                    Table 8 EFI Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="5_source_files/57_c_programming.html">
+            
+                <a href="5_source_files/57_c_programming.html#table-9-parameter-modifiers">
+            
+                    
+                    Table 9 Parameter Modifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="5_source_files/57_c_programming.html">
+            
+                <a href="5_source_files/57_c_programming.html#table-10-predicate-expression-examples">
+            
+                    
+                    Table 10 Predicate Expression Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="6_documenting_software/610_special_commands.html">
+            
+                <a href="6_documenting_software/610_special_commands.html#table-11-html-character-entities">
+            
+                    
+                    Table 11 HTML Character Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="6_documenting_software/610_special_commands.html">
+            
+                <a href="6_documenting_software/610_special_commands.html#table-12-html-commands">
+            
+                    
+                    Table 12 HTML Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >EDK II C Coding Standards Specification</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 04:23:43]</div>
+        <div style="text-align:right">Revision 2.2</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  README.md for EDK II C Coding Standards Specification
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<p><img src="media/TianocoreTitlePageLogo.jpg" width="300"></p>
+<h3 id="edk-ii-c-coding-standards-specification">EDK II C Coding Standards Specification</h3>
+<p><strong> DRAFT FOR REVIEW </strong></p>
+<p><strong> 12/01/2020 04:23:43 </strong></p>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Redistribution and use in source (original document form) and &apos;compiled&apos;
+forms (converted to PDF, epub, HTML and other formats) with or without
+modification, are permitted provided that the following conditions are met:</p>
+<ol>
+<li><p>Redistributions of source code (original document form) must retain the
+above copyright notice, this list of conditions and the following
+disclaimer as the first lines of this file unmodified.</p>
+</li>
+<li><p>Redistributions in compiled form (transformed to other DTDs, converted to
+PDF, epub, HTML and other formats) must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.</p>
+</li>
+</ol>
+<p>THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT &quot;AS IS&quot; AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>Copyright (c) 2006-2017, Intel Corporation. All rights reserved.</p>
+<h3 id="revision-history">Revision History</h3>
+<table>
+<thead>
+<tr>
+<th>Revision</th>
+<th>Revision History</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0.1</td>
+<td>First swag.</td>
+<td>6/23/00</td>
+</tr>
+<tr>
+<td>0.0.2</td>
+<td>Included feedback from team.</td>
+<td>8/3/00</td>
+</tr>
+<tr>
+<td>0.3</td>
+<td>Add comments.</td>
+<td>8/10/00</td>
+</tr>
+<tr>
+<td>0.3001</td>
+<td>Pre-vacation update, need to sync with new numbering process.</td>
+<td>9/11/00</td>
+</tr>
+<tr>
+<td>0.31</td>
+<td>Incorporated Sync 1 learnings.</td>
+<td>12/12/00</td>
+</tr>
+<tr>
+<td>0.32</td>
+<td>Completed TAT ARs.</td>
+<td>6/8/01</td>
+</tr>
+<tr>
+<td>0.33</td>
+<td>Added goto rules.</td>
+<td>8/16/01</td>
+</tr>
+<tr>
+<td>0.34</td>
+<td>Updated to match driver and Runtime Lib.</td>
+<td>11/15/01</td>
+</tr>
+<tr>
+<td>0.9</td>
+<td>Updated to Intel(R) Platform Innovation Framework for EFI. Added checklist appendix.</td>
+<td>1/8/04</td>
+</tr>
+<tr>
+<td>0.91</td>
+<td>Completed editing and formatting pass.</td>
+<td>3/3/04</td>
+</tr>
+<tr>
+<td>0.92</td>
+<td>Updated the structure declaration rules: Added section 4.8 and modified the checklist in Appendix A.</td>
+<td>4/8/04</td>
+</tr>
+<tr>
+<td>0.93</td>
+<td>Added some minor clarifications in section 3.1, 4.5, 7.1, and 10.</td>
+<td>9/14/04</td>
+</tr>
+<tr>
+<td>0.94</td>
+<td>Revised to accommodate Doxygen style commenting standards</td>
+<td>3/1/06</td>
+</tr>
+<tr>
+<td>0.50</td>
+<td>Change to new numbering scheme. Incorporate Review Comments. Editing and formatting.</td>
+<td>4/21/06</td>
+</tr>
+<tr>
+<td>0.51</td>
+<td>Changed to EDK II.</td>
+<td>7/13/06</td>
+</tr>
+<tr>
+<td>0.52</td>
+<td>Update rules to clarify areas of misinterpretation. Add copyright formatting rules.</td>
+<td>2/09/2010</td>
+</tr>
+<tr>
+<td>0.60</td>
+<td>Re-organize document and update to current rules.</td>
+<td>2/15/2010</td>
+</tr>
+<tr>
+<td>0.70</td>
+<td>Release for Review</td>
+<td>3/1/2010</td>
+</tr>
+<tr>
+<td>0.95</td>
+<td>Review comments incorporated, Release to Tech Pubs for Finalization</td>
+<td>3/10/2010</td>
+</tr>
+<tr>
+<td>1.00</td>
+<td>First full release</td>
+<td>3/15/2010</td>
+</tr>
+<tr>
+<td>1.01</td>
+<td>Restructure into book format.</td>
+<td>12/08/2011</td>
+</tr>
+<tr>
+<td>1.02</td>
+<td>Incorporate suggestions and trackers</td>
+<td>3/19/2012</td>
+</tr>
+<tr>
+<td></td>
+<td>Release For Review</td>
+<td>4/2/2012</td>
+</tr>
+<tr>
+<td></td>
+<td>Release</td>
+<td>4/16/2012</td>
+</tr>
+<tr>
+<td>1.03</td>
+<td>Update and incorporate requests and bug fixes. Remove &quot;Intel Confidential&quot; classification.</td>
+<td>9/11/2014</td>
+</tr>
+<tr>
+<td>1.50</td>
+<td>Release for Review</td>
+<td>9/26/2014</td>
+</tr>
+<tr>
+<td>1.80</td>
+<td>Incorporate US Review Comments</td>
+<td>10/10/2014</td>
+</tr>
+<tr>
+<td>1.85</td>
+<td>Incorporate PRC Review Comments</td>
+<td>10/24/2014</td>
+</tr>
+<tr>
+<td></td>
+<td>Release for Extended US &amp; PRC Review</td>
+<td>10/28/2014</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>Release</td>
+<td>11/14/2014</td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>DRAFT for REFORMAT</td>
+<td>10/30/2015</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Convert to Gitbook</td>
+<td>June 2017</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=425" target="_blank">#425</a> [CCS] clarify line breaking and indentation requirements for multi-line function calls</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=1656" target="_blank">#1656</a> Update all Wiki pages for the BSD+Patent license change with SPDX identifiers</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=607" target="_blank">#607</a> Document code comment requirements for spurious variable assignments</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 04:23:43]</div>
+        <div style="text-align:right">Revision 2.2</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                
+                <a href="1_introduction.html#1-introduction" class="navigation navigation-next navigation-unique" aria-label="Next page: 1 Introduction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"EDK II C Coding Standards Specification","level":"1.1","depth":1,"next":{"title":"1 Introduction","level":"1.2","depth":1,"anchor":"#1-introduction","path":"1_introduction.md","ref":"1_introduction.md#1-introduction","articles":[{"title":"1.1 Abstract","level":"1.2.1","depth":2,"anchor":"#11-abstract","path":"1_introduction.md","ref":"1_introduction.md#11-abstract","articles":[]},{"title":"1.2 Rationale","level":"1.2.2","depth":2,"anchor":"#12-rationale","path":"1_introduction.md","ref":"1_introduction.md#12-rationale","articles":[]},{"title":"1.3 Scope","level":"1.2.3","depth":2,"anchor":"#13-scope","path":"1_introduction.md","ref":"1_introduction.md#13-scope","articles":[]},{"title":"1.4 References","level":"1.2.4","depth":2,"anchor":"#14-references","path":"1_introduction.md","ref":"1_introduction.md#14-references","articles":[]},{"title":"1.5 Glossary","level":"1.2.5","depth":2,"anchor":"#15-glossary","path":"1_introduction.md","ref":"1_introduction.md#15-glossary","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-12-01T04:23:06.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T04:23:43.240Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
