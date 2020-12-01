@@ -1,0 +1,1488 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.7 C Programming · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="58_error_handling_and_assert.html" />
+    
+    
+    <link rel="prev" href="56_declarations_and_types.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-c-coding-standards-specification">
+            
+                    
+                    EDK II C Coding Standards Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#11-abstract">
+            
+                    
+                    1.1 Abstract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#12-rationale">
+            
+                    
+                    1.2 Rationale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#13-scope">
+            
+                    
+                    1.3 Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#14-references">
+            
+                    
+                    1.4 References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#15-glossary">
+            
+                    
+                    1.5 Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#2-guiding-principles">
+            
+                    
+                    2 Guiding Principles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#21-software-design">
+            
+                    
+                    2.1 Software Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#22-principles-for-software-maintenance">
+            
+                    
+                    2.2 Principles for Software Maintenance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#23-additional-recommendations">
+            
+                    
+                    2.3 Additional Recommendations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#3-quick-reference">
+            
+                    
+                    3 Quick Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#31-naming">
+            
+                    
+                    3.1 Naming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#32-formatting">
+            
+                    
+                    3.2 Formatting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#33-files-general-rules">
+            
+                    
+                    3.3 Files: General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#34-documentation">
+            
+                    
+                    3.4 Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#4-naming-conventions">
+            
+                    
+                    4 Naming Conventions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#41-general-naming-rules">
+            
+                    
+                    4.1 General Naming Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_naming_conventions/42_file_names.html">
+            
+                <a href="../4_naming_conventions/42_file_names.html#42-file-names">
+            
+                    
+                    4.2 File Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_naming_conventions/43_identifiers.html">
+            
+                <a href="../4_naming_conventions/43_identifiers.html#43-identifiers">
+            
+                    
+                    4.3 Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_naming_conventions/44_global_&_module_variables.html">
+            
+                <a href="../4_naming_conventions/44_global_&_module_variables.html#44-global--module-variables">
+            
+                    
+                    4.4 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_naming_conventions/45_name_space_rules.html">
+            
+                <a href="../4_naming_conventions/45_name_space_rules.html#45-name-space-rules">
+            
+                    
+                    4.5 Name Space Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./#5-source-files">
+            
+                    
+                    5 Source Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="./">
+            
+                <a href="./#51-general-rules">
+            
+                    
+                    5.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="52_spacing.html">
+            
+                <a href="52_spacing.html#52-spacing">
+            
+                    
+                    5.2 Spacing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="53_include_files.html">
+            
+                <a href="53_include_files.html#53-include-files">
+            
+                    
+                    5.3 Include Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="54_code_file_structure.html">
+            
+                <a href="54_code_file_structure.html#54-code-file-structure">
+            
+                    
+                    5.4 Code File Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="55_preprocessor_directives.html">
+            
+                <a href="55_preprocessor_directives.html#55-preprocessor-directives">
+            
+                    
+                    5.5 Preprocessor Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="56_declarations_and_types.html">
+            
+                <a href="56_declarations_and_types.html#56-declarations-and-types">
+            
+                    
+                    5.6 Declarations and Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="57_c_programming.html">
+            
+                <a href="57_c_programming.html#57-c-programming">
+            
+                    
+                    5.7 C Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="58_error_handling_and_assert.html">
+            
+                <a href="58_error_handling_and_assert.html#58-error-handling-and-assert">
+            
+                    
+                    5.8 Error Handling and ASSERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6_documenting_software/">
+            
+                <a href="../6_documenting_software/#6-documenting-software">
+            
+                    
+                    6 Documenting Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6_documenting_software/">
+            
+                <a href="../6_documenting_software/#61-documentation-concepts">
+            
+                    
+                    6.1 Documentation Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6_documenting_software/62_comments.html">
+            
+                <a href="../6_documenting_software/62_comments.html#62-comments">
+            
+                    
+                    6.2 Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6_documenting_software/63_what_not_to_comment.html">
+            
+                <a href="../6_documenting_software/63_what_not_to_comment.html#63-what-not-to-comment">
+            
+                    
+                    6.3 What NOT to Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6_documenting_software/64_what_you_must_comment.html">
+            
+                <a href="../6_documenting_software/64_what_you_must_comment.html#64-what-you-must-comment">
+            
+                    
+                    6.4 What You Must Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6_documenting_software/65_types_of_comments.html">
+            
+                <a href="../6_documenting_software/65_types_of_comments.html#65-types-of-comments">
+            
+                    
+                    6.5 Types of Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6_documenting_software/66_introducing_doxygen.html">
+            
+                <a href="../6_documenting_software/66_introducing_doxygen.html#66-introducing-doxygen">
+            
+                    
+                    6.6 Introducing Doxygen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../6_documenting_software/67_how_doxygen_works.html">
+            
+                <a href="../6_documenting_software/67_how_doxygen_works.html#67-how-doxygen-works">
+            
+                    
+                    6.7 How Doxygen Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../6_documenting_software/68_special_documentation_blocks.html">
+            
+                <a href="../6_documenting_software/68_special_documentation_blocks.html#68-special-documentation-blocks">
+            
+                    
+                    6.8 Special Documentation Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../6_documenting_software/69_putting_documentation_after_members.html">
+            
+                <a href="../6_documenting_software/69_putting_documentation_after_members.html#69-putting-documentation-after-members">
+            
+                    
+                    6.9 Putting Documentation after Members
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../6_documenting_software/610_special_commands.html">
+            
+                <a href="../6_documenting_software/610_special_commands.html#610-special-commands">
+            
+                    
+                    6.10 Special Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../appendix_a_common_examples.html">
+            
+                <a href="../appendix_a_common_examples.html#appendix-a-common-examples">
+            
+                    
+                    APPENDIX A Common Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../appendix_b_reserved_identifiers.html">
+            
+                <a href="../appendix_b_reserved_identifiers.html#appendix-b-reserved-identifiers">
+            
+                    
+                    APPENDIX B Reserved Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../appendix_c_optimization_and_performance.html">
+            
+                <a href="../appendix_c_optimization_and_performance.html#appendix-c-optimization-and-performance">
+            
+                    
+                    APPENDIX C Optimization and Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-1-common-opposites">
+            
+                    
+                    Table 1 Common Opposites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-2-efi-supported-abbreviations">
+            
+                    
+                    Table 2 EFI Supported Abbreviations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-3-efi-supported-acronyms">
+            
+                    
+                    Table 3 EFI Supported Acronyms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../4_naming_conventions/43_identifiers.html">
+            
+                <a href="../4_naming_conventions/43_identifiers.html#table-4-reserved-keywords">
+            
+                    
+                    Table 4 Reserved Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="./">
+            
+                <a href="./#table-5-permissible-escape-sequences-isoiec-98991990-6134">
+            
+                    
+                    Table 5 Permissible Escape Sequences (ISO/IEC 9899:1990 6.1.3.4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="56_declarations_and_types.html">
+            
+                <a href="56_declarations_and_types.html#table-6-efi-data-types-slightly-modified-from-uefi-231">
+            
+                    
+                    Table 6 EFI Data Types (slightly modified from UEFI 2.3.1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="56_declarations_and_types.html">
+            
+                <a href="56_declarations_and_types.html#table-7-modifiers-for-common-efi-data-types-reference-the-uefi-specification-and-beyond-bios">
+            
+                    
+                    Table 7 Modifiers for Common EFI Data Types (reference the UEFI Specification and Beyond Bios)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="56_declarations_and_types.html">
+            
+                <a href="56_declarations_and_types.html#table-8-efi-constants">
+            
+                    
+                    Table 8 EFI Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="57_c_programming.html">
+            
+                <a href="57_c_programming.html#table-9-parameter-modifiers">
+            
+                    
+                    Table 9 Parameter Modifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="57_c_programming.html">
+            
+                <a href="57_c_programming.html#table-10-predicate-expression-examples">
+            
+                    
+                    Table 10 Predicate Expression Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../6_documenting_software/610_special_commands.html">
+            
+                <a href="../6_documenting_software/610_special_commands.html#table-11-html-character-entities">
+            
+                    
+                    Table 11 HTML Character Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../6_documenting_software/610_special_commands.html">
+            
+                <a href="../6_documenting_software/610_special_commands.html#table-12-html-commands">
+            
+                    
+                    Table 12 HTML Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5.7 C Programming</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="text-align:right">Revision 2.20</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  5.7 C Programming
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="57-c-programming">5.7 C Programming</h2>
+<h3 id="571-function-definition-layout">5.7.1 Function Definition Layout</h3>
+<p>Every function should be constructed to the conventions described in this
+section.</p>
+<h4 id="5711-precede-the-function-with-a-doxygen-style-comment-block">5.7.1.1 Precede the function with a Doxygen style comment block.</h4>
+<p>The function header comment block must describe the intent and purpose of the
+function, parameters used, and return values.</p>
+<h4 id="5712-the-line-immediately-following-the-function-header-comment-block-optionally-specifies-the-storage-class-of-the-function">5.7.1.2 The line immediately following the function header comment block optionally specifies the storage class of the function.</h4>
+<p>If the storage class is not specified, the return type will be on the first
+line following the comment block.</p>
+<h4 id="5713-the-next-line-of-the-function-definition-must-specify-the-functions-return-type">5.7.1.3 The next line of the function definition must specify the function&apos;s return type.</h4>
+<p>If the function does not return a value, this line must contain <code>VOID</code>.</p>
+<h4 id="5714-the-next-line-contains-any-optional-functional-modifiers">5.7.1.4 The next line contains any optional functional modifiers.</h4>
+<p>For example, <code>EFIAPI</code>, or other valid modifiers.</p>
+<h4 id="5715-the-next-line-contains-the-function-name-left-justified-followed-by-the-beginning-of-the-parameter-list-">5.7.1.5 The next line contains the function name, left justified, followed by the beginning of the parameter list, &quot;(.&quot;</h4>
+<p>No parameters are allowed on this line. If no parameters are present, it is
+acceptable to place the closing parenthesis on the same line, &quot;<code>(VOID)</code>&quot;.</p>
+<h4 id="5716-a-function-that-takes-no-parameters-shall-be-declared-with-void-as-the-parameter-list">5.7.1.6 A function that takes no parameters shall be declared with VOID as the parameter list.</h4>
+<p>Declaring a function with an empty parameter list, <code>()</code>, is prohibited.</p>
+<h4 id="5717-the-next-lines-contain-parameters">5.7.1.7 The next lines contain parameters.</h4>
+<p>Each line will contain a single argument and will start indented two spaces
+(one tab stop). Type and argument columns should be aligned to maximize
+readability and should include appropriate spacing to ensure this alignment. No
+comments are allowed in this region. Parameters are documented clearly in the
+function header comment block.</p>
+<h4 id="5718-the-closing-parenthesis-is-on-its-own-line-and-is-also-indented-two-spaces">5.7.1.8 The closing parenthesis is on its own line and is also indented two spaces.</h4>
+<p>A valid exception exists if the function has no parameters.</p>
+<h4 id="5719-function-prototypes-have-the-same-form-as-function-definitions-with-the-exception-of-requiring-a-semicolon-after-the-closing-parenthesis-of-the-parameter-list">5.7.1.9 Function prototypes have the same form as function definitions, with the exception of requiring a semicolon after the closing parenthesis of the parameter list.</h4>
+<h4 id="57110-the-opening-brace-of-the-function-body-is-alone-on-the-next-line">5.7.1.10 The opening brace of the function body is alone on the next line.</h4>
+<p>Both the opening and closing brace of the function body must be aligned in the
+left most column. All other lines of the function body are indented in
+multiples of two spaces.</p>
+<pre><code class="lang-c"><span class="hljs-comment">/** Brief and Detailed Descriptions.
+
+  @param[in]      Arg1  Description of Arg1.
+  @param[in]      Arg2  Description of Arg2, which is optional.
+  @param[out]     Arg3  Description of Arg3.
+  @param[in,out]  Arg4  Description of Arg4.
+
+  @retval  EFI_SUCCESS   Description of what EFI_SUCCESS means.
+  @retval  !EFI_SUCCESS  Failure.
+
+--*/</span>
+<span class="hljs-function">EFI_STATUS
+EFIAPI
+<span class="hljs-title">FooName</span> <span class="hljs-params">(
+  IN UINTN      Arg1,
+  IN UINTN      Arg2, OPTIONAL
+  OUT UINTN     *Arg3,
+  IN OUT UINTN  *Arg4
+  )</span></span>;
+{
+  UINTN Local;
+  ...
+}
+</code></pre>
+<h4 id="57111-each-argument-variables-type-specification-should-be-preceded-by-in-andor-out-modifiers">5.7.1.11 Each argument variable&apos;s type specification should be preceded by IN and/or OUT modifiers.</h4>
+<p>The modifiers are used to indicate whether the argument is an input or output
+variable. It is strongly suggested that the <code>IN</code> variables are first and <code>OUT</code>
+variables come next. If data is both passed in and passed out through a
+variable, then it should be marked as both <code>IN</code> and <code>OUT</code>. A buffer that is
+passed into a routine that modifies the contents of the buffer is marked as
+<code>IN</code> and <code>OUT</code>. &quot;Parameter Modifiers&quot; below describes the usage of the <code>IN</code> and
+<code>OUT</code> modifiers.</p>
+<p>The <code>IN</code> and <code>OUT</code> modifiers may be omitted if the mandatory <code>@param[in,out]</code>
+descriptions are provided in the function header comment.</p>
+<h6 id="table-9-parameter-modifiers">Table 9 Parameter Modifiers</h6>
+<table>
+<thead>
+<tr>
+<th>Mnemonic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IN</code></td>
+<td>Passed by value. For C, this modifier is any argument whose name <strong>is not</strong> preceded by an asterisk (*).</td>
+</tr>
+<tr>
+<td><code>IN</code></td>
+<td>Passed by reference, and referenced data <strong>is not</strong> modified by the routine. An asterisk precedes the argument name.</td>
+</tr>
+<tr>
+<td><code>OUT</code></td>
+<td>Passed by reference, and the referenced data <strong>is</strong> modified by the routine. The passed-in state of the referenced data is not used by the routine.</td>
+</tr>
+<tr>
+<td><code>IN OUT</code></td>
+<td>Passed by reference, and the passed-in referenced data is consumed and then modified by the routine.</td>
+</tr>
+<tr>
+<td><code>OPTIONAL</code></td>
+<td>Indicates that if a pointer argument is <code>NULL</code>, it is not present. If the value is not <code>NULL</code>, then it is a valid argument and may be used.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="57112-the-body-of-a-function-is-contained-within-open-and-close-braces-that-must-be-in-the-first-column">5.7.1.12 The body of a function is contained within open and close braces that must be in the first column.</h4>
+<h4 id="57113-file-scope-data-definitions-must-be-the-first-code-in-a-module">5.7.1.13 File-Scope data definitions must be the first code in a module.</h4>
+<p>The type definition must start indented and be followed by the variable name
+with at least one indent between the two. Each variable name must have its own
+line; do not use a comma to separate multiple declarations. Do not comment data
+declarations; they should contain selfdescribing names. If comments are
+required for complex data declarations, place the comments in the include file
+that defines the complex data type, or make comments in the routine description
+block. This restriction does not apply to the members of structures, unions, or
+enums.</p>
+<h4 id="57114-file-scope-data-definitions-appearing-anywhere-but-at-the-beginning-of-the-module-are-illegal">5.7.1.14 File-Scope Data definitions appearing anywhere but at the beginning of the module are illegal.</h4>
+<h4 id="57115-function-headings">5.7.1.15 Function Headings</h4>
+<h5 id="571151-every-new-function-created-as-part-of-edk-ii-must-have-a-function-header-comment-block-immediately-preceding-the-function-definition">5.7.1.15.1 Every new function created as part of EDK II must have a function header comment block immediately preceding the function definition.</h5>
+<p>The function header comment block takes the form shown in the example below.</p>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+  Brief description of the function&apos;s purpose.
+
+  Detailed description of the function&apos;s purpose and how it
+  works. Describe algorithms, side-effects, or other attributes
+  of the function that would be of use to a programmer unfamiliar
+  with the code.
+
+  @param[in] Arg1  Description of Arg1 This can span multiple
+                   lines if needed.
+  @param[in] Arg2  Description of Arg2.
+
+  @retval  EFI_SUCCESS  Procedure returned successfully.
+  @retval  VALUE        Line for each possible return value.
+**/</span>
+<span class="hljs-function">EFI_STATUS
+<span class="hljs-title">Foo</span> <span class="hljs-params">(
+  IN UINTN  Arg1,
+  IN UINTN  Arg2
+  )</span>
+</span>{
+  <span class="hljs-comment">// Function body</span>
+}
+</code></pre>
+<h5 id="571152-function-comment-headings-must-be-present-in-both-the-c-file-containing-the-function-implementation-and-in-the-h-file-containing-the-function-prototype">5.7.1.15.2 Function comment headings must be present in both the .c file containing the function implementation and in the .h file containing the function prototype.</h5>
+<p>The function comment heading in the .c file shall, at a minimum, be a
+duplicate of the heading in the include file. In all cases, the function
+comment heading in the include file is the authoritative source. Function
+comment headings in .c files may contain implementation specific comments which
+are not permitted in the <code>.h</code> file.</p>
+<h5 id="571153-any-function-that-is-shared-must-have-the-function-prototype-in-a-shared-h-file">5.7.1.15.3 Any function that is shared must have the function prototype in a shared .h file.</h5>
+<p>Private functions may be declared in the .c file implementing them if they
+are not used in any other file. All such private function declarations must be
+present at the beginning of the <code>.c</code> file, before any function implementations
+and after global data.</p>
+<h5 id="571154-all-public-types-macros-and-declarations-for-a-module-shall-be-in-a-single-include-file-resident-in-the-hierarchy-of-the-top-level-include-directory-of-the-package-the-module-is-part-of">5.7.1.15.4 All public types, macros, and declarations for a module shall be in a single include file resident in the hierarchy of the top-level include directory of the package the module is part of.</h5>
+<h3 id="572-predicate-expressions">5.7.2 Predicate Expressions</h3>
+<h4 id="5721-boolean-values-variable-type-boolean-do-not-require-explicit-comparisons-to-true-or-false">5.7.2.1 Boolean values, variable type <code>BOOLEAN</code>, do not require explicit comparisons to <code>TRUE</code> or <code>FALSE</code>.</h4>
+<p>Non-Boolean comparisons must use a compare operator (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt; &gt;=</code>,
+<code>&lt;=</code>).</p>
+<h4 id="5722-a-comparison-of-any-pointer-to-zero-must-be-done-via-the-null-type">5.7.2.2 A comparison of any pointer to zero must be done via the <code>NULL</code> type.</h4>
+<p>&quot;Predicate Expression Examples&quot; below shows examples using the following:</p>
+<pre><code class="lang-c">BOOLEAN Done;
+UINTN Index;
+VOID *Ptr;
+</code></pre>
+<h6 id="table-10-predicate-expression-examples">Table 10 Predicate Expression Examples</h6>
+<table>
+<thead>
+<tr>
+<th>Incorrect</th>
+<th>Correct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if (Index) {</code></td>
+<td><code>if (Index != 0) {</code></td>
+</tr>
+<tr>
+<td><code>if (!Index) {</code></td>
+<td><code>if (Index == 0) {</code></td>
+</tr>
+<tr>
+<td><code>if (Done == TRUE) {</code></td>
+<td><code>if (Done) {</code></td>
+</tr>
+<tr>
+<td><code>if (Done == FALSE) {</code></td>
+<td><code>if (!Done) {</code></td>
+</tr>
+<tr>
+<td><code>if (Ptr) {</code></td>
+<td><code>if (Ptr != NULL) {</code></td>
+</tr>
+<tr>
+<td><code>if (Ptr ==0) {</code></td>
+<td><code>if (Ptr == NULL) {</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="5723-comparison-of-unsigned-integer-types-to-be-0-is-permitted">5.7.2.3 Comparison of unsigned integer types to be &gt;=0 is permitted.</h4>
+<p>There has been some controversy on this since unsigned integers are always &gt;=0,
+and some compilers will emit a warning when this type of construct is seen.
+This is perfectly valid code and, with some compilers, is needed for limit
+checking against enumerated types. These compilers will assign the type to the
+enum based upon the range of values the enum is assigned at compile time.</p>
+<pre><code>if ((foo &gt;= 0) &amp;&amp;
+    (foo &lt; MaxVal))
+{ ...
+</code></pre><p>If one wants to be perfectly safe in their comparison, the potentially unsigned
+term can be cast to a signed integer type of sufficient size; if the range of
+possible values is known. <code>if ((INTN)foo &gt;= 0) { ...</code></p>
+<h4 id="5724-the-ordering-of-terms-in-predicate-expressions-may-impact-performance-significantly">5.7.2.4 The ordering of terms in predicate expressions may impact performance significantly.</h4>
+<p>This is because only enough of the expression has to be evaluated to determine
+the outcome. For example, the first term in an OR expression that evaluates to
+<code>TRUE</code> is sufficient to determine that the entire OR expression will be <code>TRUE</code>.</p>
+<p>The following code sample consists of a predicate expression within a for loop.
+The predicate expression is a compound AND expression with four terms. Each
+term is itself a simple predicate expression.</p>
+<p>This is a real example from a previous version of the EDK II code and was used
+in the implementation of the PERF_END functionality. It finds the first open
+(EndTimeStamp is zero) performance trace record matching the Handle, Token, and
+Module parameters of a PERF_END invocation.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">for</span> (Index = <span class="hljs-number">0</span>; Index &lt; NumberOfEntries; Index++) {
+  <span class="hljs-keyword">if</span> (( LogEntryArray[Index].Handle == (EFI_PHYSICAL_ADDRESS)(UINTN) Handle)
+       &amp;&amp; AsciiStrnCmp (LogEntryArray[Index].Token, Token, PEI_PERFORMANCE_STRING_LENGTH) == <span class="hljs-number">0</span>
+       &amp;&amp; AsciiStrnCmp (LogEntryArray[Index].Module, Module, PEI_PERFORMANCE_STRING_LENGTH) == <span class="hljs-number">0</span>
+       &amp;&amp; LogEntryArray[Index].EndTimeStamp == <span class="hljs-number">0</span>
+     )
+  {
+    <span class="hljs-keyword">break</span>; <span class="hljs-comment">// Exit the enclosing for loop.</span>
+  }
+}
+</code></pre>
+<p>While there is nothing really wrong with this code, a little knowledge of the
+data it will be working on will allow us to significantly speed things up.
+Again taking from a real-world example:</p>
+<ul>
+<li><p>NumberOfEntries = 25,172</p>
+</li>
+<li><p>Target entry is at Index 25,159</p>
+</li>
+<li><p>There are 532 completed measurement records with the same Handle, Token, and
+Module values prior to the target.</p>
+</li>
+<li><p>There are 6 measurement records with the same Handle and different Token and
+Module values prior to the target.</p>
+</li>
+<li><p>There are 25,157 completed entries prior to the target.</p>
+</li>
+</ul>
+<p>From this information, we can see that the terms, in order of importance, are:</p>
+<ol>
+<li><p>EndTimeStamp 1 match (2 max over life of a session)</p>
+</li>
+<li><p>Handle 538 matches</p>
+</li>
+<li><p>Module 532 matches</p>
+</li>
+<li><p>Token 532 matches</p>
+</li>
+</ol>
+<p>We also can determine that this ordering is valid for any measurement.
+Re-ordering the predicate expression using this information produces:</p>
+<pre><code class="lang-c"><span class="hljs-keyword">for</span> (Index = <span class="hljs-number">0</span>; Index &lt; NumberOfEntries; Index++) {
+  <span class="hljs-keyword">if</span> ( LogEntryArray[Index].EndTimeStamp == <span class="hljs-number">0</span>
+       &amp;&amp; LogEntryArray[Index].Handle == (EFI_PHYSICAL_ADDRESS)(UINTN) <span class="hljs-function">Handle
+       &amp;&amp; <span class="hljs-title">AsciiStrnCmp</span> <span class="hljs-params">(LogEntryArray[Index].Module, Module, PEI_PERFORMANCE_STRING_LENGTH)</span> </span>== <span class="hljs-number">0</span>
+       &amp;&amp; AsciiStrnCmp (LogEntryArray[Index].Token, Token, PEI_PERFORMANCE_STRING_LENGTH) == <span class="hljs-number">0</span>
+     )
+  {
+    <span class="hljs-keyword">break</span>; <span class="hljs-comment">// Exit the enclosing for loop.</span>
+  }
+}
+</code></pre>
+<p>The new ordering results in 538 fewer 64-bit integer comparisons and 1,069
+fewer string comparisons for this single PERF_END invocation. Considering that
+there will be 25,170 PERF_END invocations one can see how the savings add up to
+a sizable amount: around 2.7 seconds if the string comparisons only took 100ns
+each.</p>
+<h3 id="573-flow-control-statements">5.7.3 Flow Control Statements</h3>
+<h4 id="5731-the-body-of-looping-statements-must-be-compound-statements">5.7.3.1 The body of looping statements must be compound statements.</h4>
+<p>The <code>if</code>, <code>for</code>, <code>do</code>, and <code>while</code> statements shall use a compound statement as
+their bodies, even if it is necessary to use a null compound.</p>
+<h4 id="5732-null-compound-statements-shall-occupy-three-source-lines">5.7.3.2 Null compound statements shall occupy three source lines.</h4>
+<p>The opening brace shall be on the same line as the controlling keyword,
+followed by a line consisting of a properly indented semicolon, then closed
+with a closing brace, aligned in the same column as the opening keyword, as the
+first non-white-space character on the third line.</p>
+<h4 id="5733-any-loop-that-contains-no-code-in-the-body-must-use-a-null-compound-statement-as-the-body">5.7.3.3 Any loop that contains no code in the body must use a null compound statement as the body.</h4>
+<p>For example, the following statement has a null compound for its body.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">for</span> (Index = <span class="hljs-number">0</span>; Index &lt; MAX_INDEX; Foo[Index] = Index++) {
+  ;
+}
+</code></pre>
+<p>Avoid this type of construct because it is harder to read than other control
+structures.</p>
+<h4 id="5734-if-statements">5.7.3.4 if Statements</h4>
+<h5 id="57341-the-if-statement-shall-be-followed-by-a-space-and-then-the-open-parenthesis">5.7.3.4.1 The if statement shall be followed by a space and then the open parenthesis.</h5>
+<ul>
+<li><p>The open parenthesis is followed by a conditional (predicate) expression and
+a close parenthesis.</p>
+</li>
+<li><p>There is a space after the close parenthesis followed by an open brace.</p>
+</li>
+<li><p>The code body follows and is indented by two spaces.</p>
+</li>
+<li><p>The close bracket is on its own line and indented to the same level as the if.</p>
+</li>
+</ul>
+<p>The following is the allowed if construct:</p>
+<pre><code class="lang-c"><span class="hljs-keyword">if</span> (TRUE) {
+  IamTheCode ();
+}
+</code></pre>
+<h5 id="57342-when-an-else-is-used-it-may-start-on-the-same-line-as-the-close-brace-of-the-if-or-be-on-the-following-line-and-aligned-with-the-closing-brace">5.7.3.4.2 When an else is used, it may start on the same line as the close brace of the if, or be on the following line and aligned with the closing brace.</h5>
+<ul>
+<li><p>A single space must separate <code>else</code> from the close and open braces.</p>
+</li>
+<li><p>An open brace always follows the <code>else</code>.</p>
+</li>
+</ul>
+<p>The following are the allowed <code>if</code> and <code>else</code> constructs:</p>
+<pre><code class="lang-c"><span class="hljs-keyword">if</span> (EXPR_1) {
+  IamTheCode ();
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (EXPR_2) {
+  IamTheCode ();
+}
+<span class="hljs-keyword">else</span> { <span class="hljs-comment">// Alternative format</span>
+  IamTheCode ();
+}
+</code></pre>
+<h4 id="5735-while-and-do---while-statements">5.7.3.5 while and do - while Statements</h4>
+<p><code>while</code> statements execute their body zero or more times depending upon the
+result of a predicate expression. The expression is evaluated at the beginning
+of the loop and the body is executed if the expression evaluates to <code>TRUE</code>. Code
+must be constructed so that nothing outside of the while loop is dependent upon
+the body of the loop having been executed.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">while</span> (TRUE) {
+  IamTheCode ();
+}
+</code></pre>
+<p>For those cases where the body of the loop must be executed at least once,
+there is the do-while statement. In this statement, the predicate is evaluated
+at the end of the loop, with the statement&apos;s body being re-executed as long as
+the predicate evaluates to <code>TRUE</code>.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">do</span> {
+  IamTheCode ();
+} <span class="hljs-keyword">while</span> (TRUE);
+</code></pre>
+<h4 id="5736-for-statements">5.7.3.6 for Statements</h4>
+<p>A <code>for</code> loop occupies a minimum of three lines. It is comprised of the <code>for</code>
+keyword followed by three expressions within parentheses, followed by a
+compound statement. The three expressions within parentheses are separated by
+semicolons, &apos;;&apos;, and consist of the initialization, conditional, and increment
+expressions. Any one or combination of these expressions may be omitted if
+needed.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">for</span> (Index = <span class="hljs-number">0</span>; Index &lt; MAX_INDEX; Index++) {
+  IamTheCode (Index);
+}
+</code></pre>
+<h4 id="5737-switch-statements">5.7.3.7 switch Statements</h4>
+<p>The following is a switch statement:</p>
+<pre><code class="lang-c"><span class="hljs-keyword">switch</span> (Variable) {
+<span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+  IamTheCode ();
+  <span class="hljs-keyword">break</span>;
+
+<span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+  IamTheCode ();
+  <span class="hljs-keyword">break</span>;
+
+<span class="hljs-keyword">default</span>:
+  IamTheCode ();
+  <span class="hljs-keyword">break</span>;
+};
+</code></pre>
+<p>The case statements are indented either zero tab stops or one tab stop and the
+bodies of each case one tab stop from the case.</p>
+<p>The closing brace of the switch statement should be in the same column as the
+&apos;<code>s</code>&apos; in the <code>switch</code> keyword.</p>
+<p>Always include the <code>default</code> case. It should always end with a <code>break</code>
+statement, even if the <code>break</code> is the last thing before the closing brace.</p>
+<p>The indenting of the case statements should be consistent with all other
+files in the module containing the new .c file. Use the legacy, zero indent,
+style if any other file within the module uses that style, otherwise you may
+indent a single tab stop.</p>
+<p>A descriptive comment is required in cases where the intention is for a
+preceding <code>case</code> to fall through to the next <code>case</code>. That is to say, a
+descriptive comment is required where there is no <code>break</code> preceding the second
+or beyond <code>case</code> in a <code>switch</code> block.</p>
+<h4 id="5738-goto-statements-should-not-be-used-in-general">5.7.3.8 Goto Statements should not be used (in general)</h4>
+<p>In almost all cases, it is possible to write the code so that a <code>goto</code> is not
+needed. If a <code>goto</code> is used, be ready to defend it during review.</p>
+<p>It is common to use <code>goto</code> for error handling and thus, exiting a routine in an
+error case is the only legal use of a <code>goto</code>. A <code>goto</code> allows the error exit
+code to be contained in one place in the routine. This one place reduces
+software life cycle maintenance issues, as there can be one copy of error
+cleanup code per routine.</p>
+<p>The <code>goto</code> follows the normal rules for C code. The label must be indented one
+level less than the code it is marking.</p>
+<pre><code class="lang-c">Status = IAmTheCode ();
+<span class="hljs-keyword">if</span> (EFI_ERROR (Status)) {
+  <span class="hljs-keyword">goto</span> ErrorExit;
+}
+
+IDoTheWork ();
+
+ErrorExit:
+  <span class="hljs-keyword">return</span> Status;
+</code></pre>
+<p>The above example could have been rewritten as below, eliminating the need for
+a <code>goto</code>.</p>
+<pre><code class="lang-c">Status = IAmTheCode ();
+<span class="hljs-keyword">if</span> (! EFI_ERROR (Status)) {
+  IDoTheWork ();
+}
+<span class="hljs-keyword">return</span> Status;
+</code></pre>
+<h3 id="574-structure-definitions">5.7.4 Structure Definitions</h3>
+<h4 id="5741-structure-reference">5.7.4.1 Structure Reference</h4>
+<pre><code class="lang-c"><span class="hljs-comment">/** Sample reference to a structure.
+ *
+ * Sample code showing a reference to a structure as a
+ * function parameter. This function should be called as:
+ * FooName (&amp;Structure);
+ *
+ * @param[in] Arg1 A pointer to the sample structure.
+**/</span>
+<span class="hljs-function">VOID
+EFIAPI
+<span class="hljs-title">FooName</span> <span class="hljs-params">(
+  IN EFI_STRUCTURE_NAME  *Arg1
+  )</span></span>;
+</code></pre>
+<p>In any situation, definition of structure instances shall be in the following
+form:</p>
+<pre><code>EFI_STRUCTURE_NAME  StructureName;
+</code></pre><p>Never pass structures as function parameters by value. Use the &quot;address of&quot;
+operator, &apos;<code>&amp;</code>&apos;, and pass structures by reference.</p>
+<pre><code>FooName (&amp;StructureName);
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="text-align:right">Revision 2.20</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="56_declarations_and_types.html#56-declarations-and-types" class="navigation navigation-prev " aria-label="Previous page: 5.6 Declarations and Types">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="58_error_handling_and_assert.html#58-error-handling-and-assert" class="navigation navigation-next " aria-label="Next page: 5.8 Error Handling and ASSERT">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.7 C Programming","level":"1.6.7","depth":2,"next":{"title":"5.8 Error Handling and ASSERT","level":"1.6.8","depth":2,"anchor":"#58-error-handling-and-assert","path":"5_source_files/58_error_handling_and_assert.md","ref":"5_source_files/58_error_handling_and_assert.md#58-error-handling-and-assert","articles":[]},"previous":{"title":"5.6 Declarations and Types","level":"1.6.6","depth":2,"anchor":"#56-declarations-and-types","path":"5_source_files/56_declarations_and_types.md","ref":"5_source_files/56_declarations_and_types.md#56-declarations-and-types","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II C Coding Standards Specification","version":"Revision 2.20"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_source_files/57_c_programming.md","mtime":"2020-12-01T04:27:15.087Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T04:27:45.051Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

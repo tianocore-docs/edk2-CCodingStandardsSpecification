@@ -1,0 +1,1525 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.10 Special Commands · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../appendix_a_common_examples.html" />
+    
+    
+    <link rel="prev" href="69_putting_documentation_after_members.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-c-coding-standards-specification">
+            
+                    
+                    EDK II C Coding Standards Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#11-abstract">
+            
+                    
+                    1.1 Abstract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#12-rationale">
+            
+                    
+                    1.2 Rationale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#13-scope">
+            
+                    
+                    1.3 Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#14-references">
+            
+                    
+                    1.4 References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#15-glossary">
+            
+                    
+                    1.5 Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#2-guiding-principles">
+            
+                    
+                    2 Guiding Principles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#21-software-design">
+            
+                    
+                    2.1 Software Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#22-principles-for-software-maintenance">
+            
+                    
+                    2.2 Principles for Software Maintenance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#23-additional-recommendations">
+            
+                    
+                    2.3 Additional Recommendations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#3-quick-reference">
+            
+                    
+                    3 Quick Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#31-naming">
+            
+                    
+                    3.1 Naming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#32-formatting">
+            
+                    
+                    3.2 Formatting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#33-files-general-rules">
+            
+                    
+                    3.3 Files: General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#34-documentation">
+            
+                    
+                    3.4 Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#4-naming-conventions">
+            
+                    
+                    4 Naming Conventions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#41-general-naming-rules">
+            
+                    
+                    4.1 General Naming Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_naming_conventions/42_file_names.html">
+            
+                <a href="../4_naming_conventions/42_file_names.html#42-file-names">
+            
+                    
+                    4.2 File Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_naming_conventions/43_identifiers.html">
+            
+                <a href="../4_naming_conventions/43_identifiers.html#43-identifiers">
+            
+                    
+                    4.3 Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_naming_conventions/44_global_&_module_variables.html">
+            
+                <a href="../4_naming_conventions/44_global_&_module_variables.html#44-global--module-variables">
+            
+                    
+                    4.4 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_naming_conventions/45_name_space_rules.html">
+            
+                <a href="../4_naming_conventions/45_name_space_rules.html#45-name-space-rules">
+            
+                    
+                    4.5 Name Space Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_source_files/">
+            
+                <a href="../5_source_files/#5-source-files">
+            
+                    
+                    5 Source Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_source_files/">
+            
+                <a href="../5_source_files/#51-general-rules">
+            
+                    
+                    5.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_source_files/52_spacing.html">
+            
+                <a href="../5_source_files/52_spacing.html#52-spacing">
+            
+                    
+                    5.2 Spacing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_source_files/53_include_files.html">
+            
+                <a href="../5_source_files/53_include_files.html#53-include-files">
+            
+                    
+                    5.3 Include Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_source_files/54_code_file_structure.html">
+            
+                <a href="../5_source_files/54_code_file_structure.html#54-code-file-structure">
+            
+                    
+                    5.4 Code File Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_source_files/55_preprocessor_directives.html">
+            
+                <a href="../5_source_files/55_preprocessor_directives.html#55-preprocessor-directives">
+            
+                    
+                    5.5 Preprocessor Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../5_source_files/56_declarations_and_types.html">
+            
+                <a href="../5_source_files/56_declarations_and_types.html#56-declarations-and-types">
+            
+                    
+                    5.6 Declarations and Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../5_source_files/57_c_programming.html">
+            
+                <a href="../5_source_files/57_c_programming.html#57-c-programming">
+            
+                    
+                    5.7 C Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../5_source_files/58_error_handling_and_assert.html">
+            
+                <a href="../5_source_files/58_error_handling_and_assert.html#58-error-handling-and-assert">
+            
+                    
+                    5.8 Error Handling and ASSERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./#6-documenting-software">
+            
+                    
+                    6 Documenting Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="./">
+            
+                <a href="./#61-documentation-concepts">
+            
+                    
+                    6.1 Documentation Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="62_comments.html">
+            
+                <a href="62_comments.html#62-comments">
+            
+                    
+                    6.2 Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="63_what_not_to_comment.html">
+            
+                <a href="63_what_not_to_comment.html#63-what-not-to-comment">
+            
+                    
+                    6.3 What NOT to Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="64_what_you_must_comment.html">
+            
+                <a href="64_what_you_must_comment.html#64-what-you-must-comment">
+            
+                    
+                    6.4 What You Must Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="65_types_of_comments.html">
+            
+                <a href="65_types_of_comments.html#65-types-of-comments">
+            
+                    
+                    6.5 Types of Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="66_introducing_doxygen.html">
+            
+                <a href="66_introducing_doxygen.html#66-introducing-doxygen">
+            
+                    
+                    6.6 Introducing Doxygen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="67_how_doxygen_works.html">
+            
+                <a href="67_how_doxygen_works.html#67-how-doxygen-works">
+            
+                    
+                    6.7 How Doxygen Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="68_special_documentation_blocks.html">
+            
+                <a href="68_special_documentation_blocks.html#68-special-documentation-blocks">
+            
+                    
+                    6.8 Special Documentation Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="69_putting_documentation_after_members.html">
+            
+                <a href="69_putting_documentation_after_members.html#69-putting-documentation-after-members">
+            
+                    
+                    6.9 Putting Documentation after Members
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="610_special_commands.html">
+            
+                <a href="610_special_commands.html#610-special-commands">
+            
+                    
+                    6.10 Special Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../appendix_a_common_examples.html">
+            
+                <a href="../appendix_a_common_examples.html#appendix-a-common-examples">
+            
+                    
+                    APPENDIX A Common Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../appendix_b_reserved_identifiers.html">
+            
+                <a href="../appendix_b_reserved_identifiers.html#appendix-b-reserved-identifiers">
+            
+                    
+                    APPENDIX B Reserved Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../appendix_c_optimization_and_performance.html">
+            
+                <a href="../appendix_c_optimization_and_performance.html#appendix-c-optimization-and-performance">
+            
+                    
+                    APPENDIX C Optimization and Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-1-common-opposites">
+            
+                    
+                    Table 1 Common Opposites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-2-efi-supported-abbreviations">
+            
+                    
+                    Table 2 EFI Supported Abbreviations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-3-efi-supported-acronyms">
+            
+                    
+                    Table 3 EFI Supported Acronyms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../4_naming_conventions/43_identifiers.html">
+            
+                <a href="../4_naming_conventions/43_identifiers.html#table-4-reserved-keywords">
+            
+                    
+                    Table 4 Reserved Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../5_source_files/">
+            
+                <a href="../5_source_files/#table-5-permissible-escape-sequences-isoiec-98991990-6134">
+            
+                    
+                    Table 5 Permissible Escape Sequences (ISO/IEC 9899:1990 6.1.3.4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../5_source_files/56_declarations_and_types.html">
+            
+                <a href="../5_source_files/56_declarations_and_types.html#table-6-efi-data-types-slightly-modified-from-uefi-231">
+            
+                    
+                    Table 6 EFI Data Types (slightly modified from UEFI 2.3.1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../5_source_files/56_declarations_and_types.html">
+            
+                <a href="../5_source_files/56_declarations_and_types.html#table-7-modifiers-for-common-efi-data-types-reference-the-uefi-specification-and-beyond-bios">
+            
+                    
+                    Table 7 Modifiers for Common EFI Data Types (reference the UEFI Specification and Beyond Bios)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../5_source_files/56_declarations_and_types.html">
+            
+                <a href="../5_source_files/56_declarations_and_types.html#table-8-efi-constants">
+            
+                    
+                    Table 8 EFI Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../5_source_files/57_c_programming.html">
+            
+                <a href="../5_source_files/57_c_programming.html#table-9-parameter-modifiers">
+            
+                    
+                    Table 9 Parameter Modifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../5_source_files/57_c_programming.html">
+            
+                <a href="../5_source_files/57_c_programming.html#table-10-predicate-expression-examples">
+            
+                    
+                    Table 10 Predicate Expression Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="610_special_commands.html">
+            
+                <a href="610_special_commands.html#table-11-html-character-entities">
+            
+                    
+                    Table 11 HTML Character Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="610_special_commands.html">
+            
+                <a href="610_special_commands.html#table-12-html-commands">
+            
+                    
+                    Table 12 HTML Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.10 Special Commands</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="text-align:right">Revision 2.20</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  6.10 Special Commands
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="610-special-commands">6.10 Special Commands</h2>
+<p>All Doxygen commands start with an &quot;at&quot; sign (@). A commands may have one or
+more arguments. The following typographic conventions are used to identify each
+arguments range:</p>
+<ul>
+<li><p>If <strong>&lt;</strong>sharp<strong>&gt;</strong> braces are used, the argument is a single word.</p>
+</li>
+<li><p>If <strong>(</strong>round<strong>)</strong> braces are used, the argument extends until the end of the
+line on which the command was found.</p>
+</li>
+<li><p>If <strong>{</strong>curly<strong>}</strong> braces are used, the argument extends until the next
+paragraph. Paragraphs are delimited by a blank line or by a section indicator.</p>
+</li>
+<li><p>If <strong>[</strong>square<strong>]</strong> brackets are used, the argument is optional.</p>
+</li>
+</ul>
+<p>The following sections describe the special Doxygen commands.</p>
+<h3 id="6101-example-">6.10.1 @example <file-name></file-name></h3>
+<p>Indicates that a comment block contains documentation for a source code example.</p>
+<h3 id="6102-file---">6.10.2 @file [ <name> ]</name></h3>
+<p>Indicates that a comment block contains documentation for a source or header
+file with name <name>. If the file name is omitted, Doxygen uses the name of the
+file that contains the <code>@file</code> command. This is the preferred method.</name></p>
+<h3 id="6103-attention--attention-text-">6.10.3 @attention { attention text }</h3>
+<p>Starts an indented paragraph where you can enter a message about an issue that
+needs attention.</p>
+<h3 id="6104-paraminout---parameter-description-">6.10.4 @param[in,out] <parameter-name> { parameter description }</parameter-name></h3>
+<p>Starts a parameter description for a function parameter named <parameter-name>.</parameter-name></p>
+<h3 id="6105-post--description-of-a-postcondition-">6.10.5 @post { description of a postcondition }</h3>
+<p>Starts an indented paragraph where you can describe a postcondition of an
+entity.</p>
+<h3 id="6106-pre--description-of-a-precondition-">6.10.6 @pre { description of a precondition }</h3>
+<p>Starts an indented paragraph where you can describe a precondition of an entity.</p>
+<h3 id="6107-retval---description-">6.10.7 @retval <return value=""> { description }</return></h3>
+<p>Starts a description of a return value from a function. Include a separate
+<code>@retval</code> for each unique return value.</p>
+<h3 id="6108-return--description-of-what-is-returned-">6.10.8 @return { description of what is returned }</h3>
+<p>Starts a description for a function&apos;s return values when those values aren&apos;t
+easily described by <code>@retval</code> commands (that is, the return values are something
+other than a small set of unique values with discrete meanings).</p>
+<h3 id="6109-sa--references-">6.10.9 @sa { references }</h3>
+<p>Starts a paragraph where you can specify one or more cross-references to
+functions, structures, variables, files, or URLs.</p>
+<h3 id="61010-since--text-">6.10.10 @since { text }</h3>
+<p>This tag can be used to specify when (version or time) an entity is available.</p>
+<h3 id="61011-test--paragraph-describing-a-test-case-">6.10.11 @test { paragraph describing a test case }</h3>
+<p>Starts a paragraph where you can describe a test case. The description will
+also add the test case to a separate test list. The two instances of the
+description will be cross-referenced. Each test case in the test list will be
+preceded by a header that indicates the origin of the test case.</p>
+<h3 id="61012-todo--paragraph-describing-what-is-to-be-done-">6.10.12 @todo { paragraph describing what is to be done }</h3>
+<p>Starts a paragraph where a TODO item is described. The description will also
+add an item to a separate TODO list. The two instances of the description will
+be cross-referenced. Each item in the TODO list will be preceded by a header
+that indicates the origin of the item.</p>
+<h3 id="61013-html-commands">6.10.13 HTML Commands</h3>
+<p>For greater control over the format of generated documentation, you may add
+HTML commands to special documentation blocks. &quot;HTML Character Entities&quot; below
+lists the special HTML character entities that Doxygen recognizes.</p>
+<p>&quot;HTML Commands&quot; lists the HTML commands that you may use inside the
+documentation.</p>
+<p>Finally, to put invisible comments inside comment blocks, you may use HTML
+style comments:</p>
+<pre><code>/** &lt;!-- This is a comment within a comment block --&gt; Visible text */
+</code></pre><h6 id="table-11-html-character-entities">Table 11 HTML Character Entities</h6>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;copy;</code></td>
+<td>Copyright symbol</td>
+</tr>
+<tr>
+<td><code>&amp;tm;</code></td>
+<td>Trade mark symbol</td>
+</tr>
+<tr>
+<td><code>&amp;reg;</code></td>
+<td>Registered trade mark symbol</td>
+</tr>
+<tr>
+<td><code>&amp;lt</code></td>
+<td>Less-than symbol</td>
+</tr>
+<tr>
+<td><code>&amp;gt</code></td>
+<td>Greater-than symbol</td>
+</tr>
+<tr>
+<td><code>&amp;amp;</code></td>
+<td>Ampersand</td>
+</tr>
+<tr>
+<td><code>&amp;apos;</code></td>
+<td>Single quotation mark (straight)</td>
+</tr>
+<tr>
+<td><code>&amp;quot;</code></td>
+<td>Double quotation mark (straight)</td>
+</tr>
+<tr>
+<td><code>&amp;lsquo;</code></td>
+<td>Left single quotation mark</td>
+</tr>
+<tr>
+<td><code>&amp;rsquo;</code></td>
+<td>Right single quotation mark</td>
+</tr>
+<tr>
+<td><code>&amp;ldquo;</code></td>
+<td>Left double quotation mark</td>
+</tr>
+<tr>
+<td><code>&amp;rdquo;</code></td>
+<td>Right double quotation mark</td>
+</tr>
+<tr>
+<td><code>&amp;ndash;</code></td>
+<td>En-dash (for numeric ranges, e.g. 2-8)</td>
+</tr>
+<tr>
+<td><code>&amp;mdash;</code></td>
+<td>Em-dash (for parenthetical punctuation-like this)</td>
+</tr>
+<tr>
+<td><code>&amp;?uml;</code></td>
+<td>Where ? is one of {A,E,I,O,U,Y,a,e,i,o,u,y}, writes a character with a diaeresis accent (&#xE4;).</td>
+</tr>
+<tr>
+<td><code>&amp;?acute;</code></td>
+<td>Where ? is one of {A,E,I,O,U,Y,a,e,i,o,u,y}, writes a character with an acute accent (&#xE1;).</td>
+</tr>
+<tr>
+<td><code>&amp;?grave;</code></td>
+<td>Where ? is one of {A,E,I,O,U,a,e,i,o,u,y}, writes a character with a grave accent (&#xE0;).</td>
+</tr>
+<tr>
+<td><code>&amp;?circ;</code></td>
+<td>Where ? is one of {A,E,I,O,U,a,e,i,o,u,y}, writes a character with a circumflex accent (&#xE2;).</td>
+</tr>
+<tr>
+<td><code>&amp;?tilde;</code></td>
+<td>Where ? is one of {A,N,O,a,n,o}, writes a character with a tilde accent (&#xE3;).</td>
+</tr>
+<tr>
+<td><code>&amp;szlig;</code></td>
+<td>Sharp s (&#xDF;).</td>
+</tr>
+<tr>
+<td><code>&amp;?cedil;</code></td>
+<td>Where ? is one of {c,C}, writes a c-cedille (&#xE7;).</td>
+</tr>
+<tr>
+<td><code>&amp;?ring;</code></td>
+<td>Where ? is one of {a,A}, writes an &apos;a&apos; with a ring (&#xE5;).</td>
+</tr>
+<tr>
+<td><code>&amp;nbsp;</code></td>
+<td>A non breaking space.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="table-12-html-commands">Table 12 HTML Commands</h6>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;A HREF=&quot;...&quot;&gt;</code></td>
+<td>Starts an HTML hyper-link.</td>
+</tr>
+<tr>
+<td><code>&lt;A NAME=&quot;...&quot;&gt;</code></td>
+<td>Starts a named anchor.</td>
+</tr>
+<tr>
+<td><code>&lt;/A&gt;</code></td>
+<td>Ends a link or anchor.</td>
+</tr>
+<tr>
+<td><code>&lt;B&gt;</code></td>
+<td>Starts a piece of text displayed in a bold font.</td>
+</tr>
+<tr>
+<td><code>&lt;/B&gt;</code></td>
+<td>Ends a <code>&lt;B&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;BODY&gt;</code></td>
+<td>Does not generate any output.</td>
+</tr>
+<tr>
+<td><code>&lt;/BODY&gt;</code></td>
+<td>Does not generate any output.</td>
+</tr>
+<tr>
+<td><code>&lt;BR&gt;</code></td>
+<td>Forces a line break.</td>
+</tr>
+<tr>
+<td><code>&lt;CENTER&gt;</code></td>
+<td>Starts a section of centered text.</td>
+</tr>
+<tr>
+<td><code>&lt;/CENTER&gt;</code></td>
+<td>Ends a section of centered text.</td>
+</tr>
+<tr>
+<td><code>&lt;CAPTION&gt;</code></td>
+<td>Starts a caption. Use within a table only.</td>
+</tr>
+<tr>
+<td><code>&lt;/CAPTION&gt;</code></td>
+<td>Ends a caption. Use within a table only.</td>
+</tr>
+<tr>
+<td><code>&lt;CODE&gt;</code></td>
+<td>Starts a piece of text displayed in a typewriter font.</td>
+</tr>
+<tr>
+<td><code>&lt;/CODE&gt;</code></td>
+<td>End a <code>&lt;CODE&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;DD&gt;</code></td>
+<td>Starts an item description.</td>
+</tr>
+<tr>
+<td><code>&lt;DFN&gt;</code></td>
+<td>Starts a piece of text displayed in a typewriter font.</td>
+</tr>
+<tr>
+<td><code>&lt;/DFN&gt;</code></td>
+<td>Ends a <code>&lt;DFN&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;DIV&gt;</code></td>
+<td>Starts a section with a specific style</td>
+</tr>
+<tr>
+<td><code>&lt;/DIV&gt;</code></td>
+<td>Ends a section with a specific style</td>
+</tr>
+<tr>
+<td><code>&lt;DL&gt;</code></td>
+<td>Starts a description list.</td>
+</tr>
+<tr>
+<td><code>&lt;/DL&gt;</code></td>
+<td>Ends a description list.</td>
+</tr>
+<tr>
+<td><code>&lt;DT&gt;</code></td>
+<td>Starts an item title.</td>
+</tr>
+<tr>
+<td><code>&lt;/DT&gt;</code></td>
+<td>Ends an item title.</td>
+</tr>
+<tr>
+<td><code>&lt;EM&gt;</code></td>
+<td>Starts a piece of text displayed in an italic font.</td>
+</tr>
+<tr>
+<td><code>&lt;/EM&gt;</code></td>
+<td>Ends a <code>&lt;EM&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;FORM&gt;</code></td>
+<td>Does not generate any output.</td>
+</tr>
+<tr>
+<td><code>&lt;/FORM&gt;</code></td>
+<td>Does not generate any output.</td>
+</tr>
+<tr>
+<td><code>&lt;HR&gt;</code></td>
+<td>Writes a horizontal rule.</td>
+</tr>
+<tr>
+<td><code>&lt;H1&gt;</code></td>
+<td>Starts an unnumbered section.</td>
+</tr>
+<tr>
+<td><code>&lt;/H1&gt;</code></td>
+<td>Ends an unnumbered section.</td>
+</tr>
+<tr>
+<td><code>&lt;H2&gt;</code></td>
+<td>Starts an unnumbered subsection.</td>
+</tr>
+<tr>
+<td><code>&lt;/H2&gt;</code></td>
+<td>Ends an unnumbered subsection.</td>
+</tr>
+<tr>
+<td><code>&lt;H3&gt;</code></td>
+<td>Starts an unnumbered sub subsection.</td>
+</tr>
+<tr>
+<td><code>&lt;/H3&gt;</code></td>
+<td>Ends an unnumbered sub subsection.</td>
+</tr>
+<tr>
+<td><code>&lt;I&gt;</code></td>
+<td>Starts a piece of text displayed in an italic font.</td>
+</tr>
+<tr>
+<td><code>&lt;INPUT&gt;</code></td>
+<td>Does not generate any output.</td>
+</tr>
+<tr>
+<td><code>&lt;/I&gt;</code></td>
+<td>Ends a <code>&lt;I&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;IMG&gt;</code></td>
+<td>This command is written with attributes to the HTML output.</td>
+</tr>
+<tr>
+<td><code>&lt;LI&gt;</code></td>
+<td>Starts a new list item.</td>
+</tr>
+<tr>
+<td><code>&lt;/LI&gt;</code></td>
+<td>Ends a list item.</td>
+</tr>
+<tr>
+<td><code>&lt;META&gt;</code></td>
+<td>Does not generate any output.</td>
+</tr>
+<tr>
+<td><code>&lt;MULTICOL&gt;</code></td>
+<td>Ignored by Doxygen.</td>
+</tr>
+<tr>
+<td><code>&lt;/MUTLICOL&gt;</code></td>
+<td>Ignored by Doxygen.</td>
+</tr>
+<tr>
+<td><code>&lt;OL&gt;</code></td>
+<td>Starts a numbered item list.</td>
+</tr>
+<tr>
+<td><code>&lt;/OL&gt;</code></td>
+<td>Ends a numbered item list.</td>
+</tr>
+<tr>
+<td><code>&lt;P&gt;</code></td>
+<td>Starts a new paragraph.</td>
+</tr>
+<tr>
+<td><code>&lt;/P&gt;</code></td>
+<td>Ends a paragraph.</td>
+</tr>
+<tr>
+<td><code>&lt;PRE&gt;</code></td>
+<td>Starts a pre-formatted fragment.</td>
+</tr>
+<tr>
+<td><code>&lt;/PRE&gt;</code></td>
+<td>Ends a pre-formatted fragment.</td>
+</tr>
+<tr>
+<td><code>&lt;SMALL&gt;</code></td>
+<td>Starts a section of text displayed in a smaller font.</td>
+</tr>
+<tr>
+<td><code>&lt;/SMALL&gt;</code></td>
+<td>Ends a <code>&lt;SMALL&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;SPAN&gt;</code></td>
+<td>Starts an inline text fragment with a specific style.</td>
+</tr>
+<tr>
+<td><code>&lt;/SPAN&gt;</code></td>
+<td>Ends an inline text fragment with a specific style.</td>
+</tr>
+<tr>
+<td><code>&lt;STRONG&gt;</code></td>
+<td>Starts a section of bold text.</td>
+</tr>
+<tr>
+<td><code>&lt;/STRONG&gt;</code></td>
+<td>Ends a section of bold text.</td>
+</tr>
+<tr>
+<td><code>&lt;SUB&gt;</code></td>
+<td>Starts a piece of text displayed in subscript.</td>
+</tr>
+<tr>
+<td><code>&lt;/SUB&gt;</code></td>
+<td>Ends a <code>&lt;SUB&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;SUP&gt;</code></td>
+<td>Starts a piece of text displayed in superscript.</td>
+</tr>
+<tr>
+<td><code>&lt;/SUP&gt;</code></td>
+<td>Ends a <code>&lt;/SUP&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;TABLE&gt;</code></td>
+<td>Starts a table.</td>
+</tr>
+<tr>
+<td><code>&lt;/TABLE&gt;</code></td>
+<td>Ends a table.</td>
+</tr>
+<tr>
+<td><code>&lt;TD&gt;</code></td>
+<td>Starts a new table data element.</td>
+</tr>
+<tr>
+<td><code>&lt;/TD&gt;</code></td>
+<td>Ends a table data element.</td>
+</tr>
+<tr>
+<td><code>&lt;TR&gt;</code></td>
+<td>Starts a new table row.</td>
+</tr>
+<tr>
+<td><code>&lt;/TR&gt;</code></td>
+<td>Ends a table row.</td>
+</tr>
+<tr>
+<td><code>&lt;TT&gt;</code></td>
+<td>Starts a piece of text displayed in a typewriter font.</td>
+</tr>
+<tr>
+<td><code>&lt;/TT&gt;</code></td>
+<td>Ends a <code>&lt;TT&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;KBD&gt;</code></td>
+<td>Starts a piece of text displayed in a typewriter font.</td>
+</tr>
+<tr>
+<td><code>&lt;/KBD&gt;</code></td>
+<td>Ends a <code>&lt;KBD&gt;</code> section.</td>
+</tr>
+<tr>
+<td><code>&lt;UL&gt;</code></td>
+<td>Starts an unnumbered item list.</td>
+</tr>
+<tr>
+<td><code>&lt;/UL&gt;</code></td>
+<td>Ends an unnumbered item list.</td>
+</tr>
+<tr>
+<td><code>&lt;VAR&gt;</code></td>
+<td>Starts a piece of text displayed in an italic font.</td>
+</tr>
+<tr>
+<td><code>&lt;/VAR&gt;</code></td>
+<td>Ends a <code>&lt;/VAR&gt;</code> section.</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="text-align:right">Revision 2.20</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="69_putting_documentation_after_members.html#69-putting-documentation-after-members" class="navigation navigation-prev " aria-label="Previous page: 6.9 Putting Documentation after Members">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../appendix_a_common_examples.html#appendix-a-common-examples" class="navigation navigation-next " aria-label="Next page: APPENDIX A Common Examples">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.10 Special Commands","level":"1.7.10","depth":2,"next":{"title":"APPENDIX A Common Examples","level":"1.8","depth":1,"anchor":"#appendix-a-common-examples","path":"appendix_a_common_examples.md","ref":"appendix_a_common_examples.md#appendix-a-common-examples","articles":[]},"previous":{"title":"6.9 Putting Documentation after Members","level":"1.7.9","depth":2,"anchor":"#69-putting-documentation-after-members","path":"6_documenting_software/69_putting_documentation_after_members.md","ref":"6_documenting_software/69_putting_documentation_after_members.md#69-putting-documentation-after-members","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II C Coding Standards Specification","version":"Revision 2.20"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"6_documenting_software/610_special_commands.md","mtime":"2020-12-01T04:27:15.087Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T04:27:45.051Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
