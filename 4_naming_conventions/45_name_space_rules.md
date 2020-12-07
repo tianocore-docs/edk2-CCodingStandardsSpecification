@@ -53,9 +53,9 @@ tags may be reused only for union types.
 
 ```c
 typedef struct MyStruct {
-  int  one;
-  int  two;
-  int  three;
+  UINT32  One;
+  UINT32  Two;
+  UINT32  Three;
 } MY_STRUCT;
 ```
 
@@ -68,14 +68,14 @@ Exceptions are structure member and union member names.
 
 ```c
 typedef struct StructOne {
-  INT32             one;
-  INT16             two;
+  INT32             One;
+  INT16             Two;
   struct StructOne  *MySelf;
 } STRUCT_ONE;
 
 typedef struct StructTwo {
-  INT16             one;
-  INT8              *two;
+  INT16             One;
+  INT8              *Two;
   struct StructTwo  *MySelf;
 } STRUCT_TWO;
 
