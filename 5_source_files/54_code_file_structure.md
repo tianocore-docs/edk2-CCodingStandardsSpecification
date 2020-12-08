@@ -151,12 +151,12 @@ and hide each other. Never write code that does this.
  7 {
  8   UINT32 i;
  9
-10   for ( i = 0; i < 5; ++i) {
+10   for (i = 0; i < 5; ++i) {
 11     UCHAR8 MyVar = i; // Block scope
 12     INT16 i = 12;
 13
 14     MyVar += 'A';
-15     process ( MyVar, i);
+15     process (MyVar, i);
 16   }
 17   *MyVar = i;
 18 }
@@ -165,8 +165,8 @@ and hide each other. Never write code that does this.
 21 {
 22   UINT32 George = 4;
 23
-24   MyFunction ( &George);
-25   process ( MyVar, 0);
+24   MyFunction (&George);
+25   process (MyVar, 0);
 26 }
 27
 ```

@@ -103,10 +103,10 @@ by && or || must have each sub-expression on a separate line. The opening brace,
 column of the associated keyword.
 
 ```c
-while ( ( Code == MEETS_STANDARD)
-  && ( Code == FUNCTIONAL))
+while ((Code == MEETS_STANDARD)
+  && (Code == FUNCTIONAL))
 {
-  ShipIt();
+  ShipIt ();
 }
 ```
 
@@ -220,7 +220,7 @@ This is not the case. The bitwise OR operator, '`|`', has lower precedence than
 the equality operator, '`==`'. This results in the expression being evaluated as
 if one had entered:
 ```
-8 | ( 8 == 8 )
+8 | (8 == 8)
 ```
 
 This evaluates to the value 9.

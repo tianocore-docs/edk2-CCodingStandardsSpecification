@@ -259,7 +259,7 @@ Module parameters of a PERF_END invocation.
 
 ```c
 for (Index = 0; Index < NumberOfEntries; Index++) {
-  if (( LogEntryArray[Index].Handle == (EFI_PHYSICAL_ADDRESS)(UINTN) Handle)
+  if ((LogEntryArray[Index].Handle == (EFI_PHYSICAL_ADDRESS)(UINTN) Handle)
        && AsciiStrnCmp (LogEntryArray[Index].Token, Token, PEI_PERFORMANCE_STRING_LENGTH) == 0
        && AsciiStrnCmp (LogEntryArray[Index].Module, Module, PEI_PERFORMANCE_STRING_LENGTH) == 0
        && LogEntryArray[Index].EndTimeStamp == 0
@@ -301,7 +301,7 @@ Re-ordering the predicate expression using this information produces:
 
 ```c
 for (Index = 0; Index < NumberOfEntries; Index++) {
-  if ( LogEntryArray[Index].EndTimeStamp == 0
+  if (LogEntryArray[Index].EndTimeStamp == 0
        && LogEntryArray[Index].Handle == (EFI_PHYSICAL_ADDRESS)(UINTN) Handle
        && AsciiStrnCmp (LogEntryArray[Index].Module, Module, PEI_PERFORMANCE_STRING_LENGTH) == 0
        && AsciiStrnCmp (LogEntryArray[Index].Token, Token, PEI_PERFORMANCE_STRING_LENGTH) == 0
@@ -495,7 +495,7 @@ a `goto`.
 
 ```c
 Status = IAmTheCode ();
-if (! EFI_ERROR (Status)) {
+if (!EFI_ERROR (Status)) {
   IDoTheWork ();
 }
 return Status;

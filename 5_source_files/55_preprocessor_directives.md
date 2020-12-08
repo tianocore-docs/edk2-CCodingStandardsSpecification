@@ -77,8 +77,8 @@ An order-of-precedence bug in a macro is very hard to debug. The following are
 examples of macro construction:
 
 ```
-#define BAD_MACRO(a, b) a*b
-#define GOOD_MACRO(a, b) ((a)*(b))
+#define BAD_MACRO(a, b) a * b
+#define GOOD_MACRO(a, b) ((a) * (b))
 ```
 
 The following examples should explain the difference between `BAD_MACRO ()` and
@@ -86,9 +86,9 @@ The following examples should explain the difference between `BAD_MACRO ()` and
 
 * `BAD_MACRO (10, 2)` and `GOOD_MACRO (10, 2)` both evaluate to 20.
 
-* `BAD_MACRO (7+3, 2)` returns 13 = 7 + (3*2).
+* `BAD_MACRO (7 + 3, 2)` returns 13 = 7 + (3 * 2).
 
-* `GOOD_MACRO (7+3, 2)` returns 20.
+* `GOOD_MACRO (7 + 3, 2)` returns 20.
 
 Also, consider the following expression:
 
@@ -102,7 +102,7 @@ the equality operator, '`==`'. This results in the expression being evaluated as
 if one had entered:
 
 ```
-8 | ( 8 == 8 )
+8 | (8 == 8)
 ```
 
 This evaluates to the value 9 The desired result of `TRUE`, (1), can be achieved
@@ -123,7 +123,7 @@ or a simple substitution macro.
 Failure to do this will cause the build to break.
 
 ```
-#define GOOD_MACRO(a, b) ((a)*(b))
+#define GOOD_MACRO(a, b) ((a) * (b))
 ```
 
 This is because the compiler has no way to differentiate between
@@ -146,7 +146,7 @@ Failure to separate macro names from parameters negatively impacts readability
 and consistency with other coding style rules.
 
 ```
-GOOD_MACRO (7+3, 2)
+GOOD_MACRO (7 + 3, 2)
 ```
 
 #### 5.5.2.7 Single-line Functions
