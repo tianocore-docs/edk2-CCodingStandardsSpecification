@@ -102,7 +102,7 @@ FooName (
   IN UINTN      Arg2, OPTIONAL
   OUT UINTN     *Arg3,
   IN OUT UINTN  *Arg4
-  );
+  )
 {
   UINTN Local;
   ...
