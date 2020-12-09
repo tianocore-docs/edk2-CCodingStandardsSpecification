@@ -216,12 +216,12 @@ internal namespaces to other components of the firmware system.
   David Keppel, EECS, UC Berkeley CS&E, University of Washington; Mark Brader,
   SoftQuad Incorporated, Toronto. 6/25/1990.
 
-* _Doxygen manual_, http://www.doxygen.org/manual.html, Version 1.4.6-NO
+* _Doxygen manual_, https://www.doxygen.org/manual/, Version 1.4.6-NO
 
 * _Doxygen Primer_ by Daryl McDaniel, IBM 2002; Updated for Intel Corporation
   1/2006
 
-* _UEFI Specification_, http://www.uefi.org
+* _UEFI Specification_, https://www.uefi.org
 
 * _Beyond Bios:Developing with the Unified Extensible Firmware Interface_,
   Second Edition, Zimmer, Michael Rothman, Suresh Marisetty Copyright @2010
