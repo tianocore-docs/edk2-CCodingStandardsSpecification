@@ -930,7 +930,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/08/2020 09:32:48]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1006,16 +1006,16 @@ functions.</p>
 <h4 id="5523-overusing-parentheses-is-strongly-encouraged">5.5.2.3 Overusing parentheses is strongly encouraged.</h4>
 <p>An order-of-precedence bug in a macro is very hard to debug. The following are
 examples of macro construction:</p>
-<pre><code>#define BAD_MACRO(a, b) a*b
-#define GOOD_MACRO(a, b) ((a)*(b))
+<pre><code>#define BAD_MACRO(a, b) a * b
+#define GOOD_MACRO(a, b) ((a) * (b))
 </code></pre><p>The following examples should explain the difference between <code>BAD_MACRO ()</code> and
 <code>GOOD_MACRO ()</code>:</p>
 <ul>
 <li><p><code>BAD_MACRO (10, 2)</code> and <code>GOOD_MACRO (10, 2)</code> both evaluate to 20.</p>
 </li>
-<li><p><code>BAD_MACRO (7+3, 2)</code> returns 13 = 7 + (3*2).</p>
+<li><p><code>BAD_MACRO (7 + 3, 2)</code> returns 13 = 7 + (3 * 2).</p>
 </li>
-<li><p><code>GOOD_MACRO (7+3, 2)</code> returns 20.</p>
+<li><p><code>GOOD_MACRO (7 + 3, 2)</code> returns 20.</p>
 </li>
 </ul>
 <p>Also, consider the following expression:</p>
@@ -1024,7 +1024,7 @@ examples of macro construction:</p>
 This is not the case. The bitwise OR operator, &apos;<code>|</code>&apos;, has lower precedence than
 the equality operator, &apos;<code>==</code>&apos;. This results in the expression being evaluated as
 if one had entered:</p>
-<pre><code>8 | ( 8 == 8 )
+<pre><code>8 | (8 == 8)
 </code></pre><p>This evaluates to the value 9 The desired result of <code>TRUE</code>, (1), can be achieved
 by specifying the expression as:</p>
 <pre><code>((8 | 8) == 8)
@@ -1034,7 +1034,7 @@ output, and behavior are required. This is true whether it is a parameterized
 or a simple substitution macro.</p>
 <h4 id="5525-parameterized-macro-definitions-shall-not-have-a-space-between-the-name-and-the-">5.5.2.5 Parameterized macro definitions shall not have a space between the name and the &apos;(.&apos;</h4>
 <p>Failure to do this will cause the build to break.</p>
-<pre><code>#define GOOD_MACRO(a, b) ((a)*(b))
+<pre><code>#define GOOD_MACRO(a, b) ((a) * (b))
 </code></pre><p>This is because the compiler has no way to differentiate between</p>
 <pre><code>#define SIMPLE_MACRO (a) (TXT)
 </code></pre><p>which substitutes all subsequent occurrences of SIMPLE_MACRO with (a) (TXT), and</p>
@@ -1043,7 +1043,7 @@ or a simple substitution macro.</p>
 <h4 id="5526-when-using-a-macro-there-must-be-a-space-between-the-name-and-the--to-comply-with-function-calling-conventions">5.5.2.6 When using a macro, there must be a space between the name and the &apos;(&apos; to comply with function calling conventions.</h4>
 <p>Failure to separate macro names from parameters negatively impacts readability
 and consistency with other coding style rules.</p>
-<pre><code>GOOD_MACRO (7+3, 2)
+<pre><code>GOOD_MACRO (7 + 3, 2)
 </code></pre><h4 id="5527-single-line-functions">5.5.2.7 Single-line Functions</h4>
 <p>Most uses of parameterized macros can be replaced by one or two line functions.
 The compilers will almost always in-line the function resulting in the same
@@ -1063,7 +1063,7 @@ functions is the type checking the compiler can now provide.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/08/2020 09:32:48]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1092,7 +1092,7 @@ functions is the type checking the compiler can now provide.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.5 Preprocessor Directives","level":"1.6.5","depth":2,"next":{"title":"5.6 Declarations and Types","level":"1.6.6","depth":2,"anchor":"#56-declarations-and-types","path":"5_source_files/56_declarations_and_types.md","ref":"5_source_files/56_declarations_and_types.md#56-declarations-and-types","articles":[]},"previous":{"title":"5.4 Code File Structure","level":"1.6.4","depth":2,"anchor":"#54-code-file-structure","path":"5_source_files/54_code_file_structure.md","ref":"5_source_files/54_code_file_structure.md#54-code-file-structure","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_source_files/55_preprocessor_directives.md","mtime":"2020-12-08T21:32:20.065Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-08T21:32:48.330Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.5 Preprocessor Directives","level":"1.6.5","depth":2,"next":{"title":"5.6 Declarations and Types","level":"1.6.6","depth":2,"anchor":"#56-declarations-and-types","path":"5_source_files/56_declarations_and_types.md","ref":"5_source_files/56_declarations_and_types.md#56-declarations-and-types","articles":[]},"previous":{"title":"5.4 Code File Structure","level":"1.6.4","depth":2,"anchor":"#54-code-file-structure","path":"5_source_files/54_code_file_structure.md","ref":"5_source_files/54_code_file_structure.md#54-code-file-structure","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_source_files/55_preprocessor_directives.md","mtime":"2020-12-11T19:39:44.791Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-11T19:40:18.735Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

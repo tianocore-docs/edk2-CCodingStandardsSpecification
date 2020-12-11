@@ -930,7 +930,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/08/2020 09:32:48]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1025,8 +1025,8 @@ EFIAPI
   IN UINTN      Arg2, OPTIONAL
   OUT UINTN     *Arg3,
   IN OUT UINTN  *Arg4
-  )</span></span>;
-{
+  )</span>
+</span>{
   UINTN Local;
   ...
 }
@@ -1191,7 +1191,7 @@ in the implementation of the PERF_END functionality. It finds the first open
 (EndTimeStamp is zero) performance trace record matching the Handle, Token, and
 Module parameters of a PERF_END invocation.</p>
 <pre><code class="lang-c"><span class="hljs-keyword">for</span> (Index = <span class="hljs-number">0</span>; Index &lt; NumberOfEntries; Index++) {
-  <span class="hljs-keyword">if</span> (( LogEntryArray[Index].Handle == (EFI_PHYSICAL_ADDRESS)(UINTN) Handle)
+  <span class="hljs-keyword">if</span> ((LogEntryArray[Index].Handle == (EFI_PHYSICAL_ADDRESS)(UINTN) Handle)
        &amp;&amp; AsciiStrnCmp (LogEntryArray[Index].Token, Token, PEI_PERFORMANCE_STRING_LENGTH) == <span class="hljs-number">0</span>
        &amp;&amp; AsciiStrnCmp (LogEntryArray[Index].Module, Module, PEI_PERFORMANCE_STRING_LENGTH) == <span class="hljs-number">0</span>
        &amp;&amp; LogEntryArray[Index].EndTimeStamp == <span class="hljs-number">0</span>
@@ -1232,7 +1232,7 @@ Module values prior to the target.</p>
 <p>We also can determine that this ordering is valid for any measurement.
 Re-ordering the predicate expression using this information produces:</p>
 <pre><code class="lang-c"><span class="hljs-keyword">for</span> (Index = <span class="hljs-number">0</span>; Index &lt; NumberOfEntries; Index++) {
-  <span class="hljs-keyword">if</span> ( LogEntryArray[Index].EndTimeStamp == <span class="hljs-number">0</span>
+  <span class="hljs-keyword">if</span> (LogEntryArray[Index].EndTimeStamp == <span class="hljs-number">0</span>
        &amp;&amp; LogEntryArray[Index].Handle == (EFI_PHYSICAL_ADDRESS)(UINTN) <span class="hljs-function">Handle
        &amp;&amp; <span class="hljs-title">AsciiStrnCmp</span> <span class="hljs-params">(LogEntryArray[Index].Module, Module, PEI_PERFORMANCE_STRING_LENGTH)</span> </span>== <span class="hljs-number">0</span>
        &amp;&amp; AsciiStrnCmp (LogEntryArray[Index].Token, Token, PEI_PERFORMANCE_STRING_LENGTH) == <span class="hljs-number">0</span>
@@ -1381,7 +1381,7 @@ ErrorExit:
 <p>The above example could have been rewritten as below, eliminating the need for
 a <code>goto</code>.</p>
 <pre><code class="lang-c">Status = IAmTheCode ();
-<span class="hljs-keyword">if</span> (! EFI_ERROR (Status)) {
+<span class="hljs-keyword">if</span> (!EFI_ERROR (Status)) {
   IDoTheWork ();
 }
 <span class="hljs-keyword">return</span> Status;
@@ -1422,7 +1422,7 @@ operator, &apos;<code>&amp;</code>&apos;, and pass structures by reference.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/08/2020 09:32:48]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1451,7 +1451,7 @@ operator, &apos;<code>&amp;</code>&apos;, and pass structures by reference.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.7 C Programming","level":"1.6.7","depth":2,"next":{"title":"5.8 Error Handling and ASSERT","level":"1.6.8","depth":2,"anchor":"#58-error-handling-and-assert","path":"5_source_files/58_error_handling_and_assert.md","ref":"5_source_files/58_error_handling_and_assert.md#58-error-handling-and-assert","articles":[]},"previous":{"title":"5.6 Declarations and Types","level":"1.6.6","depth":2,"anchor":"#56-declarations-and-types","path":"5_source_files/56_declarations_and_types.md","ref":"5_source_files/56_declarations_and_types.md#56-declarations-and-types","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_source_files/57_c_programming.md","mtime":"2020-12-08T21:32:20.065Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-08T21:32:48.330Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.7 C Programming","level":"1.6.7","depth":2,"next":{"title":"5.8 Error Handling and ASSERT","level":"1.6.8","depth":2,"anchor":"#58-error-handling-and-assert","path":"5_source_files/58_error_handling_and_assert.md","ref":"5_source_files/58_error_handling_and_assert.md#58-error-handling-and-assert","articles":[]},"previous":{"title":"5.6 Declarations and Types","level":"1.6.6","depth":2,"anchor":"#56-declarations-and-types","path":"5_source_files/56_declarations_and_types.md","ref":"5_source_files/56_declarations_and_types.md#56-declarations-and-types","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_source_files/57_c_programming.md","mtime":"2020-12-11T19:39:44.791Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-11T19:40:18.735Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
