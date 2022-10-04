@@ -1,5 +1,5 @@
 <!--- @file
-  4.3 Identifiers
+  4.4 Identifiers
 
   Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
 
@@ -29,9 +29,9 @@
 
 -->
 
-## 4.3 Identifiers
+## 4.4 Identifiers
 
-### 4.3.1 Identifiers shall not rely on the significance of more than 31 characters.
+### 4.4.1 Identifiers shall not rely on the significance of more than 31 characters.
 
 Identifiers (variable names, labels, structure tags, derived macro names, etc.)
 may be an arbitrary length. The ISO standard only guarantees that language
@@ -42,7 +42,7 @@ has been confirmed that 31 character / case significance is supported by EDK II
 supported tool chains, there is no requirement to ensure uniqueness of
 externals within the first 6 characters.
 
-### 4.3.2 Always make identifier names that are visually distinguishable.
+### 4.4.2 Always make identifier names that are visually distinguishable.
 
 While not as big an issue as it has been in the past, when choosing labels
 ensure that the label is unlikely to be confused with other labels used in the
@@ -50,9 +50,9 @@ file. Ensure that long label names vary by more than one or two characters.
 Ensure that labels don't vary between zero and oh (0 and O), one and ell (1 and
 l). Some also consider 2 and Z, and 5 and S to be similar.
 
-### 4.3.3 Hungarian Prefixes
+### 4.4.3 Hungarian Prefixes
 
-#### 4.3.3.1 Use of Hungarian notation is not allowed
+#### 4.4.3.1 Use of Hungarian notation is not allowed
 
 This set of detailed guidelines for naming variables and routines is a
 convention widely used with the C programming language, especially in
@@ -68,7 +68,7 @@ Global data and module data shall be prefixed with 'g' or 'm', respectively.
 Pointer variables may optionally be prefixed with 'p'. These are the only
 exceptions to the prohibition against Hungarian notation.
 
-#### 4.3.3.2 Any variable with file scope, or better, shall be prefixed by an 'm' or 'g'
+#### 4.4.3.2 Any variable with file scope, or better, shall be prefixed by an 'm' or 'g'
 
 There are no exceptions to this rule. The '`m`' prefix identifies a variable
 with module scope, while a '`g`' prefix identifies a global variable.
@@ -78,13 +78,13 @@ gThisIsAGlobalVariableName
 mThisIsAModuleVariableName
 ```
 
-#### 4.3.3.3 Pointer variables may optionally be prefixed with a 'p'
+#### 4.4.3.3 Pointer variables may optionally be prefixed with a 'p'
 
 Time has shown that pass-by-value vs. pass-by-reference errors are
 significantly reduced with only the introduction of a '`p`' prefix for pointer
 variables.
 
-#### 4.3.3.4 Reasons use of Hungarian prefixes not allowed
+#### 4.4.3.4 Reasons use of Hungarian prefixes not allowed
 
 The abstraction of abstract data types is ignored. Instead, base types based on
 programminglanguage integers or long integers are abstracted. Thus, the names
@@ -100,21 +100,21 @@ Studies have shown that Hungarian notation tends to encourage lazy variable
 names. It's common to focus on the Hungarian prefix without putting effort into
 a descriptive name.
 
-### 4.3.4 Function and Data Names
+### 4.4.4 Function and Data Names
 
-#### 4.3.4.1 Identifiers shall contain mixed upper- and lower-case text.
+#### 4.4.4.1 Identifiers shall contain mixed upper- and lower-case text.
 
 Use of all upper- or all lower-case is very difficult to read because compound
 words cannot be clearly separated.
 
-#### 4.3.4.2 The names of newly created global entities (such as structures, macros, and defines) shall not use an `EFI_` prefix.
+#### 4.4.4.2 The names of newly created global entities (such as structures, macros, and defines) shall not use an `EFI_` prefix.
 
 From now on, the use of `DXE_` and `PEI_` prefixes shall be reserved for DXE and
 PEI drivers, respectively. If a structure happens to apply equally to PEI and
 DXE, it should use the prefix `DXE_`. If a structure is local to a particular
 module only, no special prefix is required.
 
-#### 4.3.4.3 Acronyms are not capitalized in Function and Data Names.
+#### 4.4.4.3 Acronyms are not capitalized in Function and Data Names.
 
 When all letters in an acronym are capitalized, it makes the prior and
 subsequent words visually difficult to distinguish.
@@ -123,14 +123,14 @@ subsequent words visually difficult to distinguish.
 ThisIsAnExampleOfWhatToDoForPci
 ```
 
-#### 4.3.4.4 Never use C keywords or the names of symbols declared in the standard header files as internal symbols.
+#### 4.4.4.4 Never use C keywords or the names of symbols declared in the standard header files as internal symbols.
 
 When you need to use the name of an existing library function for a
 user-defined function, each use of the user-defined function must be paired
 with a corresponding comment. The ISO standard does not, however, guarantee
 that the user-defined function will take priority over the library function.
 
-##### 4.3.4.4.1 List of the C-reserved keywords.
+##### 4.4.4.4.1 List of the C-reserved keywords.
 
 In principle, the ISO standard, reserves all names beginning with underscore +
 capital letter, or with underscore + underscore. External symbols names shall
@@ -162,23 +162,23 @@ not begin with an underscore.
 In addition to those listed, the identifiers asm and fortran are common
 language extensions and should also be treated as reserved.
 
-### 4.3.5 Type and Macro Names
+### 4.4.5 Type and Macro Names
 
-#### 4.3.5.1 Use all capital letters for both #define and typedef declarations.
+#### 4.4.5.1 Use all capital letters for both #define and typedef declarations.
 
 This clearly differentiates static declarations from dynamic data types.
 
-#### 4.3.5.2 Each word of a concept shall be separated by an underscore character.
+#### 4.4.5.2 Each word of a concept shall be separated by an underscore character.
 
 The underscore effectively separates the words, making names more readable.
 
-#### 4.3.5.3 The use of the "_t" suffix, designating a type, is not allowed.
+#### 4.4.5.3 The use of the "_t" suffix, designating a type, is not allowed.
 
 ```
 typedef UINT32 THIS_IS_AN_EXAMPLE_OF_WHAT_TO_DO_FOR_PCI;
 ```
 
-#### 4.3.5.4 The names of guard macros shall end with an underscore character.
+#### 4.4.5.4 The names of guard macros shall end with an underscore character.
 
 The guard macro, used in the `#ifndef` at the start of an include file, uses a
 postfix underscore character '`_`', in its name in order to prevent collision
@@ -200,7 +200,7 @@ be required if the header files are mutually exclusive.
 #endif /* FILE_NAME_H_ */
 ```
 
-#### 4.3.5.5 The #else and #endif clauses of conditional compilation blocks shall be commented to identify their context.
+#### 4.4.5.5 The #else and #endif clauses of conditional compilation blocks shall be commented to identify their context.
 
 If a conditional compilation construct spans more than seven lines, a comment
 shall be added to the construct's `#else` and `#endif` clauses identifying the

@@ -114,3 +114,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |          | [#425](https://bugzilla.tianocore.org/show_bug.cgi?id=425) [CCS] clarify line breaking and indentation requirements for multi-line function calls |            |
 |          | [#1656](https://bugzilla.tianocore.org/show_bug.cgi?id=1656) Update all Wiki pages for the BSD+Patent license change with SPDX identifiers        |            |
 |          | [#607](https://bugzilla.tianocore.org/show_bug.cgi?id=607) Document code comment requirements for spurious variable assignments                   |            |
+| 2.3      | Add 4.2 Directory names section and update File names section for the guidelines of module directory and file naming|September 2022||

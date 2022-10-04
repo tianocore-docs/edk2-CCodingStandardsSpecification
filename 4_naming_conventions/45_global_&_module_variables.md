@@ -1,5 +1,5 @@
 <!--- @file
-  4.4 Global & Module Variables
+  4.5 Global & Module Variables
 
   Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
 
@@ -29,7 +29,7 @@
 
 -->
 
-## 4.4 Global & Module Variables
+## 4.5 Global & Module Variables
 
 There is often confusion about what constitutes module variables versus global
 variables. Technically, both global and module variables are defined at file
@@ -45,9 +45,9 @@ small number of routines. On the other hand, a global variable is accessed
 throughout the firmware and as the firmware evolves more code will tend to
 access the data resulting in a large number of uses to track down.
 
-### 4.4.1 Recommendations for Global and Module Variables
+### 4.5.1 Recommendations for Global and Module Variables
 
-#### 4.4.1.1 The use of global and module data is strongly discouraged.
+#### 4.5.1.1 The use of global and module data is strongly discouraged.
 
 Global variables are appropriate for GUID, protocol, PPI definitions and other
 immutable objects. Attempting to create global variables can cause many
@@ -59,7 +59,7 @@ programming issues. A module is defined to be a set of data and routines that
 act on that data. Thus, in EFI a protocol could be thought of as a module. A
 complicated protocol may be built out of several smaller modules.
 
-#### 4.4.1.2 Use locking to protect access to global and module variables.
+#### 4.5.1.2 Use locking to protect access to global and module variables.
 
 This protection is strongly encouraged and especially useful for data that is
 accessed at various task priority levels.
