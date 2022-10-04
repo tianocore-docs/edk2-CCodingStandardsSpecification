@@ -1,5 +1,5 @@
 <!--- @file
-  4.2 File Names
+  4.3 File Names
 
   Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
 
@@ -29,25 +29,25 @@
 
 -->
 
-## 4.2 File Names
+## 4.3 File Names
 
-### 4.2.1 There is no limit to file name lengths.
+### 4.3.1 There is no limit to file name lengths.
 
 Do not assume that file names must be 8.3 compatible. Be reasonable though. Let
 the file names be as long as necessary, but no longer. Some operating systems
 limit file names to 32 characters.
 
-### 4.2.2 Spaces in file and directory names are NOT permitted.
+### 4.3.2 Spaces in file and directory names are NOT permitted.
 
 Allowing spaces would cause problems with certain versions of existing industry
 tools and does not provide additional clarity.
 
-### 4.2.3 Never start file names with numbers.
+### 4.3.3 Never start file names with numbers.
 
 Most source control systems will not be able to handle file names that start
 with numbers.
 
-### 4.2.4 Non-standard characters shall not occur in file names.
+### 4.3.4 Non-standard characters shall not occur in file names.
 
 All file names within an EDK II source tree must comply with the following
 regular expression:

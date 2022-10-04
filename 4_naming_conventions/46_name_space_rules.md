@@ -1,5 +1,5 @@
 <!--- @file
-  4.5 Name Space Rules
+  4.6 Name Space Rules
 
   Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
 
@@ -29,7 +29,7 @@
 
 -->
 
-## 4.5 Name Space Rules
+## 4.6 Name Space Rules
 
 ISO C defines several name spaces (see ISO/IEC 9899:1994 6.1.2.3). The same
 name could be used in a separate name space for a completely different item.
@@ -46,7 +46,7 @@ Name spaces are defined as:
 apply to scope. Scope is described in "Scoping Rules".
 **********
 
-### 4.5.1 Names shall be used consistently within the same type.
+### 4.6.1 Names shall be used consistently within the same type.
 
 For example, structure tags may only be reused as structure types, and union
 tags may be reused only for union types.
@@ -62,7 +62,7 @@ typedef struct MyStruct {
 Because of the similarity of `MyStruct` to `MY_STRUCT`, they may only be used
 to refer to the same structure type.
 
-### 4.5.2 No identifier in one name space may be reused as an identifier in another name space
+### 4.6.2 No identifier in one name space may be reused as an identifier in another name space
 
 Exceptions are structure member and union member names.
 
@@ -85,10 +85,10 @@ typedef struct {
 } BAD_STRUCT;
 ```
 
-### 4.5.3 A typedef name shall be a unique identifier.
+### 4.6.3 A typedef name shall be a unique identifier.
 
 The name that appears at the end of a typedef (`STRUCT_ONE` and `STRUCT_TWO` in
-the example in Section 4.5.2) is known as a _typedef name_. Because of ambiguity
+the example in Section 4.6.2) is known as a _typedef name_. Because of ambiguity
 in the C specifications, and to avoid confusion, and once a typedef name is used
 in a structure declaration, it may not be declared elsewhere
 
@@ -97,10 +97,10 @@ in a structure declaration, it may not be declared elsewhere
 number of files is not a violation of this rule.
 **********
 
-### 4.5.4 A tag name shall be unique.
+### 4.6.4 A tag name shall be unique.
 
 The name after the `struct` in structure definitions (`StructOne` and
-`StructTwo` in the example in 4.5.2) is known as a _structure tag_ or simply a
+`StructTwo` in the example in 4.6.2) is known as a _structure tag_ or simply a
 _tag_. To avoid confusion, once a tag is used for declaring a structure it
 shall not be declared elsewhere.
 
@@ -109,7 +109,7 @@ shall not be declared elsewhere.
 violation of this rule.
 **********
 
-### 4.5.5 Prefix module-scope identifiers for cleaner namespaces.
+### 4.6.5 Prefix module-scope identifiers for cleaner namespaces.
 
 The use of prefixes is not an absolute requirement, but has been shown as a
 successful method of avoiding namespace pollution and makes it easier to meet

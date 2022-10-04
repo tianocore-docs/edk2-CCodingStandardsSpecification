@@ -1,7 +1,8 @@
 <!--- @file
   Summary
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2022, Intel Corporation. All rights reserved.<BR>
+  Copyright (C) 2022 Advanced Micro Devices, Inc. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -49,10 +50,11 @@
   * [3.4 Documentation](3_quick_reference.md#34-documentation)
 * [4 Naming Conventions](4_naming_conventions/README.md#4-naming-conventions)
   * [4.1 General Naming Rules](4_naming_conventions/README.md#41-general-naming-rules)
-  * [4.2 File Names](4_naming_conventions/42_file_names.md#42-file-names)
-  * [4.3 Identifiers](4_naming_conventions/43_identifiers.md#43-identifiers)
-  * [4.4 Global & Module Variables](4_naming_conventions/44_global_&_module_variables.md#44-global--module-variables)
-  * [4.5 Name Space Rules](4_naming_conventions/45_name_space_rules.md#45-name-space-rules)
+  * [4.2 Directory Names](4_naming_conventions/42_file_names.md#42-directory-names)  
+  * [4.3 File Names](4_naming_conventions/43_file_names.md#43-file-names)
+  * [4.4 Identifiers](4_naming_conventions/44_identifiers.md#44-identifiers)
+  * [4.5 Global & Module Variables](4_naming_conventions/45_global_&_module_variables.md#45-global--module-variables)
+  * [4.6 Name Space Rules](4_naming_conventions/46_name_space_rules.md#46-name-space-rules)
 * [5 Source Files](5_source_files/README.md#5-source-files)
   * [5.1 General Rules](5_source_files/README.md#51-general-rules)
   * [5.2 Spacing](5_source_files/52_spacing.md#52-spacing)
