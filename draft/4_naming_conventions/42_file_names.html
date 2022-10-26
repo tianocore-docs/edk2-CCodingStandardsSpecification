@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4.2 File Names · GitBook</title>
+        <title>4.2 Directory Names · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -59,7 +59,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="43_identifiers.html" />
+    <link rel="next" href="43_file_names.html" />
     
     
     <link rel="prev" href="./" />
@@ -342,10 +342,10 @@
     
         <li class="chapter " data-level="1.5.2" data-path="42_file_names.html">
             
-                <a href="42_file_names.html#42-file-names">
+                <a href="42_file_names.html#42-directory-names">
             
                     
-                    4.2 File Names
+                    4.2 Directory Names
             
                 </a>
             
@@ -353,12 +353,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="43_identifiers.html">
+        <li class="chapter " data-level="1.5.3" data-path="43_file_names.html">
             
-                <a href="43_identifiers.html#43-identifiers">
+                <a href="43_file_names.html#43-file-names">
             
                     
-                    4.3 Identifiers
+                    4.3 File Names
             
                 </a>
             
@@ -366,12 +366,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="44_global_&_module_variables.html">
+        <li class="chapter " data-level="1.5.4" data-path="44_identifiers.html">
             
-                <a href="44_global_&_module_variables.html#44-global--module-variables">
+                <a href="44_identifiers.html#44-identifiers">
             
                     
-                    4.4 Global & Module Variables
+                    4.4 Identifiers
             
                 </a>
             
@@ -379,12 +379,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="45_name_space_rules.html">
+        <li class="chapter " data-level="1.5.5" data-path="45_global_&_module_variables.html">
             
-                <a href="45_name_space_rules.html#45-name-space-rules">
+                <a href="45_global_&_module_variables.html#45-global--module-variables">
             
                     
-                    4.5 Name Space Rules
+                    4.5 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="46_name_space_rules.html">
+            
+                <a href="46_name_space_rules.html#46-name-space-rules">
+            
+                    
+                    4.6 Name Space Rules
             
                 </a>
             
@@ -920,7 +933,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4.2 File Names</a>
+        <a href=".." >4.2 Directory Names</a>
     </h1>
 </div>
 <div>
@@ -930,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/26/2022 04:16:53]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -945,53 +958,7 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <!--- @file
-  4.2 File Names
-
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
-
-  Redistribution and use in source (original document form) and 'compiled'
-  forms (converted to PDF, epub, HTML and other formats) with or without
-  modification, are permitted provided that the following conditions are met:
-
-  1) Redistributions of source code (original document form) must retain the
-     above copyright notice, this list of conditions and the following
-     disclaimer as the first lines of this file unmodified.
-
-  2) Redistributions in compiled form (transformed to other DTDs, converted to
-     PDF, epub, HTML and other formats) must reproduce the above copyright
-     notice, this list of conditions and the following disclaimer in the
-     documentation and/or other materials provided with the distribution.
-
-  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
-  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
-  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
-  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
-  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
-  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
--->
-<h2 id="42-file-names">4.2 File Names</h2>
-<h3 id="421-there-is-no-limit-to-file-name-lengths">4.2.1 There is no limit to file name lengths.</h3>
-<p>Do not assume that file names must be 8.3 compatible. Be reasonable though. Let
-the file names be as long as necessary, but no longer. Some operating systems
-limit file names to 32 characters.</p>
-<h3 id="422-spaces-in-file-and-directory-names-are-not-permitted">4.2.2 Spaces in file and directory names are NOT permitted.</h3>
-<p>Allowing spaces would cause problems with certain versions of existing industry
-tools and does not provide additional clarity.</p>
-<h3 id="423-never-start-file-names-with-numbers">4.2.3 Never start file names with numbers.</h3>
-<p>Most source control systems will not be able to handle file names that start
-with numbers.</p>
-<h3 id="424-non-standard-characters-shall-not-occur-in-file-names">4.2.4 Non-standard characters shall not occur in file names.</h3>
-<p>All file names within an EDK II source tree must comply with the following
-regular expression:</p>
-<pre><code>[A-Za-z][_A-Za-z0-9-]*[A-Za-z0-9]+
-</code></pre><p>That is, a letter followed by zero, or more, letters, underscores, dashes, or
-digits followed by a period followed by one or more letters or digits.</p>
+                                <h1 id="42-directory-names">4.2 Directory Names</h1>
 
                                 
                                 </section>
@@ -1006,7 +973,7 @@ digits followed by a period followed by one or more letters or digits.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/26/2022 04:16:53]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1024,7 +991,7 @@ digits followed by a period followed by one or more letters or digits.</p>
                 </a>
                 
                 
-                <a href="43_identifiers.html#43-identifiers" class="navigation navigation-next " aria-label="Next page: 4.3 Identifiers">
+                <a href="43_file_names.html#43-file-names" class="navigation navigation-next " aria-label="Next page: 4.3 File Names">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1035,7 +1002,7 @@ digits followed by a period followed by one or more letters or digits.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.2 File Names","level":"1.5.2","depth":2,"next":{"title":"4.3 Identifiers","level":"1.5.3","depth":2,"anchor":"#43-identifiers","path":"4_naming_conventions/43_identifiers.md","ref":"4_naming_conventions/43_identifiers.md#43-identifiers","articles":[]},"previous":{"title":"4.1 General Naming Rules","level":"1.5.1","depth":2,"anchor":"#41-general-naming-rules","path":"4_naming_conventions/README.md","ref":"4_naming_conventions/README.md#41-general-naming-rules","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/42_file_names.md","mtime":"2020-12-11T19:39:44.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-11T19:40:18.735Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.2 Directory Names","level":"1.5.2","depth":2,"next":{"title":"4.3 File Names","level":"1.5.3","depth":2,"anchor":"#43-file-names","path":"4_naming_conventions/43_file_names.md","ref":"4_naming_conventions/43_file_names.md#43-file-names","articles":[]},"previous":{"title":"4.1 General Naming Rules","level":"1.5.1","depth":2,"anchor":"#41-general-naming-rules","path":"4_naming_conventions/README.md","ref":"4_naming_conventions/README.md#41-general-naming-rules","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/42_file_names.md","mtime":"2022-10-26T16:16:49.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-26T16:16:53.778Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

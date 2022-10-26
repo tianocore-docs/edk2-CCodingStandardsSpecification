@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4.3 Identifiers · GitBook</title>
+        <title>Table 4 Reserved Keywords · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -59,10 +59,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="44_global_&_module_variables.html" />
+    <link rel="next" href="../5_source_files/" />
     
     
-    <link rel="prev" href="42_file_names.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -342,10 +342,10 @@
     
         <li class="chapter " data-level="1.5.2" data-path="42_file_names.html">
             
-                <a href="42_file_names.html#42-file-names">
+                <a href="42_file_names.html#42-directory-names">
             
                     
-                    4.2 File Names
+                    4.2 Directory Names
             
                 </a>
             
@@ -353,12 +353,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="43_identifiers.html">
+        <li class="chapter " data-level="1.5.3" data-path="43_file_names.html">
             
-                <a href="43_identifiers.html#43-identifiers">
+                <a href="43_file_names.html#43-file-names">
             
                     
-                    4.3 Identifiers
+                    4.3 File Names
             
                 </a>
             
@@ -366,12 +366,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="44_global_&_module_variables.html">
+        <li class="chapter " data-level="1.5.4" data-path="44_identifiers.html">
             
-                <a href="44_global_&_module_variables.html#44-global--module-variables">
+                <a href="44_identifiers.html#44-identifiers">
             
                     
-                    4.4 Global & Module Variables
+                    4.4 Identifiers
             
                 </a>
             
@@ -379,12 +379,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="45_name_space_rules.html">
+        <li class="chapter " data-level="1.5.5" data-path="45_global_&_module_variables.html">
             
-                <a href="45_name_space_rules.html#45-name-space-rules">
+                <a href="45_global_&_module_variables.html#45-global--module-variables">
             
                     
-                    4.5 Name Space Rules
+                    4.5 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="46_name_space_rules.html">
+            
+                <a href="46_name_space_rules.html#46-name-space-rules">
+            
+                    
+                    4.6 Name Space Rules
             
                 </a>
             
@@ -920,7 +933,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4.3 Identifiers</a>
+        <a href=".." >Table 4 Reserved Keywords</a>
     </h1>
 </div>
 <div>
@@ -930,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/26/2022 04:16:53]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -945,238 +958,7 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <!--- @file
-  4.3 Identifiers
-
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
-
-  Redistribution and use in source (original document form) and 'compiled'
-  forms (converted to PDF, epub, HTML and other formats) with or without
-  modification, are permitted provided that the following conditions are met:
-
-  1) Redistributions of source code (original document form) must retain the
-     above copyright notice, this list of conditions and the following
-     disclaimer as the first lines of this file unmodified.
-
-  2) Redistributions in compiled form (transformed to other DTDs, converted to
-     PDF, epub, HTML and other formats) must reproduce the above copyright
-     notice, this list of conditions and the following disclaimer in the
-     documentation and/or other materials provided with the distribution.
-
-  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
-  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
-  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
-  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
-  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
-  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
--->
-<h2 id="43-identifiers">4.3 Identifiers</h2>
-<h3 id="431-identifiers-shall-not-rely-on-the-significance-of-more-than-31-characters">4.3.1 Identifiers shall not rely on the significance of more than 31 characters.</h3>
-<p>Identifiers (variable names, labels, structure tags, derived macro names, etc.)
-may be an arbitrary length. The ISO standard only guarantees that language
-processors only pay attention to the first 31 symbols when comparing
-identifiers. Note that the same ISO standard requires that external labels
-(those visible to the linker) be unique in their first six characters. Since it
-has been confirmed that 31 character / case significance is supported by EDK II
-supported tool chains, there is no requirement to ensure uniqueness of
-externals within the first 6 characters.</p>
-<h3 id="432-always-make-identifier-names-that-are-visually-distinguishable">4.3.2 Always make identifier names that are visually distinguishable.</h3>
-<p>While not as big an issue as it has been in the past, when choosing labels
-ensure that the label is unlikely to be confused with other labels used in the
-file. Ensure that long label names vary by more than one or two characters.
-Ensure that labels don&apos;t vary between zero and oh (0 and O), one and ell (1 and
-l). Some also consider 2 and Z, and 5 and S to be similar.</p>
-<h3 id="433-hungarian-prefixes">4.3.3 Hungarian Prefixes</h3>
-<h4 id="4331-use-of-hungarian-notation-is-not-allowed">4.3.3.1 Use of Hungarian notation is not allowed</h4>
-<p>This set of detailed guidelines for naming variables and routines is a
-convention widely used with the C programming language, especially in
-Microsoft<em> Windows</em> programming. An example of a non-compliant variable named
-with the Hungarian conventions follows:</p>
-<pre><code>bmRequestType;  // Byte mask, First byte in the USB message header
-pachInsert;     // A pointer to an array of characters to insert.
-</code></pre><p>Global data and module data shall be prefixed with &apos;g&apos; or &apos;m&apos;, respectively.
-Pointer variables may optionally be prefixed with &apos;p&apos;. These are the only
-exceptions to the prohibition against Hungarian notation.</p>
-<h4 id="4332-any-variable-with-file-scope-or-better-shall-be-prefixed-by-an-m-or-g">4.3.3.2 Any variable with file scope, or better, shall be prefixed by an &apos;m&apos; or &apos;g&apos;</h4>
-<p>There are no exceptions to this rule. The &apos;<code>m</code>&apos; prefix identifies a variable
-with module scope, while a &apos;<code>g</code>&apos; prefix identifies a global variable.</p>
-<pre><code>gThisIsAGlobalVariableName
-mThisIsAModuleVariableName
-</code></pre><h4 id="4333-pointer-variables-may-optionally-be-prefixed-with-a-p">4.3.3.3 Pointer variables may optionally be prefixed with a &apos;p&apos;</h4>
-<p>Time has shown that pass-by-value vs. pass-by-reference errors are
-significantly reduced with only the introduction of a &apos;<code>p</code>&apos; prefix for pointer
-variables.</p>
-<h4 id="4334-reasons-use-of-hungarian-prefixes-not-allowed">4.3.3.4 Reasons use of Hungarian prefixes not allowed</h4>
-<p>The abstraction of abstract data types is ignored. Instead, base types based on
-programminglanguage integers or long integers are abstracted. Thus, the names
-are focused on data types instead of the object-oriented abstraction that they
-represent. This focus is of little value and forces manual type checking that
-can be accomplished easily by the compiler with warnings promoted to errors.</p>
-<p>Hungarian notation combines data meaning with data representation. If you
-change a data type you have to rename the variable. There is no mechanism to
-ensure that the names are accurate.</p>
-<p>Studies have shown that Hungarian notation tends to encourage lazy variable
-names. It&apos;s common to focus on the Hungarian prefix without putting effort into
-a descriptive name.</p>
-<h3 id="434-function-and-data-names">4.3.4 Function and Data Names</h3>
-<h4 id="4341-identifiers-shall-contain-mixed-upper--and-lower-case-text">4.3.4.1 Identifiers shall contain mixed upper- and lower-case text.</h4>
-<p>Use of all upper- or all lower-case is very difficult to read because compound
-words cannot be clearly separated.</p>
-<h4 id="4342-the-names-of-newly-created-global-entities-such-as-structures-macros-and-defines-shall-not-use-an-efi-prefix">4.3.4.2 The names of newly created global entities (such as structures, macros, and defines) shall not use an <code>EFI_</code> prefix.</h4>
-<p>From now on, the use of <code>DXE_</code> and <code>PEI_</code> prefixes shall be reserved for DXE and
-PEI drivers, respectively. If a structure happens to apply equally to PEI and
-DXE, it should use the prefix <code>DXE_</code>. If a structure is local to a particular
-module only, no special prefix is required.</p>
-<h4 id="4343-acronyms-are-not-capitalized-in-function-and-data-names">4.3.4.3 Acronyms are not capitalized in Function and Data Names.</h4>
-<p>When all letters in an acronym are capitalized, it makes the prior and
-subsequent words visually difficult to distinguish.</p>
-<pre><code>ThisIsAnExampleOfWhatToDoForPci
-</code></pre><h4 id="4344-never-use-c-keywords-or-the-names-of-symbols-declared-in-the-standard-header-files-as-internal-symbols">4.3.4.4 Never use C keywords or the names of symbols declared in the standard header files as internal symbols.</h4>
-<p>When you need to use the name of an existing library function for a
-user-defined function, each use of the user-defined function must be paired
-with a corresponding comment. The ISO standard does not, however, guarantee
-that the user-defined function will take priority over the library function.</p>
-<h5 id="43441-list-of-the-c-reserved-keywords">4.3.4.4.1 List of the C-reserved keywords.</h5>
-<p>In principle, the ISO standard, reserves all names beginning with underscore +
-capital letter, or with underscore + underscore. External symbols names shall
-not begin with an underscore.</p>
-<h6 id="table-4-reserved-keywords">Table 4 Reserved Keywords</h6>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>auto</td>
-<td>break</td>
-<td>case</td>
-<td>char</td>
-<td>const</td>
-</tr>
-<tr>
-<td>continue</td>
-<td>default</td>
-<td>do</td>
-<td>double<sup><a href="#fn_a" id="reffn_a">a</a></sup></td>
-<td>else</td>
-</tr>
-<tr>
-<td>enum</td>
-<td>extern</td>
-<td>float<sup><a href="#fn_a" id="reffn_a">a</a></sup></td>
-<td>for</td>
-<td>goto</td>
-</tr>
-<tr>
-<td>if</td>
-<td>int</td>
-<td>long</td>
-<td>register</td>
-<td>return</td>
-</tr>
-<tr>
-<td>short</td>
-<td>signed</td>
-<td>sizeof</td>
-<td>static</td>
-<td>struct</td>
-</tr>
-<tr>
-<td>switch</td>
-<td>typedef</td>
-<td>union</td>
-<td>unsigned</td>
-<td>void</td>
-</tr>
-<tr>
-<td>volatile</td>
-<td>while</td>
-<td>inline</td>
-<td>restrict</td>
-<td>wchar_t</td>
-</tr>
-<tr>
-<td>bool</td>
-<td>true</td>
-<td>false</td>
-<td>NULL</td>
-<td>_Bool<sup><a href="#fn_b" id="reffn_b">b</a></sup></td>
-</tr>
-<tr>
-<td>_Complex<sup><a href="#fn_b" id="reffn_b">b</a></sup></td>
-<td>_Imaginary<sup><a href="#fn_b" id="reffn_b">b</a></sup></td>
-<td>and<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td>and_eq<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td>bitand<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-</tr>
-<tr>
-<td>bitor<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td>compl<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td>not<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td>not_eq<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td>or<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-</tr>
-<tr>
-<td>or_eq<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td>xor<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td>xor_eq<sup><a href="#fn_c" id="reffn_c">c</a></sup></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<blockquote id="fn_a">
-<sup>a</sup>. Floating point operations are not recommended in UEFI firmware.<a href="#reffn_a" title="Jump back to footnote [a] in the text."> &#x21A9;</a>
-</blockquote>
-<blockquote id="fn_b">
-<sup>b</sup>. These keywords are specific to C99 and are not reserved in C++.<a href="#reffn_b" title="Jump back to footnote [b] in the text."> &#x21A9;</a>
-</blockquote>
-<blockquote id="fn_c">
-<sup>c</sup>. Macros defined in header iso646.h. These identifiers are reserved in C++ and are defined as part of the C Standard Library.<a href="#reffn_c" title="Jump back to footnote [c] in the text."> &#x21A9;</a>
-</blockquote>
-<p>In addition to those listed, the identifiers asm and fortran are common
-language extensions and should also be treated as reserved.</p>
-<h3 id="435-type-and-macro-names">4.3.5 Type and Macro Names</h3>
-<h4 id="4351-use-all-capital-letters-for-both-define-and-typedef-declarations">4.3.5.1 Use all capital letters for both #define and typedef declarations.</h4>
-<p>This clearly differentiates static declarations from dynamic data types.</p>
-<h4 id="4352-each-word-of-a-concept-shall-be-separated-by-an-underscore-character">4.3.5.2 Each word of a concept shall be separated by an underscore character.</h4>
-<p>The underscore effectively separates the words, making names more readable.</p>
-<h4 id="4353-the-use-of-the-t-suffix-designating-a-type-is-not-allowed">4.3.5.3 The use of the &quot;_t&quot; suffix, designating a type, is not allowed.</h4>
-<pre><code>typedef UINT32 THIS_IS_AN_EXAMPLE_OF_WHAT_TO_DO_FOR_PCI;
-</code></pre><h4 id="4354-the-names-of-guard-macros-shall-end-with-an-underscore-character">4.3.5.4 The names of guard macros shall end with an underscore character.</h4>
-<p>The guard macro, used in the <code>#ifndef</code> at the start of an include file, uses a
-postfix underscore character &apos;<code>_</code>&apos;, in its name in order to prevent collision
-with other names that follow the naming convention. This may not be sufficient
-for header files that don&apos;t have a unique name. In that case, additional text
-may have to be added to the macro name in order to make it unique. This may not
-be required if the header files are mutually exclusive.</p>
-<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> FILE_NAME_H_</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FILE_NAME_H_</span>
-...
-<span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> (A_NUMBER &gt; 72)</span>
-...
-<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span> <span class="hljs-comment">// NOT (A_NUMBER &gt; 72)</span></span>
-...
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span> <span class="hljs-comment">// (A_NUMBER &gt; 72)</span></span>
-...
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span> <span class="hljs-comment">/* FILE_NAME_H_ */</span></span>
-</code></pre>
-<h4 id="4355-the-else-and-endif-clauses-of-conditional-compilation-blocks-shall-be-commented-to-identify-their-context">4.3.5.5 The #else and #endif clauses of conditional compilation blocks shall be commented to identify their context.</h4>
-<p>If a conditional compilation construct spans more than seven lines, a comment
-shall be added to the construct&apos;s <code>#else</code> and <code>#endif</code> clauses identifying the
-block the clause is associated with. This is illustrated in the preceding code
-example. The comment shall be on the same line as the <code>#else</code> or <code>#endif</code>
-clause.</p>
+                                <h1 id="table-4-reserved-keywords">Table 4 Reserved Keywords</h1>
 
                                 
                                 </section>
@@ -1191,7 +973,7 @@ clause.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/26/2022 04:16:53]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1204,12 +986,12 @@ clause.</p>
 
             
                 
-                <a href="42_file_names.html#42-file-names" class="navigation navigation-prev " aria-label="Previous page: 4.2 File Names">
+                <a href="./#table-3-efi-supported-acronyms" class="navigation navigation-prev " aria-label="Previous page: Table 3 EFI Supported Acronyms">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="44_global_&_module_variables.html#44-global--module-variables" class="navigation navigation-next " aria-label="Next page: 4.4 Global & Module Variables">
+                <a href="../5_source_files/#table-5-permissible-escape-sequences-isoiec-98991990-6134" class="navigation navigation-next " aria-label="Next page: Table 5 Permissible Escape Sequences (ISO/IEC 9899:1990 6.1.3.4)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1220,7 +1002,7 @@ clause.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.3 Identifiers","level":"1.5.3","depth":2,"next":{"title":"4.4 Global & Module Variables","level":"1.5.4","depth":2,"anchor":"#44-global--module-variables","path":"4_naming_conventions/44_global_&_module_variables.md","ref":"4_naming_conventions/44_global_&_module_variables.md#44-global--module-variables","articles":[]},"previous":{"title":"4.2 File Names","level":"1.5.2","depth":2,"anchor":"#42-file-names","path":"4_naming_conventions/42_file_names.md","ref":"4_naming_conventions/42_file_names.md#42-file-names","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/43_identifiers.md","mtime":"2020-12-11T19:39:44.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-11T19:40:18.735Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Table 4 Reserved Keywords","level":"2.1.4","depth":2,"next":{"title":"Table 5 Permissible Escape Sequences (ISO/IEC 9899:1990 6.1.3.4)","level":"2.1.5","depth":2,"anchor":"#table-5-permissible-escape-sequences-isoiec-98991990-6134","path":"5_source_files/README.md","ref":"5_source_files/README.md#table-5-permissible-escape-sequences-isoiec-98991990-6134","articles":[]},"previous":{"title":"Table 3 EFI Supported Acronyms","level":"2.1.3","depth":2,"anchor":"#table-3-efi-supported-acronyms","path":"4_naming_conventions/README.md","ref":"4_naming_conventions/README.md#table-3-efi-supported-acronyms","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/43_identifiers.md","mtime":"2022-10-26T16:16:49.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-26T16:16:53.778Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4.5 Name Space Rules · GitBook</title>
+        <title>4.3 File Names · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -59,10 +59,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../5_source_files/" />
+    <link rel="next" href="44_identifiers.html" />
     
     
-    <link rel="prev" href="44_global_&_module_variables.html" />
+    <link rel="prev" href="42_file_names.html" />
     
 
     </head>
@@ -342,10 +342,10 @@
     
         <li class="chapter " data-level="1.5.2" data-path="42_file_names.html">
             
-                <a href="42_file_names.html#42-file-names">
+                <a href="42_file_names.html#42-directory-names">
             
                     
-                    4.2 File Names
+                    4.2 Directory Names
             
                 </a>
             
@@ -353,12 +353,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="43_identifiers.html">
+        <li class="chapter " data-level="1.5.3" data-path="43_file_names.html">
             
-                <a href="43_identifiers.html#43-identifiers">
+                <a href="43_file_names.html#43-file-names">
             
                     
-                    4.3 Identifiers
+                    4.3 File Names
             
                 </a>
             
@@ -366,12 +366,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="44_global_&_module_variables.html">
+        <li class="chapter " data-level="1.5.4" data-path="44_identifiers.html">
             
-                <a href="44_global_&_module_variables.html#44-global--module-variables">
+                <a href="44_identifiers.html#44-identifiers">
             
                     
-                    4.4 Global & Module Variables
+                    4.4 Identifiers
             
                 </a>
             
@@ -379,12 +379,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="45_name_space_rules.html">
+        <li class="chapter " data-level="1.5.5" data-path="45_global_&_module_variables.html">
             
-                <a href="45_name_space_rules.html#45-name-space-rules">
+                <a href="45_global_&_module_variables.html#45-global--module-variables">
             
                     
-                    4.5 Name Space Rules
+                    4.5 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="46_name_space_rules.html">
+            
+                <a href="46_name_space_rules.html#46-name-space-rules">
+            
+                    
+                    4.6 Name Space Rules
             
                 </a>
             
@@ -920,7 +933,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4.5 Name Space Rules</a>
+        <a href=".." >4.3 File Names</a>
     </h1>
 </div>
 <div>
@@ -930,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/26/2022 04:16:53]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -946,9 +959,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <!--- @file
-  4.5 Name Space Rules
+  4.3 File Names
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2022, Intel Corporation. All rights reserved.<BR>
+  Copyright (C) 2022 Advanced Micro Devices, Inc. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -975,75 +989,115 @@
   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
-<h2 id="45-name-space-rules">4.5 Name Space Rules</h2>
-<p>ISO C defines several name spaces (see ISO/IEC 9899:1994 6.1.2.3). The same
-name could be used in a separate name space for a completely different item.</p>
-<p>Name spaces are defined as:</p>
+<h2 id="43-file-names">4.3 File Names</h2>
+<h3 id="431-there-is-no-limit-to-file-name-lengths">4.3.1 There is no limit to file name lengths.</h3>
+<p>Do not assume that file names must be 8.3 compatible. Be reasonable though. Let
+the file names be as long as necessary, but no longer. Some operating systems
+limit file names to 32 characters.</p>
+<h3 id="432-spaces-in-file-and-directory-names-are-not-permitted">4.3.2 Spaces in file and directory names are NOT permitted.</h3>
+<p>Allowing spaces would cause problems with certain versions of existing industry
+tools and does not provide additional clarity.</p>
+<h3 id="433-never-start-file-names-with-numbers">4.3.3 Never start file names with numbers.</h3>
+<p>Most source control systems will not be able to handle file names that start
+with numbers.</p>
+<h3 id="434-non-standard-characters-shall-not-occur-in-file-names">4.3.4 Non-standard characters shall not occur in file names.</h3>
+<p>All file names within an EDK II source tree must comply with the following
+regular expression:</p>
+<pre><code>[A-Za-z][_A-Za-z0-9-]*[A-Za-z0-9]+
+</code></pre><p>That is, a letter followed by zero, or more, letters, underscores, dashes, or
+digits followed by a period followed by one or more letters or digits.</p>
+<h3 id="435-file-naming-guidelines-for-modules">4.3.5 File naming guidelines for modules</h3>
+<p>Below sections are the file naming guidelines for EDK II meta files and source files. The
+guidelines are not just considering the the uniformity of file naming, but it also provides
+the flexibility of file name construction for the scenario of different EDK II module
+designs; such as the support for multiple processor architectures and vendors. It may require the
+further discussions between EDK II maintainers and contributors in order to determine the best
+naming of the EDK II module file.</p>
+<h4 id="4351-edk-ii-meta-files-within-a-package">4.3.5.1 EDK II meta files within a package</h4>
+<pre><code>&lt;PackageName&gt;Pkg.dec
+&lt;PackageName&gt;Pkg.dsc
+
+   &lt;PackageName&gt; REQUIRED  *
+</code></pre><h4 id="4352-edk-ii-inf-file-within-a-module-instance">4.3.5.2 EDK II INF file within a Module instance</h4>
 <ul>
-<li>label names</li>
-<li>tags of structures, unions and enumerators</li>
-<li>Members of structures or unions</li>
-<li>All other identifiers.</li>
+<li><p>If the implementation is for all CPU architectures, specific CPU architectures, CPU vendors or the implementation is shared by certain CPU archs:
+```
+<feature><phase>[<cpuarch>][<vendor>].inf</vendor></cpuarch></phase></feature></p>
+<p> <feature>      REQUIRED    *
+ <phase>        REQUIRED    Base, Sec, Pei, Dxe, DxeRuntime, Mm, StandaloneMm,</phase></feature></p>
+<pre><code>                        Smm, Uefi.
+</code></pre><p> <cpuarch>      OPTIONAL    The <cpuarch> is represented with a BNF,</cpuarch></cpuarch></p>
+<pre><code>                        &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
+                                  &apos;LoongArch64&apos; | &apos;Ebc&apos;
+                        &lt;CpuArch&gt; ::= &lt;arch&gt;[&lt;arch&gt;]*
+
+                        Example: Ia32X64Arm or RiscV64LoongArch64
+</code></pre><p> <vendor>       OPTIONAL    *</vendor></p>
+</li>
 </ul>
-<hr>
-<p><strong>Note:</strong> Name space and scope are not synonymous. Name space rules do not
-apply to scope. Scope is described in &quot;Scoping Rules&quot;.</p>
-<hr>
-<h3 id="451-names-shall-be-used-consistently-within-the-same-type">4.5.1 Names shall be used consistently within the same type.</h3>
-<p>For example, structure tags may only be reused as structure types, and union
-tags may be reused only for union types.</p>
-<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> MyStruct {
-  UINT32  One;
-  UINT32  Two;
-  UINT32  Three;
-} MY_STRUCT;
-</code></pre>
-<p>Because of the similarity of <code>MyStruct</code> to <code>MY_STRUCT</code>, they may only be used
-to refer to the same structure type.</p>
-<h3 id="452-no-identifier-in-one-name-space-may-be-reused-as-an-identifier-in-another-name-space">4.5.2 No identifier in one name space may be reused as an identifier in another name space</h3>
-<p>Exceptions are structure member and union member names.</p>
-<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> StructOne {
-  INT32             One;
-  INT16             Two;
-  <span class="hljs-keyword">struct</span> StructOne  *MySelf;
-} STRUCT_ONE;
+<p>Example:</p>
+<ul>
+<li>SmbiosDxe.inf</li>
+<li>CpuIo2Dxe.inf</li>
+<li>CpuIo2DxeAmd.inf</li>
+<li>CpuIo2DxeIa32X64.inf</li>
+<li>CpuIo2DxeIa32X64Intel.inf
+```</li>
+</ul>
+<ul>
+<li>If the implementation does not have any shared code between phases (e.g., Pcd/Dxe):</li>
+</ul>
+<pre><code>[&lt;Feature&gt;][&lt;CpuArch&gt;][&lt;Vendor&gt;].inf
 
-<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> StructTwo {
-  INT16             One;
-  INT8              *Two;
-  <span class="hljs-keyword">struct</span> StructTwo  *MySelf;
-} STRUCT_TWO;
+   &lt;Feature&gt;      OPTIONAL    *
+   &lt;CpuArch&gt;      OPTIONAL    The &lt;CpuArch&gt; is represented with a BNF,
+                              &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
+                                        &apos;LoongArch64&apos; | &apos;Ebc&apos;
+                              &lt;CpuArch&gt; ::= &lt;arch&gt;[&lt;arch&gt;]*
 
-<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> {
-  STRUCT_ONE  *StructOne;     <span class="hljs-comment">// NOT ALLOWED</span>
-  STRUCT_TWO  *StructTwoPtr;  <span class="hljs-comment">// ALLOWED, it is unique</span>
-} BAD_STRUCT;
-</code></pre>
-<h3 id="453-a-typedef-name-shall-be-a-unique-identifier">4.5.3 A typedef name shall be a unique identifier.</h3>
-<p>The name that appears at the end of a typedef (<code>STRUCT_ONE</code> and <code>STRUCT_TWO</code> in
-the example in Section 4.5.2) is known as a <em>typedef name</em>. Because of ambiguity
-in the C specifications, and to avoid confusion, and once a typedef name is used
-in a structure declaration, it may not be declared elsewhere</p>
-<hr>
-<p><strong>Note:</strong> Including the declaration in a header file that is then included in a
-number of files is not a violation of this rule.</p>
-<hr>
-<h3 id="454-a-tag-name-shall-be-unique">4.5.4 A tag name shall be unique.</h3>
-<p>The name after the <code>struct</code> in structure definitions (<code>StructOne</code> and
-<code>StructTwo</code> in the example in 4.5.2) is known as a <em>structure tag</em> or simply a
-<em>tag</em>. To avoid confusion, once a tag is used for declaring a structure it
-shall not be declared elsewhere.</p>
-<hr>
-<p><strong>Note:</strong> Including a header file that contains a structure definition is not a
-violation of this rule.</p>
-<hr>
-<h3 id="455-prefix-module-scope-identifiers-for-cleaner-namespaces">4.5.5 Prefix module-scope identifiers for cleaner namespaces.</h3>
-<p>The use of prefixes is not an absolute requirement, but has been shown as a
-successful method of avoiding namespace pollution and makes it easier to meet
-other naming requirements. A useful prefix is the module&apos;s name. For example,
-the UEFI Shell uses the prefix &quot;Shell&quot; for its identifiers.</p>
-<pre><code>SHELL_FREE_NON_NULL (Buffer);
-ShellCommandLibConstructor (ImageHandle, SystemTable);
+                              Example: Ia32X64Arm or RiscV64LoongArch64
+   &lt;Vendor&gt;       OPTIONAL    *
+Example:
+   Pcd.inf
+</code></pre><h4 id="4353-edk-ii-inf-file-within-a-library-instance">4.3.5.3 EDK II INF file within a Library instance</h4>
+<pre><code>&lt;Phase&gt;[&lt;CpuArch&gt;][&lt;Vendor&gt;]&lt;LibraryClassName&gt;[&lt;Dependency&gt;].inf
+   &lt;Phase&gt;              REQUIRED     Base, Sec, Pei, Dxe, DxeRuntime, Mm,
+                                     StandaloneMm, Smm, Uefi.
+   &lt;CpuArch&gt;            OPTIONAL     The &lt;CpuArch&gt; is represented with a BNF,
+                                     &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
+                                               &apos;LoongArch64&apos; | &apos;Ebc&apos;
+                                     &lt;CpuArch&gt; ::= &lt;arch&gt;[&lt;arch&gt;]*
+
+                                     Example: Ia32X64Arm or RiscV64LoongArch64
+   &lt;Vendor&gt;             OPTIONAL     *
+   &lt;LibraryClassName&gt;   REQUIRED     *
+   &lt;Dependency&gt;         OPTIONAL     * (Typically name of PPI, Protocol, LibraryClass
+                                       that the implementation is layered on top of)
+
+Example:
+   - SmmAmdSmmCpuFeaturesLib.inf
+   - SmmIa32X64SmmCpuFeaturesLib.inf
+</code></pre><h4 id="4354-edk-ii-source-files-within-a-librarymodule-instance">4.3.5.4 EDK II source files within a Library/Module instance</h4>
+<p>In generally, the file name is constructed as below:</p>
+<pre><code>
+[&lt;CpuArch&gt;][&lt;Vendor&gt;]&lt;FileName&gt;.*
+
+   &lt;CpuArch&gt;   OPTIONAL   The &lt;CpuArch&gt; is represented with a BNF,
+                          &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
+                                    &apos;LoongArch64&apos; | &apos;Ebc&apos;
+                          &lt;CpuArch&gt; ::= &lt;arch&gt;[&lt;arch&gt;]*
+
+                          Example: Ia32X64Arm or RiscV64LoongArch64
+   &lt;Vendor&gt;    OPTIONAL   *
+   &lt;FileName&gt;  REQUIRED   Refer to 4.3.1 to 4.3.4 sections for the file
+                          naming format.
+
+Example:
+   SmmCpuFeatureLib.c
+   SmmCpuFeatureLibCommon.c
+   Ia32X64SmmCpuFeaturesLib.c
+   Ia32X64IntelSmmCpuFeaturesLib.c
+   AmdSmmCpuFeaturesLib.c
 </code></pre>
                                 
                                 </section>
@@ -1058,7 +1112,7 @@ ShellCommandLibConstructor (ImageHandle, SystemTable);
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/26/2022 04:16:53]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1071,12 +1125,12 @@ ShellCommandLibConstructor (ImageHandle, SystemTable);
 
             
                 
-                <a href="44_global_&_module_variables.html#44-global--module-variables" class="navigation navigation-prev " aria-label="Previous page: 4.4 Global & Module Variables">
+                <a href="42_file_names.html#42-directory-names" class="navigation navigation-prev " aria-label="Previous page: 4.2 Directory Names">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../5_source_files/#5-source-files" class="navigation navigation-next " aria-label="Next page: 5 Source Files">
+                <a href="44_identifiers.html#44-identifiers" class="navigation navigation-next " aria-label="Next page: 4.4 Identifiers">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1087,7 +1141,7 @@ ShellCommandLibConstructor (ImageHandle, SystemTable);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.5 Name Space Rules","level":"1.5.5","depth":2,"next":{"title":"5 Source Files","level":"1.6","depth":1,"anchor":"#5-source-files","path":"5_source_files/README.md","ref":"5_source_files/README.md#5-source-files","articles":[{"title":"5.1 General Rules","level":"1.6.1","depth":2,"anchor":"#51-general-rules","path":"5_source_files/README.md","ref":"5_source_files/README.md#51-general-rules","articles":[]},{"title":"5.2 Spacing","level":"1.6.2","depth":2,"anchor":"#52-spacing","path":"5_source_files/52_spacing.md","ref":"5_source_files/52_spacing.md#52-spacing","articles":[]},{"title":"5.3 Include Files","level":"1.6.3","depth":2,"anchor":"#53-include-files","path":"5_source_files/53_include_files.md","ref":"5_source_files/53_include_files.md#53-include-files","articles":[]},{"title":"5.4 Code File Structure","level":"1.6.4","depth":2,"anchor":"#54-code-file-structure","path":"5_source_files/54_code_file_structure.md","ref":"5_source_files/54_code_file_structure.md#54-code-file-structure","articles":[]},{"title":"5.5 Preprocessor Directives","level":"1.6.5","depth":2,"anchor":"#55-preprocessor-directives","path":"5_source_files/55_preprocessor_directives.md","ref":"5_source_files/55_preprocessor_directives.md#55-preprocessor-directives","articles":[]},{"title":"5.6 Declarations and Types","level":"1.6.6","depth":2,"anchor":"#56-declarations-and-types","path":"5_source_files/56_declarations_and_types.md","ref":"5_source_files/56_declarations_and_types.md#56-declarations-and-types","articles":[]},{"title":"5.7 C Programming","level":"1.6.7","depth":2,"anchor":"#57-c-programming","path":"5_source_files/57_c_programming.md","ref":"5_source_files/57_c_programming.md#57-c-programming","articles":[]},{"title":"5.8 Error Handling and ASSERT","level":"1.6.8","depth":2,"anchor":"#58-error-handling-and-assert","path":"5_source_files/58_error_handling_and_assert.md","ref":"5_source_files/58_error_handling_and_assert.md#58-error-handling-and-assert","articles":[]}]},"previous":{"title":"4.4 Global & Module Variables","level":"1.5.4","depth":2,"anchor":"#44-global--module-variables","path":"4_naming_conventions/44_global_&_module_variables.md","ref":"4_naming_conventions/44_global_&_module_variables.md#44-global--module-variables","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/45_name_space_rules.md","mtime":"2020-12-11T19:39:44.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-11T19:40:18.735Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.3 File Names","level":"1.5.3","depth":2,"next":{"title":"4.4 Identifiers","level":"1.5.4","depth":2,"anchor":"#44-identifiers","path":"4_naming_conventions/44_identifiers.md","ref":"4_naming_conventions/44_identifiers.md#44-identifiers","articles":[]},"previous":{"title":"4.2 Directory Names","level":"1.5.2","depth":2,"anchor":"#42-directory-names","path":"4_naming_conventions/42_file_names.md","ref":"4_naming_conventions/42_file_names.md#42-directory-names","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/43_file_names.md","mtime":"2022-10-26T16:16:08.879Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-26T16:16:53.778Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

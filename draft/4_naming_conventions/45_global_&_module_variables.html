@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4.4 Global & Module Variables · GitBook</title>
+        <title>4.5 Global & Module Variables · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -59,10 +59,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="45_name_space_rules.html" />
+    <link rel="next" href="46_name_space_rules.html" />
     
     
-    <link rel="prev" href="43_identifiers.html" />
+    <link rel="prev" href="44_identifiers.html" />
     
 
     </head>
@@ -342,10 +342,10 @@
     
         <li class="chapter " data-level="1.5.2" data-path="42_file_names.html">
             
-                <a href="42_file_names.html#42-file-names">
+                <a href="42_file_names.html#42-directory-names">
             
                     
-                    4.2 File Names
+                    4.2 Directory Names
             
                 </a>
             
@@ -353,12 +353,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="43_identifiers.html">
+        <li class="chapter " data-level="1.5.3" data-path="43_file_names.html">
             
-                <a href="43_identifiers.html#43-identifiers">
+                <a href="43_file_names.html#43-file-names">
             
                     
-                    4.3 Identifiers
+                    4.3 File Names
             
                 </a>
             
@@ -366,12 +366,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="44_global_&_module_variables.html">
+        <li class="chapter " data-level="1.5.4" data-path="44_identifiers.html">
             
-                <a href="44_global_&_module_variables.html#44-global--module-variables">
+                <a href="44_identifiers.html#44-identifiers">
             
                     
-                    4.4 Global & Module Variables
+                    4.4 Identifiers
             
                 </a>
             
@@ -379,12 +379,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="45_name_space_rules.html">
+        <li class="chapter " data-level="1.5.5" data-path="45_global_&_module_variables.html">
             
-                <a href="45_name_space_rules.html#45-name-space-rules">
+                <a href="45_global_&_module_variables.html#45-global--module-variables">
             
                     
-                    4.5 Name Space Rules
+                    4.5 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="46_name_space_rules.html">
+            
+                <a href="46_name_space_rules.html#46-name-space-rules">
+            
+                    
+                    4.6 Name Space Rules
             
                 </a>
             
@@ -920,7 +933,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4.4 Global & Module Variables</a>
+        <a href=".." >4.5 Global & Module Variables</a>
     </h1>
 </div>
 <div>
@@ -930,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/26/2022 04:16:53]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -946,7 +959,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <!--- @file
-  4.4 Global & Module Variables
+  4.5 Global & Module Variables
 
   Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
 
@@ -975,7 +988,7 @@
   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
-<h2 id="44-global--module-variables">4.4 Global &amp; Module Variables</h2>
+<h2 id="45-global--module-variables">4.5 Global &amp; Module Variables</h2>
 <p>There is often confusion about what constitutes module variables versus global
 variables. Technically, both global and module variables are defined at file
 scope with external linkage. A module variable is intended to only be accessed
@@ -988,8 +1001,8 @@ should be fairly safe and easy to change because it is only accessed from a
 small number of routines. On the other hand, a global variable is accessed
 throughout the firmware and as the firmware evolves more code will tend to
 access the data resulting in a large number of uses to track down.</p>
-<h3 id="441-recommendations-for-global-and-module-variables">4.4.1 Recommendations for Global and Module Variables</h3>
-<h4 id="4411-the-use-of-global-and-module-data-is-strongly-discouraged">4.4.1.1 The use of global and module data is strongly discouraged.</h4>
+<h3 id="451-recommendations-for-global-and-module-variables">4.5.1 Recommendations for Global and Module Variables</h3>
+<h4 id="4511-the-use-of-global-and-module-data-is-strongly-discouraged">4.5.1.1 The use of global and module data is strongly discouraged.</h4>
 <p>Global variables are appropriate for GUID, protocol, PPI definitions and other
 immutable objects. Attempting to create global variables can cause many
 problems, including: increased image size and variables actually residing in
@@ -998,7 +1011,7 @@ ROM.</p>
 programming issues. A module is defined to be a set of data and routines that
 act on that data. Thus, in EFI a protocol could be thought of as a module. A
 complicated protocol may be built out of several smaller modules.</p>
-<h4 id="4412-use-locking-to-protect-access-to-global-and-module-variables">4.4.1.2 Use locking to protect access to global and module variables.</h4>
+<h4 id="4512-use-locking-to-protect-access-to-global-and-module-variables">4.5.1.2 Use locking to protect access to global and module variables.</h4>
 <p>This protection is strongly encouraged and especially useful for data that is
 accessed at various task priority levels.</p>
 
@@ -1015,7 +1028,7 @@ accessed at various task priority levels.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/11/2020 07:40:18]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/26/2022 04:16:53]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1028,12 +1041,12 @@ accessed at various task priority levels.</p>
 
             
                 
-                <a href="43_identifiers.html#43-identifiers" class="navigation navigation-prev " aria-label="Previous page: 4.3 Identifiers">
+                <a href="44_identifiers.html#44-identifiers" class="navigation navigation-prev " aria-label="Previous page: 4.4 Identifiers">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="45_name_space_rules.html#45-name-space-rules" class="navigation navigation-next " aria-label="Next page: 4.5 Name Space Rules">
+                <a href="46_name_space_rules.html#46-name-space-rules" class="navigation navigation-next " aria-label="Next page: 4.6 Name Space Rules">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1044,7 +1057,7 @@ accessed at various task priority levels.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.4 Global & Module Variables","level":"1.5.4","depth":2,"next":{"title":"4.5 Name Space Rules","level":"1.5.5","depth":2,"anchor":"#45-name-space-rules","path":"4_naming_conventions/45_name_space_rules.md","ref":"4_naming_conventions/45_name_space_rules.md#45-name-space-rules","articles":[]},"previous":{"title":"4.3 Identifiers","level":"1.5.3","depth":2,"anchor":"#43-identifiers","path":"4_naming_conventions/43_identifiers.md","ref":"4_naming_conventions/43_identifiers.md#43-identifiers","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/44_global_&_module_variables.md","mtime":"2020-12-11T19:39:44.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-11T19:40:18.735Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.5 Global & Module Variables","level":"1.5.5","depth":2,"next":{"title":"4.6 Name Space Rules","level":"1.5.6","depth":2,"anchor":"#46-name-space-rules","path":"4_naming_conventions/46_name_space_rules.md","ref":"4_naming_conventions/46_name_space_rules.md#46-name-space-rules","articles":[]},"previous":{"title":"4.4 Identifiers","level":"1.5.4","depth":2,"anchor":"#44-identifiers","path":"4_naming_conventions/44_identifiers.md","ref":"4_naming_conventions/44_identifiers.md#44-identifiers","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/45_global_&_module_variables.md","mtime":"2022-10-26T16:16:08.879Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-26T16:16:53.778Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
