@@ -1,0 +1,1280 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.4 Code File Structure · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="55_preprocessor_directives.html" />
+    
+    
+    <link rel="prev" href="53_include_files.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-c-coding-standards-specification">
+            
+                    
+                    EDK II C Coding Standards Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#11-abstract">
+            
+                    
+                    1.1 Abstract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#12-rationale">
+            
+                    
+                    1.2 Rationale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#13-scope">
+            
+                    
+                    1.3 Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#14-references">
+            
+                    
+                    1.4 References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1_introduction.html">
+            
+                <a href="../1_introduction.html#15-glossary">
+            
+                    
+                    1.5 Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#2-guiding-principles">
+            
+                    
+                    2 Guiding Principles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#21-software-design">
+            
+                    
+                    2.1 Software Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#22-principles-for-software-maintenance">
+            
+                    
+                    2.2 Principles for Software Maintenance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_guiding_principles.html">
+            
+                <a href="../2_guiding_principles.html#23-additional-recommendations">
+            
+                    
+                    2.3 Additional Recommendations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#3-quick-reference">
+            
+                    
+                    3 Quick Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#31-naming">
+            
+                    
+                    3.1 Naming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#32-formatting">
+            
+                    
+                    3.2 Formatting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#33-files-general-rules">
+            
+                    
+                    3.3 Files: General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3_quick_reference.html">
+            
+                <a href="../3_quick_reference.html#34-documentation">
+            
+                    
+                    3.4 Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#4-naming-conventions">
+            
+                    
+                    4 Naming Conventions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#41-general-naming-rules">
+            
+                    
+                    4.1 General Naming Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_naming_conventions/42_directory_names.html">
+            
+                <a href="../4_naming_conventions/42_directory_names.html#42-directory-names">
+            
+                    
+                    4.2 Directory Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_naming_conventions/43_file_names.html">
+            
+                <a href="../4_naming_conventions/43_file_names.html#43-file-names">
+            
+                    
+                    4.3 File Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_naming_conventions/44_identifiers.html">
+            
+                <a href="../4_naming_conventions/44_identifiers.html#44-identifiers">
+            
+                    
+                    4.4 Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_naming_conventions/45_global_&_module_variables.html">
+            
+                <a href="../4_naming_conventions/45_global_&_module_variables.html#45-global--module-variables">
+            
+                    
+                    4.5 Global & Module Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../4_naming_conventions/46_name_space_rules.html">
+            
+                <a href="../4_naming_conventions/46_name_space_rules.html#46-name-space-rules">
+            
+                    
+                    4.6 Name Space Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./#5-source-files">
+            
+                    
+                    5 Source Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="./">
+            
+                <a href="./#51-general-rules">
+            
+                    
+                    5.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="52_spacing.html">
+            
+                <a href="52_spacing.html#52-spacing">
+            
+                    
+                    5.2 Spacing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="53_include_files.html">
+            
+                <a href="53_include_files.html#53-include-files">
+            
+                    
+                    5.3 Include Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="54_code_file_structure.html">
+            
+                <a href="54_code_file_structure.html#54-code-file-structure">
+            
+                    
+                    5.4 Code File Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="55_preprocessor_directives.html">
+            
+                <a href="55_preprocessor_directives.html#55-preprocessor-directives">
+            
+                    
+                    5.5 Preprocessor Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="56_declarations_and_types.html">
+            
+                <a href="56_declarations_and_types.html#56-declarations-and-types">
+            
+                    
+                    5.6 Declarations and Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="57_c_programming.html">
+            
+                <a href="57_c_programming.html#57-c-programming">
+            
+                    
+                    5.7 C Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="58_error_handling_and_assert.html">
+            
+                <a href="58_error_handling_and_assert.html#58-error-handling-and-assert">
+            
+                    
+                    5.8 Error Handling and ASSERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6_documenting_software/">
+            
+                <a href="../6_documenting_software/#6-documenting-software">
+            
+                    
+                    6 Documenting Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6_documenting_software/">
+            
+                <a href="../6_documenting_software/#61-documentation-concepts">
+            
+                    
+                    6.1 Documentation Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6_documenting_software/62_comments.html">
+            
+                <a href="../6_documenting_software/62_comments.html#62-comments">
+            
+                    
+                    6.2 Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6_documenting_software/63_what_not_to_comment.html">
+            
+                <a href="../6_documenting_software/63_what_not_to_comment.html#63-what-not-to-comment">
+            
+                    
+                    6.3 What NOT to Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6_documenting_software/64_what_you_must_comment.html">
+            
+                <a href="../6_documenting_software/64_what_you_must_comment.html#64-what-you-must-comment">
+            
+                    
+                    6.4 What You Must Comment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6_documenting_software/65_types_of_comments.html">
+            
+                <a href="../6_documenting_software/65_types_of_comments.html#65-types-of-comments">
+            
+                    
+                    6.5 Types of Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6_documenting_software/66_introducing_doxygen.html">
+            
+                <a href="../6_documenting_software/66_introducing_doxygen.html#66-introducing-doxygen">
+            
+                    
+                    6.6 Introducing Doxygen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../6_documenting_software/67_how_doxygen_works.html">
+            
+                <a href="../6_documenting_software/67_how_doxygen_works.html#67-how-doxygen-works">
+            
+                    
+                    6.7 How Doxygen Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../6_documenting_software/68_special_documentation_blocks.html">
+            
+                <a href="../6_documenting_software/68_special_documentation_blocks.html#68-special-documentation-blocks">
+            
+                    
+                    6.8 Special Documentation Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../6_documenting_software/69_putting_documentation_after_members.html">
+            
+                <a href="../6_documenting_software/69_putting_documentation_after_members.html#69-putting-documentation-after-members">
+            
+                    
+                    6.9 Putting Documentation after Members
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../6_documenting_software/610_special_commands.html">
+            
+                <a href="../6_documenting_software/610_special_commands.html#610-special-commands">
+            
+                    
+                    6.10 Special Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../appendix_a_common_examples.html">
+            
+                <a href="../appendix_a_common_examples.html#appendix-a-common-examples">
+            
+                    
+                    APPENDIX A Common Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../appendix_b_reserved_identifiers.html">
+            
+                <a href="../appendix_b_reserved_identifiers.html#appendix-b-reserved-identifiers">
+            
+                    
+                    APPENDIX B Reserved Identifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../appendix_c_optimization_and_performance.html">
+            
+                <a href="../appendix_c_optimization_and_performance.html#appendix-c-optimization-and-performance">
+            
+                    
+                    APPENDIX C Optimization and Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-1-common-opposites">
+            
+                    
+                    Table 1 Common Opposites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-2-efi-supported-abbreviations">
+            
+                    
+                    Table 2 EFI Supported Abbreviations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../4_naming_conventions/">
+            
+                <a href="../4_naming_conventions/#table-3-efi-supported-acronyms">
+            
+                    
+                    Table 3 EFI Supported Acronyms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../4_naming_conventions/43_identifiers.html">
+            
+                <a href="../4_naming_conventions/43_identifiers.html#table-4-reserved-keywords">
+            
+                    
+                    Table 4 Reserved Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="./">
+            
+                <a href="./#table-5-permissible-escape-sequences-isoiec-98991990-6134">
+            
+                    
+                    Table 5 Permissible Escape Sequences (ISO/IEC 9899:1990 6.1.3.4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="56_declarations_and_types.html">
+            
+                <a href="56_declarations_and_types.html#table-6-efi-data-types-slightly-modified-from-uefi-231">
+            
+                    
+                    Table 6 EFI Data Types (slightly modified from UEFI 2.3.1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="56_declarations_and_types.html">
+            
+                <a href="56_declarations_and_types.html#table-7-modifiers-for-common-efi-data-types-reference-the-uefi-specification-and-beyond-bios">
+            
+                    
+                    Table 7 Modifiers for Common EFI Data Types (reference the UEFI Specification and Beyond Bios)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="56_declarations_and_types.html">
+            
+                <a href="56_declarations_and_types.html#table-8-efi-constants">
+            
+                    
+                    Table 8 EFI Constants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="57_c_programming.html">
+            
+                <a href="57_c_programming.html#table-9-parameter-modifiers">
+            
+                    
+                    Table 9 Parameter Modifiers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="57_c_programming.html">
+            
+                <a href="57_c_programming.html#table-10-predicate-expression-examples">
+            
+                    
+                    Table 10 Predicate Expression Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../6_documenting_software/610_special_commands.html">
+            
+                <a href="../6_documenting_software/610_special_commands.html#table-11-html-character-entities">
+            
+                    
+                    Table 11 HTML Character Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="../6_documenting_software/610_special_commands.html">
+            
+                <a href="../6_documenting_software/610_special_commands.html#table-12-html-commands">
+            
+                    
+                    Table 12 HTML Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5.4 Code File Structure</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="text-align:right">Revision 2.3</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  5.4 Code File Structure
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="54-code-file-structure">5.4 Code File Structure</h2>
+<p>All code generating files use the following general structure. Typically
+these are C files with an extension of &quot;<code>.c</code>&quot;.</p>
+<pre><code>/** @file
+  Definitions of bizarre protocols for something.
+
+  This is a detailed description of the something for which this
+  file exists. Something rotates upon the blarvitz allowing
+  implementation of bizarre protocols. If the blarvitz is NULL,
+  describe what is happening in more detail. If non-NULL, then
+  you should probably also explain your rationale.
+
+  Copyright (c) 20XX, Acme Corporation. All rights reserved.&lt;BR&gt;
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+
+  @par Specification Reference:
+    - UEFI 2.3, Chapter 9, Device Path Protocol
+    - PI 1.1, Chapter 10, Boot Paths
+**/
+/* Include necessary header files here */
+#include &lt;DxeCore.h&gt;
+#include &lt;Uefi.h&gt;
+#include &quot;SampleThing.h&quot;
+
+/* Define external, global and module variables here */
+
+/* Function Definitions */
+
+/* If this is a protocol definition, the
+protocol structure is defined and initialized here.
+*/
+</code></pre><h3 id="541-scoping-rules">5.4.1 Scoping Rules</h3>
+<p>There are three components of the C language that interact to affect when a
+particular variable can be used, or not.</p>
+<ul>
+<li><p><strong>Scope:</strong> The context in which an identifier is visible constitutes the scope
+of that identifier..</p>
+</li>
+<li><p><strong>Visibility:</strong> If an identifier can be referenced within a particular scope
+it is said to be visible.</p>
+</li>
+<li><p><strong>Storage Class:</strong> Allocation of storage space is controlled by the storage
+class of an identifier.</p>
+</li>
+</ul>
+<h4 id="5411-scope">5.4.1.1 Scope</h4>
+<p>Understanding the C scoping rules is critical for good programming. The various
+identifier scopes encountered are: file, prototype, function, and block or
+local scope.</p>
+<p><strong>File Scope</strong></p>
+<p>Top-level identifiers and preprocessor macros are said to have <em>file scope</em>.
+Their scope extends from their declaration point to the end of the source
+program file. A preprocessor macro can go out-of-scope earlier if a <code>#undef</code>
+command that cancels its definition is encountered.</p>
+<p><strong>Prototype Scope</strong></p>
+<p>The identifiers making up the formal parameters in function prototypes have
+<em>prototype scope</em>. Identifiers with prototype scope have scopes extending from
+their declaration point to the end of the prototype.</p>
+<p><strong>Function Scope</strong></p>
+<p>Statement labels have <em>function scope</em>. Function scope identifiers have scope
+which encompasses the entire function body in which they appear. This means
+that statement labels can be referenced before they are declared.</p>
+<p><strong>Block (local) Scope</strong></p>
+<p>Formal parameters in function definitions and data defined within compound
+statements have block scope. Any group of statements that are encompassed
+within a pair of braces, { }, is a compound statement. The body of a function
+is also a compound statement. Compound statements can be nested, with each
+creating a new scope.</p>
+<p>Data declarations may follow the opening brace of a compound statement,
+regardless of nesting depth, and before any code generating statements have
+been entered. Other than at the outermost block of a function body, this type
+of declaration is strongly discouraged.</p>
+<hr>
+<p><strong>Note:</strong> Visual C++ gives all structure declarations File Scope, even though
+ISO/IEC 9899 specifies that structure declarations may have Block Scope.</p>
+<hr>
+<h4 id="5412-visibility">5.4.1.2 Visibility</h4>
+<p>A declaration of an identifier is <em>visible</em> in some context if a use of the
+identifier in that context is associated with that declaration. A declaration
+might be visible throughout its scope, but it might also be hidden by other
+declarations whose scope and visibility overlap that of the first declaration.</p>
+<h5 id="54121-no-two-different-identifiers-in-a-function-may-have-the-same-name-nor-may-any-of-the-names-in-a-function-be-the-same-as-those-declared-at-a-global-or-module-level">5.4.1.2.1 No two different identifiers in a function may have the same name nor may any of the names in a function be the same as those declared at a global or module level.</h5>
+<ul>
+<li><p>Identifiers with file scope have the outermost scope. Those with block scope
+have the innermost scope. Nesting successive blocks creates more inner scopes.</p>
+</li>
+<li><p>Only disallow instances where an outer definition is hidden by a second inner
+definition. This rule is not violated when the first definition is not hidden
+by the second definition.</p>
+</li>
+</ul>
+<p>The following example shows how the scope visibility of identifiers can overlap
+and hide each other. Never write code that does this.</p>
+<pre><code> 1 UINTN MyVar = 7; // File scope
+ 2
+ 3 VOID
+ 4 MyFunction (
+ 5   OUT UINT32 *MyVar // Function scope
+ 6   )
+ 7 {
+ 8   UINT32 i;
+ 9
+10   for (i = 0; i &lt; 5; ++i) {
+11     UCHAR8 MyVar = i; // Block scope
+12     INT16 i = 12;
+13
+14     MyVar += &apos;A&apos;;
+15     process (MyVar, i);
+16   }
+17   *MyVar = i;
+18 }
+19
+20 main()
+21 {
+22   UINT32 George = 4;
+23
+24   MyFunction (&amp;George);
+25   process (MyVar, 0);
+26 }
+27
+</code></pre><p>In the above example, there are three declarations of <code>MyVar</code>:</p>
+<ul>
+<li><p>On line 1, <code>MyVar</code> is defined with file scope and value 7 This scope extends
+from line 1 through line 26.</p>
+</li>
+<li><p>On line 5, <code>MyVar</code> is declared as a formal parameter of MyFunction. Its
+context extends from line 5 through the end of the function on line 18.</p>
+</li>
+<li><p>On line 11, <code>MyVar</code> is declared with block scope. From its declaration point
+on line 11 through the end of the block in which it was declared, this
+declaration of <code>MyVar</code> will be in scope. It is initialized to the current
+value of <code>i</code>.</p>
+</li>
+</ul>
+<p>To test yourself on your understanding of scope and visibility rules, determine
+the value and associated declaration for each use of <code>MyVar</code> before reading
+further.</p>
+<p>The first use of <code>MyVar</code> is on line 14 Its associated declaration is on line 11
+Each time through the for loop it will have the values &apos;A&apos;, &apos;B&apos;, &apos;C&apos;, and &apos;D&apos;
+in succession.</p>
+<p>On line 15, <code>MyVar</code> is used again with its associated declaration on line 11
+with the same succession of values assigned as on line 14.</p>
+<p><code>MyVar</code>, on line 17, associates with the formal parameter declaration on line 5
+In this case the value of <code>i</code>, which is 5, is stored in the location <code>MyVar</code>
+points to. The location is established in the call to <code>MyFunction</code> on line 24.</p>
+<p>The last use of <code>MyVar</code> occurs on line 25 This occurrence associates with the
+declaration on line 1 and has the value 7.</p>
+<p>Things get extremely tricky on line 12 The identifier <code>i</code>, which is the control
+variable for the enclosing <code>for</code> loop, is declared with a different type and
+value. It is ambiguous as to which <code>i</code> was wanted in line 11. How does this
+affect the <code>for</code> loop? What will be the value of <code>i</code> at lines 15 and 17?</p>
+<p>The scope rules tell us the answers, but they still aren&apos;t obvious.</p>
+<ul>
+<li><p>The <code>i</code> on line 10 is outside the block, which is the body of the <code>for</code> loop.
+It associates with the declaration on line 8, so the <code>for</code> loop will continue
+to work as expected.</p>
+</li>
+<li><p>On line 11, <code>MyVar</code> will be initialized to the current value of <code>i</code>. It is
+compiler dependent whether this is the first value of <code>i</code>, 0, or the value of
+<code>i</code> for each loop.</p>
+</li>
+<li><p>Line 12 declares a new variable <code>i</code> which is given the value 12 C scoping
+rules state that a scope begins at the declaration point, not at the beginning
+of the block in which the declaration appears. Because of this, the <code>i</code> used
+on line 11 is not the same <code>i</code> declared here.</p>
+</li>
+<li><p>The value of <code>i</code> used on line 15 is 12, the value of the associated and
+currently visible identifier with that name.</p>
+</li>
+</ul>
+<p>As you can see, using the same identifier at different scopes can be confusing
+at best. All it takes is one mistake and a bug is introduced that is very hard
+to locate.</p>
+<h4 id="5413-compile-time-names">5.4.1.3 Compile-Time Names</h4>
+<p>So far we have been talking about variable and function identifiers, which have
+an existence at run time. However, the scope and visibility rules apply equally
+to identifiers applied to objects that don&apos;t necessarily exist at run time:
+<code>typedef</code> names, type tags, enumeration constants, macros, and labels.</p>
+<p>Macros and labels follow the rules outlined for them in Section 5.4.1.1 &quot;Scope&quot;.
+The other compile-time names follow the same scope and visibility rules as any
+variable defined at the same location.</p>
+<h3 id="542-storage-class">5.4.2 Storage Class</h3>
+<h4 id="5421-extern">5.4.2.1 extern</h4>
+<p>A special case of scope and visibility is the <em>external</em> identifier, also
+called an identifier with <em>external linkage</em>. All instances of an external
+identifier, among all the files making up a C module, are forced to refer to
+the same object or function. Each instance of the external identifier must be
+declared with the same type in each file or else the result is undefined.</p>
+<p>External names are declared using the <code>extern</code> keyword. In C89, and earlier
+dialects, external identifiers declared at file scope are implicitly extern.
+But, not all identifiers declared <code>extern</code> were external.</p>
+<p>The compilers supported by EDK II follow the C99 specification for <code>extern</code>. All
+declarations of the external variable must use the <code>extern</code> keyword. There must
+be a single definition of the external variable which does not use the <code>extern</code>
+keyword. This definition may also include an initializer.</p>
+<p>By convention, external names are declared at the top level of a C program and
+therefore have file scope. For EDK II, external names must be declared in a
+single header file and must be defined at the top level of a C file as
+specified in Section 5.4.1.3 &quot;Compile-Time Names&quot;.</p>
+<p>Thus, while it might be legal C, do <strong>not</strong> declare external variables anywhere
+other than at the top level of a file as specified by this document.</p>
+<h4 id="5422-static">5.4.2.2 Static</h4>
+<p>An object declared <code>STATIC</code> has either file or block scope.</p>
+<h5 id="54221-do-not-reuse-an-object-or-function-identifier-with-static-storage-duration">5.4.2.2.1 Do not reuse an object or function identifier with static storage duration.</h5>
+<p>Throughout the set of source files defined within a single .inf file, do not
+reuse an identifier with static storage duration. The compiler may not be
+confused by this, but the user may confuse unrelated variables with the same
+name.</p>
+<h5 id="54222-functions-should-not-be-declared-static">5.4.2.2.2 Functions should not be declared STATIC.</h5>
+<p>Some source-level debuggers are unable to resolve static functions. Until it
+can be verified that no one is dependent upon a debugger with this limitation,
+it is strongly recommended that functions not be declared static.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
+        <div style="text-align:right">Revision 2.3</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="53_include_files.html#53-include-files" class="navigation navigation-prev " aria-label="Previous page: 5.3 Include Files">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="55_preprocessor_directives.html#55-preprocessor-directives" class="navigation navigation-next " aria-label="Next page: 5.5 Preprocessor Directives">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.4 Code File Structure","level":"1.6.4","depth":2,"next":{"title":"5.5 Preprocessor Directives","level":"1.6.5","depth":2,"anchor":"#55-preprocessor-directives","path":"5_source_files/55_preprocessor_directives.md","ref":"5_source_files/55_preprocessor_directives.md#55-preprocessor-directives","articles":[]},"previous":{"title":"5.3 Include Files","level":"1.6.3","depth":2,"anchor":"#53-include-files","path":"5_source_files/53_include_files.md","ref":"5_source_files/53_include_files.md#53-include-files","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II C Coding Standards Specification","version":"Revision 2.3"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_source_files/54_code_file_structure.md","mtime":"2022-10-27T16:43:55.741Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-27T16:44:26.624Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
