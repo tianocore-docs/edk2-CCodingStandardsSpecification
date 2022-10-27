@@ -50,7 +50,7 @@
   * [3.4 Documentation](3_quick_reference.md#34-documentation)
 * [4 Naming Conventions](4_naming_conventions/README.md#4-naming-conventions)
   * [4.1 General Naming Rules](4_naming_conventions/README.md#41-general-naming-rules)
-  * [4.2 Directory Names](4_naming_conventions/42_file_names.md#42-directory-names)  
+  * [4.2 Directory Names](4_naming_conventions/42_directory_names.md#42-directory-names)  
   * [4.3 File Names](4_naming_conventions/43_file_names.md#43-file-names)
   * [4.4 Identifiers](4_naming_conventions/44_identifiers.md#44-identifiers)
   * [4.5 Global & Module Variables](4_naming_conventions/45_global_&_module_variables.md#45-global--module-variables)
