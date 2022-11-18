@@ -80,6 +80,7 @@ naming of the EDK II module file.
 
 #### 4.3.5.2 EDK II INF file within a Module instance
 * If the implementation is for all CPU architectures, specific CPU architectures, CPU vendors or the implementation is shared by certain CPU archs:
+
 ```
 <Feature><Phase>[<CpuArch>][<Vendor>].inf
 
@@ -120,6 +121,7 @@ Example:
 ```
 
 #### 4.3.5.3 EDK II INF file within a Library instance
+
 ```
 <Phase>[<CpuArch>][<Vendor>]<LibraryClassName>[<Dependency>].inf
    <Phase>              REQUIRED     Base, Sec, Pei, Dxe, DxeRuntime, Mm,
@@ -143,8 +145,8 @@ Example:
 #### 4.3.5.4 EDK II source files within a Library/Module instance
 
 In generally, the file name is constructed as below:
-```
 
+```
 [<CpuArch>][<Vendor>]<FileName>.*
 
    <CpuArch>   OPTIONAL   The <CpuArch> is represented with a BNF,
@@ -163,5 +165,4 @@ Example:
    Ia32X64SmmCpuFeaturesLib.c
    Ia32X64IntelSmmCpuFeaturesLib.c
    AmdSmmCpuFeaturesLib.c
-
 ```
