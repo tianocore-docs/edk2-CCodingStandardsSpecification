@@ -49,6 +49,7 @@ module directory.
 #### 4.2.2 EDKII Module directory
 
 * The guideline below is applied to all CPU architectures support, specific CPU architecture and vendors support, or the implementation is shared by certain CPU archs:
+
 ```
 <Feature><Phase>[<CpuArch>[<Vendor>]]
   or
@@ -63,7 +64,6 @@ module directory.
                               <CpuArch> ::= <arch>[<arch>]*
                               
                               Example: Ia32X64Arm or RiscV64LoongArch64
-                              
    <Vendor>       OPTIONAL    *
 
 Example:
@@ -98,7 +98,8 @@ Example:
    Pcd/Dxe/
 ```
 
-#### 4.2.2 EDKII Library directory
+#### 4.2.3 EDKII Library directory
+
 ```
 <Phase>[<CpuArch>[<Vendor>]]<LibraryClassName>[<Dependency>]
   or
