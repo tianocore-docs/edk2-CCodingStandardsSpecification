@@ -943,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/27/2022 04:26:01]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [11/18/2022 01:47:46]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1002,36 +1002,34 @@ module directory.</p>
    &lt;PackageName&gt; REQUIRED  *
 </code></pre><h4 id="422-edkii-module-directory">4.2.2 EDKII Module directory</h4>
 <ul>
-<li><p>The guideline below is applied to all CPU architectures support, specific CPU architecture and vendors support, or the implementation is shared by certain CPU archs:
-```
-<feature><phase>[<cpuarch>[<vendor>]]
-or
-<feature><phase>[/<cpuarch>[/<vendor>]]</vendor></cpuarch></phase></feature></vendor></cpuarch></phase></feature></p>
-<p> <feature>      REQUIRED    *
- <phase>        REQUIRED    Base, Sec, Pei, Dxe, DxeRuntime, Mm, StandaloneMm, Smm,</phase></feature></p>
-<pre><code>                        Uefi.
-</code></pre><p> <cpuarch>      OPTIONAL    The <cpuarch> is represented with a BNF,</cpuarch></cpuarch></p>
-<pre><code>                        &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
-                                  &apos;LoongArch64&apos; | &apos;Ebc&apos;   
-                        &lt;CpuArch&gt; ::= &lt;arch&gt;[&lt;arch&gt;]*
+<li>The guideline below is applied to all CPU architectures support, specific CPU architecture and vendors support, or the implementation is shared by certain CPU archs:</li>
+</ul>
+<pre><code>&lt;Feature&gt;&lt;Phase&gt;[&lt;CpuArch&gt;[&lt;Vendor&gt;]]
+  or
+&lt;Feature&gt;&lt;Phase&gt;[/&lt;CpuArch&gt;[/&lt;Vendor&gt;]]
 
-                        Example: Ia32X64Arm or RiscV64LoongArch64
-</code></pre><p> <vendor>       OPTIONAL    *</vendor></p>
-</li>
-</ul>
-<p>Example:</p>
-<ul>
-<li>SmbiosDxe/</li>
-<li>CpuDxe/                    # First implementation of CpuDxe.</li>
-<li>CpuDxeIa32X64Amd/          # Ia32 and X64 AMD specific implementation.</li>
-<li>CpuDxe/RiscV64/            # RiscV64 specific implementation.<pre><code>  /                    # Common files for the RiscV64 and other archs.
-</code></pre></li>
-<li>CpuDxe/Ia32X64/Amd/        # Ia32 and X64 AMD specific implementation.<pre><code>          /            # Common files for Ia32 and X64 archs.
-  /ArmAArch64/         # Arm and AArch64 implementation of CpuDxe.
-  /                    # Common files for the Arm, AArch64, Ia32 and X64.
-</code></pre>```</li>
-</ul>
-<ul>
+   &lt;Feature&gt;      REQUIRED    *
+   &lt;Phase&gt;        REQUIRED    Base, Sec, Pei, Dxe, DxeRuntime, Mm, StandaloneMm, Smm,
+                              Uefi.
+   &lt;CpuArch&gt;      OPTIONAL    The &lt;CpuArch&gt; is represented with a BNF,
+                              &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
+                                        &apos;LoongArch64&apos; | &apos;Ebc&apos;   
+                              &lt;CpuArch&gt; ::= &lt;arch&gt;[&lt;arch&gt;]*
+
+                              Example: Ia32X64Arm or RiscV64LoongArch64
+   &lt;Vendor&gt;       OPTIONAL    *
+
+Example:
+   - SmbiosDxe/
+   - CpuDxe/                    # First implementation of CpuDxe.
+   - CpuDxeIa32X64Amd/          # Ia32 and X64 AMD specific implementation.
+   - CpuDxe/RiscV64/            # RiscV64 specific implementation.
+           /                    # Common files for the RiscV64 and other archs.
+   - CpuDxe/Ia32X64/Amd/        # Ia32 and X64 AMD specific implementation.
+                   /            # Common files for Ia32 and X64 archs.
+           /ArmAArch64/         # Arm and AArch64 implementation of CpuDxe.
+           /                    # Common files for the Arm, AArch64, Ia32 and X64.
+</code></pre><ul>
 <li>If the implementation does not have any shared code between phases (e.g.
 MdeModulePkg/Universal/PCD). The guideline below is applied to all CPU architectures support, specific CPU architecture and vendors support, or the implementation is shared by certain CPU architectures:</li>
 </ul>
@@ -1049,7 +1047,7 @@ MdeModulePkg/Universal/PCD). The guideline below is applied to all CPU architect
    &lt;Vendor&gt;       OPTIONAL    *
 Example:
    Pcd/Dxe/
-</code></pre><h4 id="422-edkii-library-directory">4.2.2 EDKII Library directory</h4>
+</code></pre><h4 id="423-edkii-library-directory">4.2.3 EDKII Library directory</h4>
 <pre><code>&lt;Phase&gt;[&lt;CpuArch&gt;[&lt;Vendor&gt;]]&lt;LibraryClassName&gt;[&lt;Dependency&gt;]
   or
 &lt;Phase&gt;&lt;LibraryClassName&gt;[&lt;Dependency&gt;]/[&lt;CpuArch&gt;[/&lt;Vendor&gt;]]
@@ -1092,7 +1090,7 @@ Example:
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/27/2022 04:26:01]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [11/18/2022 01:47:46]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1121,7 +1119,7 @@ Example:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.2 Directory Names","level":"1.5.2","depth":2,"next":{"title":"4.3 File Names","level":"1.5.3","depth":2,"anchor":"#43-file-names","path":"4_naming_conventions/43_file_names.md","ref":"4_naming_conventions/43_file_names.md#43-file-names","articles":[]},"previous":{"title":"4.1 General Naming Rules","level":"1.5.1","depth":2,"anchor":"#41-general-naming-rules","path":"4_naming_conventions/README.md","ref":"4_naming_conventions/README.md#41-general-naming-rules","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/42_directory_names.md","mtime":"2022-10-27T16:25:16.968Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-27T16:26:01.643Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.2 Directory Names","level":"1.5.2","depth":2,"next":{"title":"4.3 File Names","level":"1.5.3","depth":2,"anchor":"#43-file-names","path":"4_naming_conventions/43_file_names.md","ref":"4_naming_conventions/43_file_names.md#43-file-names","articles":[]},"previous":{"title":"4.1 General Naming Rules","level":"1.5.1","depth":2,"anchor":"#41-general-naming-rules","path":"4_naming_conventions/README.md","ref":"4_naming_conventions/README.md#41-general-naming-rules","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/42_directory_names.md","mtime":"2022-11-18T01:47:15.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-18T01:47:46.475Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -943,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/27/2022 04:26:01]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [11/18/2022 01:47:46]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1020,31 +1020,28 @@ naming of the EDK II module file.</p>
    &lt;PackageName&gt; REQUIRED  *
 </code></pre><h4 id="4352-edk-ii-inf-file-within-a-module-instance">4.3.5.2 EDK II INF file within a Module instance</h4>
 <ul>
-<li><p>If the implementation is for all CPU architectures, specific CPU architectures, CPU vendors or the implementation is shared by certain CPU archs:
-```
-<feature><phase>[<cpuarch>][<vendor>].inf</vendor></cpuarch></phase></feature></p>
-<p> <feature>      REQUIRED    *
- <phase>        REQUIRED    Base, Sec, Pei, Dxe, DxeRuntime, Mm, StandaloneMm,</phase></feature></p>
-<pre><code>                        Smm, Uefi.
-</code></pre><p> <cpuarch>      OPTIONAL    The <cpuarch> is represented with a BNF,</cpuarch></cpuarch></p>
-<pre><code>                        &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
-                                  &apos;LoongArch64&apos; | &apos;Ebc&apos;
-                        &lt;CpuArch&gt; ::= &lt;arch&gt;[&lt;arch&gt;]*
+<li>If the implementation is for all CPU architectures, specific CPU architectures, CPU vendors or the implementation is shared by certain CPU archs:</li>
+</ul>
+<pre><code>&lt;Feature&gt;&lt;Phase&gt;[&lt;CpuArch&gt;][&lt;Vendor&gt;].inf
 
-                        Example: Ia32X64Arm or RiscV64LoongArch64
-</code></pre><p> <vendor>       OPTIONAL    *</vendor></p>
-</li>
-</ul>
-<p>Example:</p>
-<ul>
-<li>SmbiosDxe.inf</li>
-<li>CpuIo2Dxe.inf</li>
-<li>CpuIo2DxeAmd.inf</li>
-<li>CpuIo2DxeIa32X64.inf</li>
-<li>CpuIo2DxeIa32X64Intel.inf
-```</li>
-</ul>
-<ul>
+   &lt;Feature&gt;      REQUIRED    *
+   &lt;Phase&gt;        REQUIRED    Base, Sec, Pei, Dxe, DxeRuntime, Mm, StandaloneMm,
+                              Smm, Uefi.
+   &lt;CpuArch&gt;      OPTIONAL    The &lt;CpuArch&gt; is represented with a BNF,
+                              &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
+                                        &apos;LoongArch64&apos; | &apos;Ebc&apos;
+                              &lt;CpuArch&gt; ::= &lt;arch&gt;[&lt;arch&gt;]*
+
+                              Example: Ia32X64Arm or RiscV64LoongArch64
+   &lt;Vendor&gt;       OPTIONAL    *
+
+Example:
+   - SmbiosDxe.inf
+   - CpuIo2Dxe.inf
+   - CpuIo2DxeAmd.inf
+   - CpuIo2DxeIa32X64.inf
+   - CpuIo2DxeIa32X64Intel.inf
+</code></pre><ul>
 <li>If the implementation does not have any shared code between phases (e.g., Pcd/Dxe):</li>
 </ul>
 <pre><code>[&lt;Feature&gt;][&lt;CpuArch&gt;][&lt;Vendor&gt;].inf
@@ -1079,8 +1076,7 @@ Example:
    - SmmIa32X64SmmCpuFeaturesLib.inf
 </code></pre><h4 id="4354-edk-ii-source-files-within-a-librarymodule-instance">4.3.5.4 EDK II source files within a Library/Module instance</h4>
 <p>In generally, the file name is constructed as below:</p>
-<pre><code>
-[&lt;CpuArch&gt;][&lt;Vendor&gt;]&lt;FileName&gt;.*
+<pre><code>[&lt;CpuArch&gt;][&lt;Vendor&gt;]&lt;FileName&gt;.*
 
    &lt;CpuArch&gt;   OPTIONAL   The &lt;CpuArch&gt; is represented with a BNF,
                           &lt;arch&gt; ::=&apos;Ia32&apos; | &apos;X64&apos; | &apos;Arm&apos; | &apos;AArch64&apos; | &apos;RiscV64&apos; |
@@ -1112,7 +1108,7 @@ Example:
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [10/27/2022 04:26:01]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [11/18/2022 01:47:46]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1141,7 +1137,7 @@ Example:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.3 File Names","level":"1.5.3","depth":2,"next":{"title":"4.4 Identifiers","level":"1.5.4","depth":2,"anchor":"#44-identifiers","path":"4_naming_conventions/44_identifiers.md","ref":"4_naming_conventions/44_identifiers.md#44-identifiers","articles":[]},"previous":{"title":"4.2 Directory Names","level":"1.5.2","depth":2,"anchor":"#42-directory-names","path":"4_naming_conventions/42_directory_names.md","ref":"4_naming_conventions/42_directory_names.md#42-directory-names","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/43_file_names.md","mtime":"2022-10-27T16:25:16.968Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-27T16:26:01.643Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.3 File Names","level":"1.5.3","depth":2,"next":{"title":"4.4 Identifiers","level":"1.5.4","depth":2,"anchor":"#44-identifiers","path":"4_naming_conventions/44_identifiers.md","ref":"4_naming_conventions/44_identifiers.md#44-identifiers","articles":[]},"previous":{"title":"4.2 Directory Names","level":"1.5.2","depth":2,"anchor":"#42-directory-names","path":"4_naming_conventions/42_directory_names.md","ref":"4_naming_conventions/42_directory_names.md#42-directory-names","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_naming_conventions/43_file_names.md","mtime":"2022-11-18T01:47:15.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-18T01:47:46.475Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
