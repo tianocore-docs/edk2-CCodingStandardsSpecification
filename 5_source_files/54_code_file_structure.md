@@ -269,7 +269,8 @@ other than at the top level of a file as specified by this document.
 
 #### 5.4.2.2 Static
 
-An object declared `STATIC` has either file or block scope.
+An object declared `static` has file scope.
+Objects may not be declared 'static' within functions.
 
 ##### 5.4.2.2.1 Do not reuse an object or function identifier with static storage duration.
 
@@ -277,9 +278,3 @@ Throughout the set of source files defined within a single .inf file, do not
 reuse an identifier with static storage duration. The compiler may not be
 confused by this, but the user may confuse unrelated variables with the same
 name.
-
-##### 5.4.2.2.2 Functions should not be declared STATIC.
-
-Some source-level debuggers are unable to resolve static functions. Until it
-can be verified that no one is dependent upon a debugger with this limitation,
-it is strongly recommended that functions not be declared static.

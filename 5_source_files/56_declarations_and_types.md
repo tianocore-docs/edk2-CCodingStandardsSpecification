@@ -38,7 +38,7 @@
 Any abstract type that is defined must be constructed from other abstract types
 or from common EFI data types.
 
-#### 5.6.1.2 The use of int, unsigned, char, void, static, long is a violation of the coding convention.
+#### 5.6.1.2 The use of int, unsigned, char, void, long is a violation of the coding convention.
 
 The corresponding EFI types must be used instead.
 
