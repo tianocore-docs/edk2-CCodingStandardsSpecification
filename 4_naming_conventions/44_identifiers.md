@@ -178,29 +178,7 @@ The underscore effectively separates the words, making names more readable.
 typedef UINT32 THIS_IS_AN_EXAMPLE_OF_WHAT_TO_DO_FOR_PCI;
 ```
 
-#### 4.4.5.4 The names of guard macros shall end with an underscore character.
-
-The guard macro, used in the `#ifndef` at the start of an include file, uses a
-postfix underscore character '`_`', in its name in order to prevent collision
-with other names that follow the naming convention. This may not be sufficient
-for header files that don't have a unique name. In that case, additional text
-may have to be added to the macro name in order to make it unique. This may not
-be required if the header files are mutually exclusive.
-
-```c
-#ifndef FILE_NAME_H_
-#define FILE_NAME_H_
-...
-#if (A_NUMBER > 72)
-...
-#else // NOT (A_NUMBER > 72)
-...
-#endif // (A_NUMBER > 72)
-...
-#endif /* FILE_NAME_H_ */
-```
-
-#### 4.4.5.5 The #else and #endif clauses of conditional compilation blocks shall be commented to identify their context.
+#### 4.4.5.4 The #else and #endif clauses of conditional compilation blocks shall be commented to identify their context.
 
 If a conditional compilation construct spans more than seven lines, a comment
 shall be added to the construct's `#else` and `#endif` clauses identifying the
