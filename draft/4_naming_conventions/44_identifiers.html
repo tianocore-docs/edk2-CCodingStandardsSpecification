@@ -943,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [02/10/2026 03:09:01]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 01:45:29]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1166,25 +1166,7 @@ language extensions and should also be treated as reserved.</p>
 <p>The underscore effectively separates the words, making names more readable.</p>
 <h4 id="4453-the-use-of-the-t-suffix-designating-a-type-is-not-allowed">4.4.5.3 The use of the &quot;_t&quot; suffix, designating a type, is not allowed.</h4>
 <pre><code>typedef UINT32 THIS_IS_AN_EXAMPLE_OF_WHAT_TO_DO_FOR_PCI;
-</code></pre><h4 id="4454-the-names-of-guard-macros-shall-end-with-an-underscore-character">4.4.5.4 The names of guard macros shall end with an underscore character.</h4>
-<p>The guard macro, used in the <code>#ifndef</code> at the start of an include file, uses a
-postfix underscore character &apos;<code>_</code>&apos;, in its name in order to prevent collision
-with other names that follow the naming convention. This may not be sufficient
-for header files that don&apos;t have a unique name. In that case, additional text
-may have to be added to the macro name in order to make it unique. This may not
-be required if the header files are mutually exclusive.</p>
-<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> FILE_NAME_H_</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FILE_NAME_H_</span>
-...
-<span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> (A_NUMBER &gt; 72)</span>
-...
-<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span> <span class="hljs-comment">// NOT (A_NUMBER &gt; 72)</span></span>
-...
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span> <span class="hljs-comment">// (A_NUMBER &gt; 72)</span></span>
-...
-<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span> <span class="hljs-comment">/* FILE_NAME_H_ */</span></span>
-</code></pre>
-<h4 id="4455-the-else-and-endif-clauses-of-conditional-compilation-blocks-shall-be-commented-to-identify-their-context">4.4.5.5 The #else and #endif clauses of conditional compilation blocks shall be commented to identify their context.</h4>
+</code></pre><h4 id="4454-the-else-and-endif-clauses-of-conditional-compilation-blocks-shall-be-commented-to-identify-their-context">4.4.5.4 The #else and #endif clauses of conditional compilation blocks shall be commented to identify their context.</h4>
 <p>If a conditional compilation construct spans more than seven lines, a comment
 shall be added to the construct&apos;s <code>#else</code> and <code>#endif</code> clauses identifying the
 block the clause is associated with. This is illustrated in the preceding code
@@ -1204,7 +1186,7 @@ clause.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [02/10/2026 03:09:01]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 01:45:29]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1233,7 +1215,7 @@ clause.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.4 Identifiers","level":"1.5.4","depth":2,"next":{"title":"4.5 Global & Module Variables","level":"1.5.5","depth":2,"anchor":"#45-global--module-variables","path":"4_naming_conventions/45_global_&_module_variables.md","ref":"4_naming_conventions/45_global_&_module_variables.md#45-global--module-variables","articles":[]},"previous":{"title":"4.3 File Names","level":"1.5.3","depth":2,"anchor":"#43-file-names","path":"4_naming_conventions/43_file_names.md","ref":"4_naming_conventions/43_file_names.md#43-file-names","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"4_naming_conventions/44_identifiers.md","mtime":"2026-02-10T15:08:32.810Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-10T15:09:01.177Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.4 Identifiers","level":"1.5.4","depth":2,"next":{"title":"4.5 Global & Module Variables","level":"1.5.5","depth":2,"anchor":"#45-global--module-variables","path":"4_naming_conventions/45_global_&_module_variables.md","ref":"4_naming_conventions/45_global_&_module_variables.md#45-global--module-variables","articles":[]},"previous":{"title":"4.3 File Names","level":"1.5.3","depth":2,"anchor":"#43-file-names","path":"4_naming_conventions/43_file_names.md","ref":"4_naming_conventions/43_file_names.md#43-file-names","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"4_naming_conventions/44_identifiers.md","mtime":"2026-03-20T01:45:00.516Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-20T01:45:29.357Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
