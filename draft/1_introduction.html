@@ -943,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:03:05]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:07:43]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1019,7 +1019,7 @@ new code added to the ported code must conform.</p>
 documentation of the code base by embedding the documentation within the code.
 While this does not guarantee that the documentation will be kept up to date,
 it significantly increases the chances. A document generation system, Doxygen,
-then produce formatted documentation by extracting information from specially
+can produce formatted documentation by extracting information from specially
 formatted comment blocks and the syntactic elements of the code.</p>
 <p>This specification presents protocol standards that will ensure that the
 contractual relationship between APIs and their callers is clear and well
@@ -1049,10 +1049,10 @@ wide support. On the downside in that each developer&apos;s C code could
 (conceivably) be constructed in totally different and inconsistent ways. This
 lack of uniformity makes understanding and maintaining the code very difficult.</p>
 <p>Uniformity is the key theme of these rules. You may disagree with some of our
-decisions. Nevertheless, we ask that you commit to conforming to standards of
-this specification. Also, there are pitfalls inherent in the C language that
-this style guide may help you to avoid. The goal of this document is making
-you, and those who follow you, more productive.</p>
+decisions. Nevertheless, we ask that you commit to conforming with the
+standards of this specification. Also, there are pitfalls inherent in the C
+language that this style guide may help you to avoid. The goal of this document
+is making you, and those who follow you, more productive.</p>
 <p>Some of the strict rules for protocol and driver construction may seem overly
 onerous. Don&apos;t panic - there is a method to our madness - we intend to
 construct wizards to aid in the construction of protocol include files and
@@ -1103,7 +1103,7 @@ of implicit types and storage classes.</p>
 <li>Commenting rules</li>
 <li>Doxygen</li>
 </ul>
-<p>These guidelines represent an attempt make you aware of your actions, because
+<p>These guidelines represent an attempt to make you aware of your actions, because
 those actions affect the future readers and maintainers of the code you produce.</p>
 <p>Pre-existing code ported to the EDK II environment does not have to conform to
 this specification. New code which is added to, or which accompanies, the
@@ -1201,7 +1201,7 @@ Code elements are aligned at Tab Stops.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:03:05]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:07:43]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1230,7 +1230,7 @@ Code elements are aligned at Tab Stops.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1 Introduction","level":"1.2","depth":1,"next":{"title":"1.1 Abstract","level":"1.2.1","depth":2,"anchor":"#11-abstract","path":"1_introduction.md","ref":"1_introduction.md#11-abstract","articles":[]},"previous":{"title":"EDK II C Coding Standards Specification","level":"1.1","depth":1,"anchor":"#edk-ii-c-coding-standards-specification","path":"README.md","ref":"README.md#edk-ii-c-coding-standards-specification","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"1_introduction.md","mtime":"2026-03-20T07:02:36.038Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-20T07:03:05.479Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1 Introduction","level":"1.2","depth":1,"next":{"title":"1.1 Abstract","level":"1.2.1","depth":2,"anchor":"#11-abstract","path":"1_introduction.md","ref":"1_introduction.md#11-abstract","articles":[]},"previous":{"title":"EDK II C Coding Standards Specification","level":"1.1","depth":1,"anchor":"#edk-ii-c-coding-standards-specification","path":"README.md","ref":"README.md#edk-ii-c-coding-standards-specification","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"1_introduction.md","mtime":"2026-03-20T07:07:14.364Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-20T07:07:43.780Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

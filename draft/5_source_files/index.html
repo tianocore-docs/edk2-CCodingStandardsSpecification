@@ -943,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:03:05]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:07:43]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -990,8 +990,8 @@
 -->
 <h1 id="5-source-files">5 Source Files</h1>
 <h2 id="51-general-rules">5.1 General Rules</h2>
-<h3 id="511-lines-shall-be-120-columns-or-less">5.1.1 Lines shall be 120 columns, or less</h3>
-<p>Preferably, limit line lengths to 80 columns or less. When this doesn&apos;t leave
+<h3 id="511-lines-shall-be-120-columns-or-fewer">5.1.1 Lines shall be 120 columns, or fewer</h3>
+<p>Preferably, limit line lengths to 80 columns or fewer. When this doesn&apos;t leave
 sufficient space for a good postfix style comment, extend the line to a total
 of 120 columns. Having some level of uniformity in the expected width of the
 source is useful for viewing and printing the code.</p>
@@ -1064,9 +1064,9 @@ of this construct is prohibited. The only exception to this rule is &apos;\0&apo
 </tbody>
 </table>
 <h3 id="515-octal-constants-base-8-shall-not-be-used">5.1.5 Octal constants (Base 8) shall not be used.</h3>
-<p>The C language specification has defined numbers whose first digit is zero as
-octal, so 010 is decimal 8 The use of octal has declined considerably since C
-was first defined but this construct remains for backwards compatibility. Its
+<p>The C language specification defines numbers whose first digit is zero as
+octal, so 010 is decimal 8. The use of octal has declined considerably since C
+was first defined, but this construct remains for backwards compatibility. Its
 use is prohibited. In particular, do not be tempted to use the zero prefix in
 tables of numbers to ensure visual alignment:</p>
 <pre><code class="lang-c">Address[<span class="hljs-number">0</span>] = <span class="hljs-number">00130</span>;  <span class="hljs-comment">// Decimal 88</span>
@@ -1089,9 +1089,9 @@ confusing and unnecessary and are prohibited.</p>
 <h3 id="519-in-line-assembler-shall-not-be-used">5.1.9 In-line assembler shall not be used</h3>
 <p>There are really no reasons for in-line assembler to be used in EDK II code.
 The only exceptions in this case are largely associated with the lowest level
-Architectural Protocols. Using in-line assembly language deviates against the
-Scope rules defined in Section 1.3 &quot;Scope&quot; because it is an extension to
-standard C. This.</p>
+Architectural Protocols. Using in-line assembly language deviates from the
+Scope rules defined in Section 1.3 &quot;Scope&quot;, because it is an extension to
+standard C.</p>
 <h3 id="5110-do-not-use-pragma-except-for-pragma-pack-">5.1.10 Do not use #pragma, except for #pragma pack (#).</h3>
 <p>The only other exception for this would be in the <code>ProcessorBind.h</code> file.</p>
 
@@ -1108,7 +1108,7 @@ standard C. This.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:03:05]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:07:43]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1137,7 +1137,7 @@ standard C. This.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5 Source Files","level":"1.6","depth":1,"next":{"title":"5.1 General Rules","level":"1.6.1","depth":2,"anchor":"#51-general-rules","path":"5_source_files/README.md","ref":"5_source_files/README.md#51-general-rules","articles":[]},"previous":{"title":"4.6 Name Space Rules","level":"1.5.6","depth":2,"anchor":"#46-name-space-rules","path":"4_naming_conventions/46_name_space_rules.md","ref":"4_naming_conventions/46_name_space_rules.md#46-name-space-rules","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"5_source_files/README.md","mtime":"2026-03-20T07:02:36.040Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-20T07:03:05.479Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5 Source Files","level":"1.6","depth":1,"next":{"title":"5.1 General Rules","level":"1.6.1","depth":2,"anchor":"#51-general-rules","path":"5_source_files/README.md","ref":"5_source_files/README.md#51-general-rules","articles":[]},"previous":{"title":"4.6 Name Space Rules","level":"1.5.6","depth":2,"anchor":"#46-name-space-rules","path":"4_naming_conventions/46_name_space_rules.md","ref":"4_naming_conventions/46_name_space_rules.md#46-name-space-rules","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"5_source_files/README.md","mtime":"2026-03-20T07:07:14.366Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-20T07:07:43.780Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
