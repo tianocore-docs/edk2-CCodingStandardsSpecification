@@ -107,7 +107,7 @@ Trigraphs are a construct to allow character representations that do not
 support all ASCII characters to enter the equivalent of the ASCII character.
 Trigraphs are three characters long (hence the "tri"). The first two characters
 are "??" while the third character disambiguates the trigraph. Technically
-therefore, a[5] could be written a??(5??). Trigraphs have provided both
+therefore, a[5] could be written a??(5??). Trigraphs have proven both
 confusing and unnecessary and are prohibited.
 
 ### 5.1.9 In-line assembler shall not be used
