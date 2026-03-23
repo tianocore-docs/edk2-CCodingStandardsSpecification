@@ -94,17 +94,25 @@ NoFun (
   VOID
   )
 {
+
+  // A blank line above the comment block (6.5.2.2).
   // Only process data if mTest is TRUE.
   // This comment block applies to the entire if/else statement.
+  // A blank line below for the multiple code blocks (6.5.2.3).
+
   if (mTest) {
+
+    // A blank line above the comment block (6.5.2.2).
     // This is an example comment to explain why this behavior
     // is appropriate if mTest is true.
     // This comment block only applies when mTest is true.
-
+    // No blank line implies that the comment is for the next few lines of code. (6.5.2.3)
     ThisIsTheCode ();
   } else {
+
     // Explain what we do if (mTest) is false.
     // This comment block only applies when mTest is false.
+    // Can be optionally followed by a blank line (6.5.2.3).
 
     ThisIsMoreCode ();
   }
