@@ -121,7 +121,7 @@ documentation.
 Finally, to put invisible comments inside comment blocks, you may use HTML
 style comments:
 
-```
+```c
 /** <!-- This is a comment within a comment block --> Visible text */
 ```
 

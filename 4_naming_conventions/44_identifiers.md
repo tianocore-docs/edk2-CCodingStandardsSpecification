@@ -59,7 +59,7 @@ convention widely used with the C programming language, especially in
 Microsoft* Windows* programming. An example of a non-compliant variable named
 with the Hungarian conventions follows:
 
-```
+```c
 bmRequestType;  // Byte mask, First byte in the USB message header
 pachInsert;     // A pointer to an array of characters to insert.
 ```

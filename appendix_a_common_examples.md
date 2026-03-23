@@ -65,7 +65,7 @@
   @param[in]       Arg2  Description of Arg2 This is complicated and requires
                          multiple lines to describe.
   @param[out]      Arg3  Description of Arg3.
-  @param[in, out]  Arg4  Description of Arg4.
+  @param[in,out]   Arg4  Description of Arg4.
 
   @retval  VAL_ONE  Description of what VAL_ONE signifies.
   @retval  OTHER    This is the only other return value. If there were other
@@ -76,8 +76,8 @@ EFI_STATUS
 EFIAPI
 FooBar (
   IN     UINTN  Arg1,
-  IN     UINTN  Arg2, OPTIONAL
-     OUT UINTN  *Arg3,
+  IN     UINTN  Arg2  OPTIONAL,
+  OUT    UINTN  *Arg3,
   IN OUT UINTN  *Arg4
   );
 ```
@@ -95,16 +95,16 @@ typedef enum {
 
 /// Structure without forward reference.
 typedef struct {
-  UINT32                   Signature;  ///< Signature description.
-  EFI_HANDLE               Handle;     ///< Handle description.
-  EFI_PROD_PROT1_PROTOCOL  ProdProt1;  ///< ProdProt1 description.
-  EFI_PROD_PROT2_PROTOCOL  ProdProt2;  ///< ProdProt2 description.
+  UINT32                     Signature; ///< Signature description.
+  EFI_HANDLE                 Handle;    ///< Handle description.
+  EFI_PROD_PROT1_PROTOCOL    ProdProt1; ///< ProdProt1 description.
+  EFI_PROD_PROT2_PROTOCOL    ProdProt2; ///< ProdProt2 description.
 } DRIVER_NAME_INSTANCE;
 
 /// Self referential Structure.
 typedef struct EFI_CPU_IO_PROTO {
-  struct EFI_CPU_IO_PROTO     *Mem;
-  EFI_CPU_IO_PROTOCOL_ACCESS  Io;
+  struct EFI_CPU_IO_PROTO       *Mem;
+  EFI_CPU_IO_PROTOCOL_ACCESS    Io;
 } EFI_CPU_IO_PROTOCOL;
 
 /// Forward reference
@@ -112,8 +112,8 @@ typedef struct StructTag MyStruct;
 
 /// Forward reference target
 struct StructTag {
-  INT32 First;
-  INT32 Second;
+  INT32    First;
+  INT32    Second;
 };
 ```
 
@@ -170,5 +170,5 @@ case 2:
 default:
   IamTheCode ();
   break;
-};
+}
 ```

@@ -94,17 +94,17 @@ multiples of two spaces.
   @retval  EFI_SUCCESS   Description of what EFI_SUCCESS means.
   @retval  !EFI_SUCCESS  Failure.
 
---*/
+**/
 EFI_STATUS
 EFIAPI
 FooName (
-  IN UINTN      Arg1,
-  IN UINTN      Arg2, OPTIONAL
-  OUT UINTN     *Arg3,
+  IN     UINTN  Arg1,
+  IN     UINTN  Arg2  OPTIONAL,
+  OUT    UINTN  *Arg3,
   IN OUT UINTN  *Arg4
   )
 {
-  UINTN Local;
+  UINTN  Local;
   ...
 }
 ```
@@ -208,9 +208,9 @@ Non-Boolean comparisons must use a compare operator (`==`, `!=`, `>`, `< >=`,
 "Predicate Expression Examples" below shows examples using the following:
 
 ```c
-BOOLEAN Done;
-UINTN Index;
-VOID *Ptr;
+BOOLEAN  Done;
+UINTN    Index;
+VOID     *Ptr;
 ```
 
 ###### Table 10 Predicate Expression Examples
@@ -232,7 +232,7 @@ This is perfectly valid code and, with some compilers, is needed for limit
 checking against enumerated types. These compilers will assign the type to the
 enum based upon the range of values the enum is assigned at compile time.
 
-```
+```c
 if ((foo >= 0) &&
     (foo < MaxVal))
 { ...
@@ -442,7 +442,7 @@ case 2:
 default:
   IamTheCode ();
   break;
-};
+}
 ```
 
 The case statements are indented either zero tab stops or one tab stop and the
@@ -479,15 +479,17 @@ The `goto` follows the normal rules for C code. The label must be indented one
 level less than the code it is marking.
 
 ```c
-Status = IAmTheCode ();
-if (EFI_ERROR (Status)) {
-  goto ErrorExit;
-}
-
-IDoTheWork ();
-
+{
+  Status = IAmTheCode ();
+  if (EFI_ERROR (Status)) {
+    goto ErrorExit;
+  }
+  
+  IDoTheWork ();
+  
 ErrorExit:
   return Status;
+}
 ```
 
 The above example could have been rewritten as below, eliminating the need for
@@ -524,13 +526,13 @@ FooName (
 In any situation, definition of structure instances shall be in the following
 form:
 
-```
+```c
 EFI_STRUCTURE_NAME  StructureName;
 ```
 
 Never pass structures as function parameters by value. Use the "address of"
 operator, '`&`', and pass structures by reference.
 
-```
+```c
 FooName (&StructureName);
 ```

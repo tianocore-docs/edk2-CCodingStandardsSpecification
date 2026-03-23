@@ -225,7 +225,7 @@ typedef struct EFI_STRUCT_NAME EFI_STRUCT_NAME;
 /// Sample self-referential structure declaration.
 typedef struct EFI_STRUCTURE_NAME {
   ...
-  struct EFI_STRUCTURE_NAME *StructPointer;  ///< Sample self reference
+  struct EFI_STRUCTURE_NAME    *StructPointer; ///< Sample self reference
 } EFI_STRUCT_NAME;
 ```
 
@@ -237,7 +237,7 @@ typedef struct EFI_STRUCTURE_NAME {
   * Detailed description of purpose and use of this structure.
 **/
 typedef struct {
-  Atype  memberOne;  ///< Briefly describe memberOne
+  Atype    memberOne; ///< Briefly describe memberOne
   ...
   Ztype  memberN;    ///< Briefly describe memberN
 } EFI_STRUCTURE_NAME;

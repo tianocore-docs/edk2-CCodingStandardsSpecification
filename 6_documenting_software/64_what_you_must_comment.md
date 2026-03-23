@@ -72,8 +72,8 @@ storage duration, and no initializer. (The value assigned could be arbitrary;
 the above-mentioned value is chosen for stylistic reasons.) For example:
 
 ```c
-UINTN LocalIntegerVariable;
-VOID  *LocalPointerVariable;
+UINTN  LocalIntegerVariable;
+VOID   *LocalPointerVariable;
 
 LocalIntegerVariable = 0;
 LocalPointerVariable = NULL;
@@ -85,8 +85,8 @@ an intervening assignment. Therefore, each such assignment must be documented,
 as follows:
 
 ```c
-UINTN LocalIntegerVariable;
-VOID  *LocalPointerVariable;
+UINTN  LocalIntegerVariable;
+VOID   *LocalPointerVariable;
 
 //
 // set LocalIntegerVariable to suppress incorrect compiler/analyzer warnings
