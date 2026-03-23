@@ -943,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/23/2026 07:54:20]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/23/2026 10:18:44]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1030,17 +1030,17 @@ multiples of two spaces.</p>
   @retval  EFI_SUCCESS   Description of what EFI_SUCCESS means.
   @retval  !EFI_SUCCESS  Failure.
 
---*/</span>
+**/</span>
 <span class="hljs-function">EFI_STATUS
 EFIAPI
 <span class="hljs-title">FooName</span> <span class="hljs-params">(
-  IN UINTN      Arg1,
-  IN UINTN      Arg2, OPTIONAL
-  OUT UINTN     *Arg3,
+  IN     UINTN  Arg1,
+  IN     UINTN  Arg2  OPTIONAL,
+  OUT    UINTN  *Arg3,
   IN OUT UINTN  *Arg4
   )</span>
 </span>{
-  UINTN Local;
+  UINTN  Local;
   ...
 }
 </code></pre>
@@ -1141,9 +1141,9 @@ and after global data.</p>
 <code>&lt;=</code>).</p>
 <h4 id="5722-a-comparison-of-any-pointer-to-zero-must-be-done-via-the-null-type">5.7.2.2 A comparison of any pointer to zero must be done via the <code>NULL</code> type.</h4>
 <p>&quot;Predicate Expression Examples&quot; below shows examples using the following:</p>
-<pre><code class="lang-c">BOOLEAN Done;
-UINTN Index;
-VOID *Ptr;
+<pre><code class="lang-c">BOOLEAN  Done;
+UINTN    Index;
+VOID     *Ptr;
 </code></pre>
 <h6 id="table-10-predicate-expression-examples">Table 10 Predicate Expression Examples</h6>
 <table>
@@ -1186,10 +1186,11 @@ and some compilers will emit a warning when this type of construct is seen.
 This is perfectly valid code and, with some compilers, is needed for limit
 checking against enumerated types. These compilers will assign the type to the
 enum based upon the range of values the enum is assigned at compile time.</p>
-<pre><code>if ((foo &gt;= 0) &amp;&amp;
+<pre><code class="lang-c"><span class="hljs-keyword">if</span> ((foo &gt;= <span class="hljs-number">0</span>) &amp;&amp;
     (foo &lt; MaxVal))
 { ...
-</code></pre><p>If one wants to be perfectly safe in their comparison, the potentially unsigned
+</code></pre>
+<p>If one wants to be perfectly safe in their comparison, the potentially unsigned
 term can be cast to a signed integer type of sufficient size; if the range of
 possible values is known. <code>if ((INTN)foo &gt;= 0) { ...</code></p>
 <h4 id="5724-the-ordering-of-terms-in-predicate-expressions-may-impact-performance-significantly">5.7.2.4 The ordering of terms in predicate expressions may impact performance significantly.</h4>
@@ -1355,7 +1356,7 @@ needed.</p>
 <span class="hljs-keyword">default</span>:
   IamTheCode ();
   <span class="hljs-keyword">break</span>;
-};
+}
 </code></pre>
 <p>The case statements are indented either zero tab stops or one tab stop and the
 bodies of each case one tab stop from the case.</p>
@@ -1381,15 +1382,17 @@ software life cycle maintenance issues, as there can be one copy of error
 cleanup code per routine.</p>
 <p>The <code>goto</code> follows the normal rules for C code. The label must be indented one
 level less than the code it is marking.</p>
-<pre><code class="lang-c">Status = IAmTheCode ();
-<span class="hljs-keyword">if</span> (EFI_ERROR (Status)) {
-  <span class="hljs-keyword">goto</span> ErrorExit;
-}
+<pre><code class="lang-c">{
+  Status = IAmTheCode ();
+  <span class="hljs-keyword">if</span> (EFI_ERROR (Status)) {
+    <span class="hljs-keyword">goto</span> ErrorExit;
+  }
 
-IDoTheWork ();
+  IDoTheWork ();
 
 ErrorExit:
   <span class="hljs-keyword">return</span> Status;
+}
 </code></pre>
 <p>The above example could have been rewritten as below, eliminating the need for
 a <code>goto</code>.</p>
@@ -1417,11 +1420,13 @@ EFIAPI
 </code></pre>
 <p>In any situation, definition of structure instances shall be in the following
 form:</p>
-<pre><code>EFI_STRUCTURE_NAME  StructureName;
-</code></pre><p>Never pass structures as function parameters by value. Use the &quot;address of&quot;
-operator, &apos;<code>&amp;</code>&apos;, and pass structures by reference.</p>
-<pre><code>FooName (&amp;StructureName);
+<pre><code class="lang-c">EFI_STRUCTURE_NAME  StructureName;
 </code></pre>
+<p>Never pass structures as function parameters by value. Use the &quot;address of&quot;
+operator, &apos;<code>&amp;</code>&apos;, and pass structures by reference.</p>
+<pre><code class="lang-c">FooName (&amp;StructureName);
+</code></pre>
+
                                 
                                 </section>
                             
@@ -1435,7 +1440,7 @@ operator, &apos;<code>&amp;</code>&apos;, and pass structures by reference.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/23/2026 07:54:20]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/23/2026 10:18:44]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1464,7 +1469,7 @@ operator, &apos;<code>&amp;</code>&apos;, and pass structures by reference.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.7 C Programming","level":"1.6.7","depth":2,"next":{"title":"5.8 Error Handling and ASSERT","level":"1.6.8","depth":2,"anchor":"#58-error-handling-and-assert","path":"5_source_files/58_error_handling_and_assert.md","ref":"5_source_files/58_error_handling_and_assert.md#58-error-handling-and-assert","articles":[]},"previous":{"title":"5.6 Declarations and Types","level":"1.6.6","depth":2,"anchor":"#56-declarations-and-types","path":"5_source_files/56_declarations_and_types.md","ref":"5_source_files/56_declarations_and_types.md#56-declarations-and-types","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"5_source_files/57_c_programming.md","mtime":"2026-03-23T19:53:52.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-23T19:54:20.665Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.7 C Programming","level":"1.6.7","depth":2,"next":{"title":"5.8 Error Handling and ASSERT","level":"1.6.8","depth":2,"anchor":"#58-error-handling-and-assert","path":"5_source_files/58_error_handling_and_assert.md","ref":"5_source_files/58_error_handling_and_assert.md#58-error-handling-and-assert","articles":[]},"previous":{"title":"5.6 Declarations and Types","level":"1.6.6","depth":2,"anchor":"#56-declarations-and-types","path":"5_source_files/56_declarations_and_types.md","ref":"5_source_files/56_declarations_and_types.md#56-declarations-and-types","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"5_source_files/57_c_programming.md","mtime":"2026-03-23T22:18:15.660Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-23T22:18:44.479Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
