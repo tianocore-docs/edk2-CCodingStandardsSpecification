@@ -943,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:07:43]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/23/2026 09:21:44]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1018,7 +1018,7 @@
   @param[in]       Arg2  Description of Arg2 This is complicated and requires
                          multiple lines to describe.
   @param[out]      Arg3  Description of Arg3.
-  @param[in, out]  Arg4  Description of Arg4.
+  @param[in,out]   Arg4  Description of Arg4.
 
   @retval  VAL_ONE  Description of what VAL_ONE signifies.
   @retval  OTHER    This is the only other return value. If there were other
@@ -1029,8 +1029,8 @@
 EFIAPI
 <span class="hljs-title">FooBar</span> <span class="hljs-params">(
   IN     UINTN  Arg1,
-  IN     UINTN  Arg2, OPTIONAL
-     OUT UINTN  *Arg3,
+  IN     UINTN  Arg2  OPTIONAL,
+  OUT    UINTN  *Arg3,
   IN OUT UINTN  *Arg4
   )</span></span>;
 </code></pre>
@@ -1045,16 +1045,16 @@ EFIAPI
 
 <span class="hljs-comment">/// Structure without forward reference.</span>
 <span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> {
-  UINT32                   Signature;  <span class="hljs-comment">///&lt; Signature description.</span>
-  EFI_HANDLE               Handle;     <span class="hljs-comment">///&lt; Handle description.</span>
-  EFI_PROD_PROT1_PROTOCOL  ProdProt1;  <span class="hljs-comment">///&lt; ProdProt1 description.</span>
-  EFI_PROD_PROT2_PROTOCOL  ProdProt2;  <span class="hljs-comment">///&lt; ProdProt2 description.</span>
+  UINT32                     Signature; <span class="hljs-comment">///&lt; Signature description.</span>
+  EFI_HANDLE                 Handle;    <span class="hljs-comment">///&lt; Handle description.</span>
+  EFI_PROD_PROT1_PROTOCOL    ProdProt1; <span class="hljs-comment">///&lt; ProdProt1 description.</span>
+  EFI_PROD_PROT2_PROTOCOL    ProdProt2; <span class="hljs-comment">///&lt; ProdProt2 description.</span>
 } DRIVER_NAME_INSTANCE;
 
 <span class="hljs-comment">/// Self referential Structure.</span>
 <span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> EFI_CPU_IO_PROTO {
-  <span class="hljs-keyword">struct</span> EFI_CPU_IO_PROTO     *Mem;
-  EFI_CPU_IO_PROTOCOL_ACCESS  Io;
+  <span class="hljs-keyword">struct</span> EFI_CPU_IO_PROTO       *Mem;
+  EFI_CPU_IO_PROTOCOL_ACCESS    Io;
 } EFI_CPU_IO_PROTOCOL;
 
 <span class="hljs-comment">/// Forward reference</span>
@@ -1062,8 +1062,8 @@ EFIAPI
 
 <span class="hljs-comment">/// Forward reference target</span>
 <span class="hljs-keyword">struct</span> StructTag {
-  INT32 First;
-  INT32 Second;
+  INT32    First;
+  INT32    Second;
 };
 </code></pre>
 <h4 id="function-calling">Function Calling</h4>
@@ -1114,7 +1114,7 @@ Status = TestString (
 <span class="hljs-keyword">default</span>:
   IamTheCode ();
   <span class="hljs-keyword">break</span>;
-};
+}
 </code></pre>
 
                                 
@@ -1130,7 +1130,7 @@ Status = TestString (
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:07:43]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/23/2026 09:21:44]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1159,7 +1159,7 @@ Status = TestString (
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"APPENDIX A Common Examples","level":"1.8","depth":1,"next":{"title":"APPENDIX B Reserved Identifiers","level":"1.9","depth":1,"anchor":"#appendix-b-reserved-identifiers","path":"appendix_b_reserved_identifiers.md","ref":"appendix_b_reserved_identifiers.md#appendix-b-reserved-identifiers","articles":[]},"previous":{"title":"6.10 Special Commands","level":"1.7.10","depth":2,"anchor":"#610-special-commands","path":"6_documenting_software/610_special_commands.md","ref":"6_documenting_software/610_special_commands.md#610-special-commands","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"appendix_a_common_examples.md","mtime":"2026-03-20T07:07:14.368Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-20T07:07:43.780Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"APPENDIX A Common Examples","level":"1.8","depth":1,"next":{"title":"APPENDIX B Reserved Identifiers","level":"1.9","depth":1,"anchor":"#appendix-b-reserved-identifiers","path":"appendix_b_reserved_identifiers.md","ref":"appendix_b_reserved_identifiers.md#appendix-b-reserved-identifiers","articles":[]},"previous":{"title":"6.10 Special Commands","level":"1.7.10","depth":2,"anchor":"#610-special-commands","path":"6_documenting_software/610_special_commands.md","ref":"6_documenting_software/610_special_commands.md#610-special-commands","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"appendix_a_common_examples.md","mtime":"2026-03-23T21:21:04.976Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-23T21:21:44.455Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

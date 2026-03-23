@@ -943,7 +943,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:07:43]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/23/2026 09:21:44]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -997,8 +997,8 @@ comments are almost always special Doxygen comment blocks. See Section 6.6
 &quot;Introducing Doxygen&quot;.</p>
 <h4 id="6511-comments-are-allowed-on-structure-member-declarations">6.5.1.1 Comments are allowed on structure member declarations:</h4>
 <pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> {
-  EFI_SAMPLE_STRUCTURE *StructurePointer; <span class="hljs-comment">///&lt; Sample comment #1</span>
-  UINT64               SimpleVariable;    <span class="hljs-comment">///&lt; Sample comment #2</span>
+  EFI_SAMPLE_STRUCTURE    *StructurePointer; <span class="hljs-comment">///&lt; Sample comment #1</span>
+  UINT64                  SimpleVariable;    <span class="hljs-comment">///&lt; Sample comment #2</span>
 } EFI_STRUCTURE_NAME;
 </code></pre>
 <h3 id="652-internal-comments">6.5.2 Internal Comments</h3>
@@ -1027,8 +1027,10 @@ are never Doxygen comments.</p>
 <p>This indentation conveys the scope of the comment, as well as maintaining
 readability of the code.</p>
 <pre><code class="lang-c"><span class="hljs-comment">/// Do nothing, carefully.</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span>
-<span class="hljs-title">NoFun</span> <span class="hljs-params">(VOID)</span>
+<span class="hljs-function">VOID
+<span class="hljs-title">NoFun</span> <span class="hljs-params">(
+  VOID
+  )</span>
 </span>{
   <span class="hljs-comment">// Only process data if mTest is TRUE.</span>
   <span class="hljs-comment">// This comment block applies to the entire if/else statement.</span>
@@ -1037,12 +1039,12 @@ readability of the code.</p>
     <span class="hljs-comment">// is appropriate if mTest is true.</span>
     <span class="hljs-comment">// This comment block only applies when mTest is true.</span>
 
-    ThisIsTheCode();
+    ThisIsTheCode ();
   } <span class="hljs-keyword">else</span> {
     <span class="hljs-comment">// Explain what we do if (mTest) is false.</span>
     <span class="hljs-comment">// This comment block only applies when mTest is false.</span>
 
-    ThisIsMoreCode();
+    ThisIsMoreCode ();
   }
 }
 </code></pre>
@@ -1060,7 +1062,7 @@ readability of the code.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II C Coding Standards Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/20/2026 07:07:43]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/23/2026 09:21:44]</div>
         <div style="text-align:right">Revision 2.2</div>
       </h2>  
     
@@ -1089,7 +1091,7 @@ readability of the code.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.5 Types of Comments","level":"1.7.5","depth":2,"next":{"title":"6.6 Introducing Doxygen","level":"1.7.6","depth":2,"anchor":"#66-introducing-doxygen","path":"6_documenting_software/66_introducing_doxygen.md","ref":"6_documenting_software/66_introducing_doxygen.md#66-introducing-doxygen","articles":[]},"previous":{"title":"6.4 What You Must Comment","level":"1.7.4","depth":2,"anchor":"#64-what-you-must-comment","path":"6_documenting_software/64_what_you_must_comment.md","ref":"6_documenting_software/64_what_you_must_comment.md#64-what-you-must-comment","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"6_documenting_software/65_types_of_comments.md","mtime":"2026-03-20T07:07:14.367Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-20T07:07:43.780Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.5 Types of Comments","level":"1.7.5","depth":2,"next":{"title":"6.6 Introducing Doxygen","level":"1.7.6","depth":2,"anchor":"#66-introducing-doxygen","path":"6_documenting_software/66_introducing_doxygen.md","ref":"6_documenting_software/66_introducing_doxygen.md#66-introducing-doxygen","articles":[]},"previous":{"title":"6.4 What You Must Comment","level":"1.7.4","depth":2,"anchor":"#64-what-you-must-comment","path":"6_documenting_software/64_what_you_must_comment.md","ref":"6_documenting_software/64_what_you_must_comment.md#64-what-you-must-comment","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II C Coding Standards Specification","version":"Revision 2.2"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"6_documenting_software/65_types_of_comments.md","mtime":"2026-03-23T21:21:04.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-23T21:21:44.455Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
