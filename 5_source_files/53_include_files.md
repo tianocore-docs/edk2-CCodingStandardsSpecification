@@ -42,7 +42,7 @@ The name of all include files, within the EDK II code base, must be unique. The
 uniqueness test applies to the entire path used in the #include directive. For
 example:
 
-```
+```c
 #include <Peach/Pit.h>
 #include "Olive/Pit.h"
 #include <MoneyPit.h>

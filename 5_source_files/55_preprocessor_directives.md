@@ -47,7 +47,7 @@ to include files in the same directory as, or a subdirectory of, the file being
 compiled, and angle brackets for all other include files.
 
 ```c
-#include <Uefi.h> /* System include file. */
+#include <Uefi.h>        /* System include file. */
 #include "SampleThing.h" /* In same directory as the C file. */
 ```
 
@@ -76,9 +76,9 @@ functions.
 An order-of-precedence bug in a macro is very hard to debug. The following are
 examples of macro construction:
 
-```
-#define BAD_MACRO(a, b) a * b
-#define GOOD_MACRO(a, b) ((a) * (b))
+```c
+#define BAD_MACRO(a, b)   a * b
+#define GOOD_MACRO(a, b)  ((a) * (b))
 ```
 
 The following examples should explain the difference between `BAD_MACRO ()` and
@@ -92,7 +92,7 @@ The following examples should explain the difference between `BAD_MACRO ()` and
 
 Also, consider the following expression:
 
-```
+```c
 8 | 8 == 8
 ```
 
@@ -101,14 +101,14 @@ This is not the case. The bitwise OR operator, '`|`', has lower precedence than
 the equality operator, '`==`'. This results in the expression being evaluated as
 if one had entered:
 
-```
+```c
 8 | (8 == 8)
 ```
 
 This evaluates to the value 9 The desired result of `TRUE`, (1), can be achieved
 by specifying the expression as:
 
-```
+```c
 ((8 | 8) == 8)
 ```
 
@@ -122,20 +122,20 @@ or a simple substitution macro.
 
 Failure to do this will cause the build to break.
 
-```
-#define GOOD_MACRO(a, b) ((a) * (b))
+```c
+#define GOOD_MACRO(a, b)  ((a) * (b))
 ```
 
 This is because the compiler has no way to differentiate between
 
-```
-#define SIMPLE_MACRO (a) (TXT)
+```c
+#define SIMPLE_MACRO  (a) (TXT)
 ```
 
 which substitutes all subsequent occurrences of SIMPLE_MACRO with (a) (TXT), and
 
-```
-#define PARAM_MACRO(a) (a) (TXT)
+```c
+#define PARAM_MACRO(a)  (a) (TXT)
 ```
 
 which defines a parameterized macro.
@@ -145,7 +145,7 @@ which defines a parameterized macro.
 Failure to separate macro names from parameters negatively impacts readability
 and consistency with other coding style rules.
 
-```
+```c
 GOOD_MACRO (7 + 3, 2)
 ```
 

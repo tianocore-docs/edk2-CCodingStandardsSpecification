@@ -348,7 +348,7 @@
 
 ```c
 @file [<name>]
-@param[in, out] <parameter name> { parameter description }
+@param[in,out] <parameter name> { parameter description }
 @retval <return value> { description }
 @sa { references }
 @test { description of a test case }

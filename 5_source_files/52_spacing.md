@@ -73,7 +73,7 @@ This requirement includes functions and data. A _simple predicate expression_
 is one containing zero or one operator which fits on the same line as the
 keyword.
 
-```
+```c
 while (MyVar != 0) {
 ```
 
@@ -126,8 +126,8 @@ if (MyVar != 0) {
 
 #### 5.2.2.3 Do not put space between unary operators and their object
 
-```
-If ((--MyInteger) > 0) {
+```c
+if ((--MyInteger) > 0) {
 ```
 
 #### 5.2.2.4 Subsequent lines of multi-line function calls should line up two spaces from the beginning of the function name
@@ -187,7 +187,7 @@ EfiLibAllocateCopyPool (...
 
 #### 5.2.2.7 Put a space before an open brace if it is not on its own line
 
-```
+```c
 if () {
 while () {
 ```
@@ -201,7 +201,7 @@ Pointer->Index = *Ptr;
 
 #### 5.2.2.9 Do not put spaces before open brackets of array subscripts
 
-```
+```c
 Array[(Max + Min) / 2]
 ```
 
@@ -211,7 +211,7 @@ Array[(Max + Min) / 2]
 
 Consider the following expression:
 
-```
+```c
 8 | 8 == 8
 ```
 
@@ -219,7 +219,7 @@ On first glance, one might think that the expression would evaluate to `TRUE`.
 This is not the case. The bitwise OR operator, '`|`', has lower precedence than
 the equality operator, '`==`'. This results in the expression being evaluated as
 if one had entered:
-```
+```c
 8 | (8 == 8)
 ```
 
@@ -239,7 +239,7 @@ Value = (GetData (BubbaBaes + BUBBA_HIGH_DATA) << 8) |
 This block shall begin on the first line of the file. This is a Doxygen file
 descriptor comment block, so line 1 of the file will be:
 
-```
+```c
 /** @file
 ```
 

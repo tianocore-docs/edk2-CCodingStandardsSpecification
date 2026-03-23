@@ -141,7 +141,7 @@ declarations whose scope and visibility overlap that of the first declaration.
 The following example shows how the scope visibility of identifiers can overlap
 and hide each other. Never write code that does this.
 
-```
+```c
  1 UINTN MyVar = 7; // File scope
  2
  3 VOID

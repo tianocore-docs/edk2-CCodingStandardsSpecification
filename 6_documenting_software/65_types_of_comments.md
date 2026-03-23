@@ -44,8 +44,8 @@ comments are almost always special Doxygen comment blocks. See Section 6.6
 
 ```c
 typedef struct {
-  EFI_SAMPLE_STRUCTURE *StructurePointer; ///< Sample comment #1
-  UINT64               SimpleVariable;    ///< Sample comment #2
+  EFI_SAMPLE_STRUCTURE    *StructurePointer; ///< Sample comment #1
+  UINT64                  SimpleVariable;    ///< Sample comment #2
 } EFI_STRUCTURE_NAME;
 ```
 
@@ -89,8 +89,10 @@ readability of the code.
 
 ```c
 /// Do nothing, carefully.
-void
-NoFun (VOID)
+VOID
+NoFun (
+  VOID
+  )
 {
   // Only process data if mTest is TRUE.
   // This comment block applies to the entire if/else statement.
@@ -99,12 +101,12 @@ NoFun (VOID)
     // is appropriate if mTest is true.
     // This comment block only applies when mTest is true.
 
-    ThisIsTheCode();
+    ThisIsTheCode ();
   } else {
     // Explain what we do if (mTest) is false.
     // This comment block only applies when mTest is false.
 
-    ThisIsMoreCode();
+    ThisIsMoreCode ();
   }
 }
 ```
