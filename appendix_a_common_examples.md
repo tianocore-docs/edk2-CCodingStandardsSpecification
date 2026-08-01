@@ -46,12 +46,10 @@
   - UEFI 2.3, Chapter 9, Device Path Protocol
   - PI 1.1, Chapter 10, Boot Paths
 **/
-#ifndef FOO_BAR_H_
-#define FOO_BAR_H_
+#pragma once
 
 // Body of the file goes here
 
-#endif // FOO_BAR_H_
 ```
 
 #### Functioon Declarations

@@ -151,8 +151,7 @@ Not all types of declarations are present in every file.
     - UEFI 2.3, Chapter 9, Device Path Protocol
     - PI 1.1, Chapter 10, Boot Paths
 **/
-#ifndef SAMPLE_THING_H_
-#define SAMPLE_THING_H_
+#pragma once
 
 /* Include directives for dependent header files */
 
@@ -164,5 +163,4 @@ Not all types of declarations are present in every file.
 
 /* Protocol declarations */
 
-#endif /* SAMPLE_THING_H_ */
 ```
