@@ -52,7 +52,7 @@
 
 ```
 
-#### Functioon Declarations
+#### Function Declarations
 
 ```c
 /** Brief description of this function's purpose.
