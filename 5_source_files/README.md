@@ -118,6 +118,8 @@ Architectural Protocols. Using in-line assembly language deviates from the
 Scope rules defined in Section 1.3 "Scope", because it is an extension to
 standard C.
 
-### 5.1.10 Do not use #pragma, except for #pragma pack (#).
+### 5.1.10 Do not use #pragma, except for #pragma pack (#) and #pragma once.
 
 The only other exception for this would be in the `ProcessorBind.h` file.
+Header files should use #pragma once, instead of #ifdef guards as described
+in Section 5.3.5.
