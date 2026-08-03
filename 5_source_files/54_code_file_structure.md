@@ -114,8 +114,9 @@ creating a new scope.
 
 Data declarations may follow the opening brace of a compound statement,
 regardless of nesting depth, and before any code generating statements have
-been entered. Other than at the outermost block of a function body, this type
-of declaration is strongly discouraged.
+been entered. This can be helpful to reduce the number of live variables at
+function scope, but care should be taken that it does not make variable
+scope confusing.
 
 **********
 **Note:** Visual C++ gives all structure declarations File Scope, even though
